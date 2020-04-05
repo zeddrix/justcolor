@@ -1,5 +1,18 @@
+.container {
+    display: flex;
+    height: 650px;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: center;
+}
+
 button {
     outline-style: none;
+    transition: all .5s;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
 .red {
