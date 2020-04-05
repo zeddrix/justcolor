@@ -1,14 +1,36 @@
-.container {
-    display: flex;
-    height: 650px;
-    flex-wrap: wrap;
-    align-content: flex-end;
-    justify-content: center;
+@media (min-width: 415px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        height: 580px;
+        align-content: flex-end;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 700px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        height: 580px;
+        align-content: flex-end;
+        justify-content: center;
+    }
+}
+
+@media (min-height: 680px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        height: 650px;
+        align-content: flex-end;
+        justify-content: center;
+    }
 }
 
 button {
     outline-style: none;
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 button:hover {
