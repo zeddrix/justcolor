@@ -1,3 +1,7 @@
+button {
+    outline-style: none;
+}
+
 .red {
     background-color: red;
     border: none;
