@@ -8,24 +8,19 @@
 </head>
 <body>
     <div class="container">
-        <div class="block">
-            <div class="top">
-                <button class="red" onclick="changeColor('red')">r</button>
-                <button class="yellow" onclick="changeColor('yellow')">y</button>
-                <button class="blue" onclick="changeColor('rgb(0, 119, 255)')">b</button>
-                <button class="green" onclick="changeColor('green')">g</button>
-                <button class="purple" onclick="changeColor('purple')">p</button>
-                <button class="orange" onclick="changeColor('orange')">o</button>
-            </div>
-            <div class="bottom">
-                <button class="bluegreen" onclick="changeColor('rgb(32, 123, 131)')">bg</button>
-                <button class="blueviolet" onclick="changeColor('blueviolet')">bv</button>
-                <button class="yellowgreen" onclick="changeColor('yellowgreen')">yg</button>
-                <button class="redviolet" onclick="changeColor('#c71585')">rv</button>
-                <button class="redorange" onclick="changeColor('rgb(255, 102, 0)')">ro</button>
-                <button class="yelloworange" onclick="changeColor('#ffae42')">yo</button>
-            </div>
-        </div>
+        <button class="red button-prop" onclick="changeColor('red')">r</button>
+        <button class="yellow button-prop" onclick="changeColor('yellow')">y</button>
+        <button class="blue button-prop" onclick="changeColor('rgb(0, 119, 255)')">b</button>
+        <button class="green button-prop" onclick="changeColor('green')">g</button>
+        <button class="purple button-prop" onclick="changeColor('purple')">p</button>
+        <button class="orange button-prop" onclick="changeColor('orange')">o</button>
+        <button class="bluegreen button-prop" onclick="changeColor('rgb(32, 123, 131)')">bg</button>
+        <button class="blueviolet button-prop" onclick="changeColor('blueviolet')">bv</button>
+        <button class="yellowgreen button-prop" onclick="changeColor('yellowgreen')">yg</button>
+        <button class="redviolet button-prop" onclick="changeColor('#c71585')">rv</button>
+        <button class="redorange button-prop" onclick="changeColor('rgb(255, 102, 0)')">ro</button>
+        <button class="yelloworange button-prop" onclick="changeColor('#ffae42')">yo</button>
+        <img src="color random.jpg" class="random button-prop" onclick="changeToRandomColor()"/>
     </div>
 </body>
 <script src="app.js"></script>
