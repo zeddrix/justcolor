@@ -7,11 +7,6 @@ const changeToRandomColor = () => {
     document.body.style.backgroundColor = "#" + rColor;
 }
 
-// const red = document.querySelector('.red');
-// red.addEventListener('click', () => {
-    //         document.body.style.backgroundColor = 'red';
-    // })
-    
 const getRandomColorValue = () => {
     return Math.floor(Math.random()*256)
 }
