@@ -64,10 +64,20 @@ const changeColor = (color) => {
     document.body.style.backgroundColor = color;
 }
 
+// const red = document.querySelector('.red');
+// red.addEventListener('click', () => {
+//     document.body.style.backgroundColor = 'red';
+// })
+
 const changeToRandomColor = () => {
     const rColor = fullColorHex(getRandomColorValue(), getRandomColorValue(), getRandomColorValue()); 
     document.body.style.backgroundColor = "#" + rColor;
 }
+
+// const addColorButton = () => {
+//     const addColor = 
+//     document.body.style.backgroundColor = 
+// }
     
 const getRandomColorValue = () => {
     return Math.floor(Math.random()*256)
@@ -87,3 +97,8 @@ const fullColorHex = function(r, g, b) {
     const blue = rgbToHex(b);
     return red + green + blue;
 };
+
+const arrayLength = colors.length;
+for (let c = 0; c < arrayLength; c++) {
+    console.log(colors[c])
+}
