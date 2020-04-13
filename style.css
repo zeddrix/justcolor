@@ -86,3 +86,7 @@ button:hover, .random:hover {
 .yelloworange {
     background-color: rgb(255, 174, 66);
 }
+
+.add-button {
+    background-color: rgb(185, 185, 185);
+}
