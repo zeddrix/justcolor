@@ -114,6 +114,7 @@ const addNewColorButton = () => {
     newButton.addEventListener('click', () => changeColor(newColor));
     parent.append(newButton);
     console.log(newColor);
+}
 
 // const addNewColorButton = () => {
 //     const newButton = 
