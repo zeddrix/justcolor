@@ -17,13 +17,14 @@ button:hover, .random:hover {
     width: 100%;
 }
 
+/* buttons */
+
 .random {
     clip-path: circle(29px at center);
     width: 80px;
     margin: 4px 2px;
+    /* you can't put a border for this button */
 }
-
-/* buttons */
 
 .button-prop {
     width: 60px;
@@ -37,6 +38,7 @@ button:hover, .random:hover {
     font-size: 16px;
     margin: 4px 2px;
     border-radius: 50%;
+    border: 0.1px solid black;
 }
 
 .red {
