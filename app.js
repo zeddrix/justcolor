@@ -113,10 +113,10 @@ const addNewColorButton = () => {
     newButton.style.backgroundColor = newColor;
     newButton.addEventListener('click', () => changeColor(newColor));
     parent.append(newButton);
-    console.log(newColor);
+    console.log(newButton)
 }
 
 // const addNewColorButton = () => {
-//     const newButton = 
-//     document.body.style.backgroundColor = 
-// }
+    //     const newButton = 
+    //     document.body.style.backgroundColor = 
+    // }
