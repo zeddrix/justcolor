@@ -54,11 +54,6 @@ button,
   transition: all 0.5s;
 }
 
-button:hover,
-.random:hover {
-  transform: scale(1.1);
-}
-
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -83,15 +78,26 @@ button:hover,
   height: 60px;
   border: none;
   color: black;
-  /* padding: 20px 20px; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
   border-radius: 50%;
-  border: 0.1px solid lightgrey;
+  border: none;
+  cursor:pointer;
+  text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); 
+  -moz-box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey, 0px 10px 5px #999;
+  -webkit-box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey, 0px 10px 5px #999;
+  box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey, 0px 10px 5px #999;
 }
+  
+.button-prop:hover, .button-prop:focus {
+  color:#dfe7ea;
+  -webkit-box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey, 0px 2px 5px #999;
+  -moz-box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey, 0px 2px 5px #999;
+  box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey, 0px 2px 5px #999;
+  }
 
 .red {
   background-color: rgb(255, 0, 0);
