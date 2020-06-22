@@ -7,12 +7,6 @@ h1 {
   text-align: center;
 }
 
-button,
-.random {
-  outline-style: none;
-  transition: all 0.5s;
-}
-
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -23,16 +17,9 @@ button,
   width: 100%;
 }
 
-/* buttons */
-
-.random {
-  clip-path: circle(29px at center);
-  width: 80px;
-  margin: 4px 2px;
-  /* you can't put a border for this button */
-}
-
-.button-prop {
+img, button {
+  outline-style: none;
+  transition: all 0.5s;
   width: 60px;
   height: 60px;
   border: none;
@@ -54,8 +41,8 @@ button,
     0px 10px 5px #999;
 }
 
-.button-prop:hover,
-.button-prop:focus {
+img, button:hover,
+img, button:focus {
   color: #dfe7ea;
   -webkit-box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey,
     0px 2px 5px #999;
@@ -113,6 +100,12 @@ button,
   background: rgb(255, 174, 66);
 }
 
-.add-button {
+.random {
+  clip-path: circle(29px at center);
+  width: 80px;
+  margin: 7px 0;
+}
+
+.add-btn {
   background: #999 linear-gradient(to right, white, black);
 }
