@@ -1,51 +1,10 @@
 body {
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
+  font-family: "Architects Daughter", cursive;
 }
 
-@media only screen and (max-width: 361px) {
-  h1 {
-    text-align: center;
-    font-family: cursive;
-    font-size: 5em;
-    padding: 5% 0;
-  }
-}
-
-@media only screen and (min-width: 362px) {
-  h1 {
-    text-align: center;
-    font-family: cursive;
-    font-size: 5em;
-    padding: 5% 0;
-  }
-}
-
-@media only screen and (min-width: 700px) {
-  h1 {
-    text-align: center;
-    font-family: cursive;
-    font-size: 5em;
-    padding: 5% 0;
-  }
-}
-
-@media only screen and (min-width: 700px) {
-  h1 {
-    text-align: center;
-    font-family: cursive;
-    font-size: 10em;
-    padding: 20% 0;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  h1 {
-    text-align: center;
-    font-family: cursive;
-    font-size: 12em;
-    padding: 2% 0;
-  }
+h1 {
+  text-align: center;
 }
 
 button,
