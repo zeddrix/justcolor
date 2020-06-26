@@ -1,9 +1,6 @@
 body {
   overflow: hidden;
   font-family: "Architects Daughter", cursive;
-}
-
-h1 {
   text-align: center;
 }
 
@@ -17,7 +14,7 @@ h1 {
   width: 100%;
 }
 
-img, button {
+button {
   outline-style: none;
   transition: all 0.5s;
   width: 60px;
@@ -41,8 +38,8 @@ img, button {
     0px 10px 5px #999;
 }
 
-img, button:hover,
-img, button:focus {
+button:hover,
+button:focus {
   color: #dfe7ea;
   -webkit-box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey,
     0px 2px 5px #999;
@@ -101,9 +98,8 @@ img, button:focus {
 }
 
 .random {
-  clip-path: circle(29px at center);
-  width: 80px;
-  margin: 7px 0;
+  min-height:100%;
+  background:conic-gradient(from 45deg,red,blue,green,yellow,red);
 }
 
 .add-btn {
