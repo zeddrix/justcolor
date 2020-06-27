@@ -1,33 +1,33 @@
 @media only screen and (max-width: 361px) {
-  h1 {
+  .just-color-title {
     font-size: 5em;
     padding: 5% 0;
   }
 }
 
 @media only screen and (min-width: 362px) {
-  h1 {
+  .just-color-title {
     font-size: 5em;
     padding: 5% 0;
   }
 }
 
 @media only screen and (min-width: 700px) {
-  h1 {
+  .just-color-title {
     font-size: 5em;
     padding: 5% 0;
   }
 }
 
 @media only screen and (min-width: 700px) {
-  h1 {
+  .just-color-title {
     font-size: 10em;
     padding: 20% 0;
   }
 }
 
 @media only screen and (min-width: 1000px) {
-  h1 {
+  .just-color-title {
     font-size: 12em;
     padding: 2% 0;
   }
