@@ -9,44 +9,49 @@ body {
   flex-wrap: wrap;
   align-content: flex-end;
   position: absolute;
-  bottom: 20px;
+  bottom: 1.25rem;
   justify-content: center;
   width: 100%;
 }
 
 button {
-  outline-style: none;
-  transition: all 0.5s;
-  width: 60px;
-  height: 60px;
-  border: none;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  width: 3.75rem;
+  height: 3.75rem;
+  margin: 0.25rem 0.125rem;
   border-radius: 50%;
+  transition: all 0.5s;
   border: none;
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
   cursor: pointer;
   text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey,
+    0px 10px 5px #999;
   -moz-box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey,
     0px 10px 5px #999;
   -webkit-box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey,
-    0px 10px 5px #999;
-  box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey,
     0px 10px 5px #999;
 }
 
 button:hover,
 button:focus {
   color: #dfe7ea;
+  box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey,
+    0px 2px 5px #999;
   -webkit-box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey,
     0px 2px 5px #999;
   -moz-box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey,
     0px 2px 5px #999;
-  box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey,
-    0px 2px 5px #999;
+}
+
+.random {
+  background: conic-gradient(from 45deg, red, blue, green, yellow, red);
+}
+
+.add-btn {
+  background: #999 linear-gradient(to bottom, white, black);
 }
 
 .red {
@@ -95,13 +100,4 @@ button:focus {
 
 .yelloworange {
   background: rgb(255, 174, 66);
-}
-
-.random {
-  min-height:100%;
-  background:conic-gradient(from 45deg,red,blue,green,yellow,red);
-}
-
-.add-btn {
-  background: #999 linear-gradient(to right, white, black);
 }
