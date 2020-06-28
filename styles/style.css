@@ -2,16 +2,28 @@ body {
   overflow: hidden;
   font-family: "Architects Daughter", cursive;
   text-align: center;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.just-color-title {
+  font-size: 5rem;
+  margin-top: 4rem;
+  position: relative;
+  vertical-align: middle;
 }
 
 .container {
+  bottom: 1.25rem;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-end;
   position: absolute;
-  bottom: 1.25rem;
   justify-content: center;
-  width: 100%;
 }
 
 button {
