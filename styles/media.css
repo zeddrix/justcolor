@@ -4,9 +4,6 @@
     height: 70vh;
     font-size: 4rem;
   }
-  .container {
-    bottom: 2rem;
-  }
   button {
     width: 2.5rem;
     height: 2.5rem;
@@ -20,7 +17,7 @@
     font-size: 10rem;
   }
   .container {
-    bottom: 3rem;
+    height: 30vh;
   }
   button {
     width: 5.5rem;
@@ -32,9 +29,6 @@
 @media only screen and (min-width: 1024px) and (min-height: 1366px) {
   .just-color-title {
     font-size: 15rem;
-  }
-  .container {
-    bottom: 5rem;
   }
   button {
     width: 7.5rem;
@@ -49,7 +43,7 @@
     font-size: 13rem;
   }
   .container {
-    bottom: 2rem;
+    height: 26vh;
   }
   button {
     width: 4.5rem;
