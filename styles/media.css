@@ -1,8 +1,8 @@
 /* MOBILE */
-@media only screen and (max-width: 359px) and (max-height: 639px) {
+@media only screen and (max-width: 359px) {
   .just-color-title {
-    height: 70vh;
     font-size: 4rem;
+    height: 70vh;
   }
   button {
     width: 2.5rem;
@@ -12,23 +12,23 @@
 }
 
 /* IPAD */
-@media only screen and (min-width: 768px) and (min-height: 1024px) {
+@media only screen and (min-width: 768px) {
   .just-color-title {
     font-size: 10rem;
-  }
-  .container {
-    height: 30vh;
   }
   button {
     width: 5.5rem;
     height: 5.5rem;
   }
+  .container {
+    height: 30vh;
+  }
 }
 
 /* IPAD PRO */
-@media only screen and (min-width: 1024px) and (min-height: 1366px) {
+@media only screen and (min-width: 1024px) {
   .just-color-title {
-    font-size: 15rem;
+    font-size: 12rem;
   }
   button {
     width: 7.5rem;
@@ -37,17 +37,17 @@
 }
 
 /* DESKTOP */
-@media only screen and (min-width: 1200px) and (min-height: 680px) {
+@media only screen and (min-width: 1200px) {
   .just-color-title {
-    height: 85vh;
     font-size: 13rem;
-  }
-  .container {
-    height: 26vh;
+    height: 85vh;
   }
   button {
     width: 4.5rem;
     height: 4.5rem;
+  }
+  .container {
+    height: 26vh;
   }
   ::-webkit-scrollbar {
     width: 5px;
