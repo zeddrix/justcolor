@@ -83,49 +83,49 @@ button:focus {
 }
 
 .red {
-  background: rgb(255, 0, 0);
-}
-
-.yellow {
-  background: rgb(255, 255, 0);
+  background: red;
 }
 
 .blue {
-  background: rgb(0, 119, 255);
+  background: blue;
+}
+
+.yellow {
+  background: yellow;
 }
 
 .green {
-  background: rgb(0, 128, 0);
+  background: green;
 }
 
 .purple {
-  background: rgb(128, 0, 128);
+  background: purple;
 }
 
 .orange {
-  background: rgb(255, 165, 0);
+  background: orange;
 }
 
 .bluegreen {
-  background: rgb(13, 152, 186);
+  background: #0d98ba;
 }
 
 .blueviolet {
-  background: rgb(138, 43, 226);
+  background: blueviolet;
 }
 
 .yellowgreen {
-  background: rgb(154, 205, 50);
+  background: yellowgreen;
 }
 
 .redviolet {
-  background: rgb(199, 21, 133);
+  background: #c71585;
 }
 
 .redorange {
-  background: rgb(255, 102, 0);
+  background: #ff6600;
 }
 
 .yelloworange {
-  background: rgb(255, 174, 66);
+  background: #ffae42;
 }

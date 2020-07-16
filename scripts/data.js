@@ -1,62 +1,62 @@
 colors = [
   {
     name: "red",
+    label: "red",
     colorValue: "red",
-    label: "r",
-  },
-  {
-    name: "yellow",
-    colorValue: "yellow",
-    label: "y",
   },
   {
     name: "blue",
-    colorValue: "#0077FF",
-    label: "b",
+    label: "blue",
+    colorValue: "blue",
+  },
+  {
+    name: "yellow",
+    label: "yellow",
+    colorValue: "yellow",
   },
   {
     name: "green",
+    label: "green",
     colorValue: "green",
-    label: "g",
   },
   {
     name: "purple",
-    colorValue: "#800080",
-    label: "p",
+    label: "purple",
+    colorValue: "purple",
   },
   {
     name: "orange",
-    colorValue: "#FFA500",
-    label: "o",
+    label: "orange",
+    colorValue: "orange",
   },
   {
     name: "bluegreen",
+    label: "bluegreen",
     colorValue: "#0d98ba",
-    label: "bg",
   },
   {
     name: "blueviolet",
-    colorValue: "#8a2be2",
-    label: "bv",
+    label: "blue violet",
+    colorValue: "blueviolet",
   },
   {
     name: "yellowgreen",
-    colorValue: "#9acd32",
-    label: "yg",
+    label: "yellow green",
+    colorValue: "yellowgreen",
   },
   {
     name: "redviolet",
+    label: "red violet",
     colorValue: "#c71585",
-    label: "rv",
   },
   {
     name: "redorange",
+    label: "redorange",
     colorValue: "#ff6600",
-    label: "ro",
   },
   {
     name: "yelloworange",
+    label: "yellow orange",
     colorValue: "#ffae42",
-    label: "yo",
   },
 ];
