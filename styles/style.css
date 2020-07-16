@@ -64,20 +64,12 @@ button {
   text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey,
     0px 10px 5px #999;
-  -moz-box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey,
-    0px 10px 5px #999;
-  -webkit-box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey,
-    0px 10px 5px #999;
 }
 
 button:hover,
 button:focus {
   color: #dfe7ea;
   box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey,
-    0px 2px 5px #999;
-  -webkit-box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey,
-    0px 2px 5px #999;
-  -moz-box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey,
     0px 2px 5px #999;
 }
 
