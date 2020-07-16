@@ -87,6 +87,7 @@ button:focus {
 
 .add-btn {
   background: #999 linear-gradient(to bottom, white, black);
+  font-size: 1rem;
 }
 
 .red {
