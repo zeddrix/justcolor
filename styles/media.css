@@ -5,8 +5,8 @@
     height: 70vh;
   }
   button {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     margin: 0.1rem;
   }
 }
@@ -17,11 +17,14 @@
     font-size: 10rem;
   }
   button {
-    width: 5.5rem;
-    height: 5.5rem;
+    width: 6rem;
+    height: 6rem;
   }
   .container {
     height: 30vh;
+  }
+  .add-btn {
+    font-size: 2rem;
   }
 }
 
@@ -31,8 +34,11 @@
     font-size: 12rem;
   }
   button {
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  .add-btn {
+    font-size: 2.5rem;
   }
 }
 
