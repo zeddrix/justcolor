@@ -51,6 +51,9 @@ h1 {
 }
 
 button {
+  font-family: inherit;
+  font-size: 0.8rem;
+  line-height: 0.9;
   width: 3.75rem;
   height: 3.75rem;
   margin: 0.25rem 0.125rem;
@@ -80,6 +83,7 @@ button:focus {
 .add-btn {
   background: #999 linear-gradient(to bottom, white, black);
   font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .red {

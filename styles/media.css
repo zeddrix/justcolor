@@ -8,9 +8,10 @@
     width: 3rem;
     height: 3rem;
     margin: 0.1rem;
+    font-size: 0.7rem;
   }
   .add-btn {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -22,12 +23,13 @@
   button {
     width: 6rem;
     height: 6rem;
+    font-size: 1.4rem;
   }
   .container {
     height: 30vh;
   }
   .add-btn {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -39,9 +41,10 @@
   button {
     width: 8rem;
     height: 8rem;
+    font-size: 1.7rem;
   }
   .add-btn {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 }
 
@@ -54,11 +57,12 @@
   button {
     width: 4.5rem;
     height: 4.5rem;
+    font-size: 1rem;
   }
   .container {
     height: 26vh;
   }
   .add-btn {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 }

@@ -40,7 +40,7 @@ const parent = document.querySelector(".container");
 
 for (let c = 0; c < arrayLength; c++) {
   const button = document.createElement("button");
-  // button.innerText = colors[c].label;
+  button.innerText = colors[c].label;
   button.classList.add(colors[c].name);
   button.addEventListener("click", () => changeColor(colors[c].colorValue));
   parent.append(button);

@@ -31,7 +31,7 @@ colors = [
   },
   {
     name: "bluegreen",
-    label: "bluegreen",
+    label: "blue green",
     colorValue: "#0d98ba",
   },
   {
@@ -51,7 +51,7 @@ colors = [
   },
   {
     name: "redorange",
-    label: "redorange",
+    label: "red orange",
     colorValue: "#ff6600",
   },
   {
