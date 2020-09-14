@@ -12,5 +12,6 @@ document.addEventListener("click", function (event) {
 document.addEventListener("keypress", (event) => {
   if (event.keyCode === 13) {
     getNewColorInputName();
+    closeNewColorModal();
   }
 });

@@ -46,28 +46,35 @@ for (let c = 0; c < arrayLength; c++) {
   parent.append(button);
 }
 
+const newButton = document.createElement("button");
+
 const addNewColorButton = () => {
-  const newButton = document.createElement("button");
   const newColor = document.body.style.backgroundColor;
-  // newButton.innerText = "";
   newButton.classList.add("button-prop");
   newButton.style.backgroundColor = newColor;
   newButton.addEventListener("click", () => changeColor(newColor));
   parent.append(newButton);
-  console.log(newButton);
-};
-
-const showNewColorModal = () => {
-  const newColorModal = document.querySelector(".new-color-modal");
-  const backdrop = document.querySelector("#backdrop");
-  backdrop.style.display = "block";
-  newColorModal.style.display = "block";
+  console.log("NEW COLOR BUTTON:", newButton);
 };
 
 const getNewColorInputName = () => {
   const newColorInputName = document.querySelector("#new-color-input-name")
     .value;
-  console.log(newColorInputName);
+  console.log("NEW COLOR INPUT NAME:", newColorInputName);
+  newButton.textContent = newColorInputName;
+};
+
+const newColorModal = document.querySelector(".new-color-modal");
+const backdrop = document.querySelector("#backdrop");
+
+const showNewColorModal = () => {
+  backdrop.style.display = "block";
+  newColorModal.style.display = "block";
+};
+
+const closeNewColorModal = () => {
+  backdrop.style.display = "none";
+  newColorModal.style.display = "none";
 };
 
 // const addNewColorButton = () => {
