@@ -36,13 +36,11 @@ h1 {
 }
 
 .container {
-  /* border-top: 5px dashed black; */
+  border-top: 2px solid white;
   height: 38vh;
   bottom: 0;
   width: 100vw;
   display: flex;
-  /* flex-direction: row;
-  flex-wrap: wrap; */
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-end;
@@ -135,16 +133,21 @@ button:focus {
   background: #ffae42;
 }
 
-::-webkit-scrollbar {
+.container::-webkit-scrollbar {
   width: 5px;
 }
-::-webkit-scrollbar-track {
+.container::-webkit-scrollbar-track {
   background: none;
 }
-::-webkit-scrollbar-thumb {
-  background: whitesmoke;
+.container::-webkit-scrollbar-thumb {
+  background: #f5f5f573;
   border-radius: 50px;
+  visibility: hidden;
 }
-::-webkit-scrollbar-thumb:hover {
+.container::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.container:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
 }
