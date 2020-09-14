@@ -64,6 +64,12 @@ const showNewColorModal = () => {
   newColorModal.style.display = "block";
 };
 
+const getNewColorInputName = () => {
+  const newColorInputName = document.querySelector("#new-color-input-name")
+    .value;
+  console.log(newColorInputName);
+};
+
 // const addNewColorButton = () => {
 //     const newButton =
 //     document.body.style.backgroundColor =

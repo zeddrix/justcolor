@@ -134,6 +134,7 @@ button:focus {
   background: #ffae42;
 }
 
+/* MODAL */
 #backdrop {
   background: #00000099;
   position: fixed;
@@ -159,6 +160,15 @@ button:focus {
   border-radius: 10px;
   animation-name: zoomIn;
   animation-duration: 0.1s;
+}
+
+#okay-btn {
+  padding: 0.5rem 0.5rem;
+  width: 5rem;
+  margin: 1rem auto 0 auto;
+  background: darkblue;
+  color: white;
+  border-radius: 5px;
 }
 
 /* SCROLLBAR */
