@@ -31,6 +31,15 @@ body {
   position: absolute;
 }
 
+.fade-out {
+  animation: fadeOut 3s;
+  -webkit-animation: fadeOut 3s;
+  -moz-animation: fadeOut 3s;
+  -o-animation: fadeOut 3s;
+  -ms-animation: fadeOut 3s;
+  opacity: 0;
+}
+
 h1 {
   margin: 0;
 }

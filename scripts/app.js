@@ -1,3 +1,9 @@
+const justColorTitleToggle = () => {
+  const justColorTitle = document.querySelector(".just-color-title");
+  justColorTitle.classList.toggle("fade-out");
+  console.log("JUST COLOR title toggled!");
+};
+
 const changeColor = (color) => {
   document.body.style.backgroundColor = color;
 };

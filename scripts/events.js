@@ -6,6 +6,8 @@ document.addEventListener("click", function (event) {
     addNewColorButton();
   } else if (event.target.matches("#okay-btn")) {
     getNewColorInputName();
+  }else if (event.target.matches(".just-color-title")) {
+    justColorTitleToggle();
   }
 });
 
