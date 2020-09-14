@@ -57,6 +57,13 @@ const addNewColorButton = () => {
   console.log(newButton);
 };
 
+const showNewColorModal = () => {
+  const newColorModal = document.querySelector(".new-color-modal");
+  const backdrop = document.querySelector("#backdrop");
+  backdrop.style.display = "block";
+  newColorModal.style.display = "block";
+};
+
 // const addNewColorButton = () => {
 //     const newButton =
 //     document.body.style.backgroundColor =

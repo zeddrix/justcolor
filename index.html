@@ -12,15 +12,22 @@
       href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
   </head>
   <body>
+    <div id="backdrop"></div>
     <h1 class="just-color-title">Just Color!</h1>
     <div class="container">
       <!-- <button class="red button-prop" onclick="changeColor('rgb(255, 0, 0)')">r</button> -->
       <button class="random"></button>
-      <button class="add-btn">
-        +
-      </button>
+      <button class="add-btn">+</button>
+    </div>
+    <div class="modal">
+      <p>Name your new color:</p>
+      <input id="new-color-input-name" type="text" />
     </div>
   </body>
   <script src="scripts/data.js"></script>

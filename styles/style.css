@@ -75,6 +75,7 @@ button:focus {
     0px 2px 5px #999;
 }
 
+/* COLOR BUTTONS */
 .random {
   background: conic-gradient(from 45deg, red, blue, green, yellow, red);
 }
@@ -133,6 +134,34 @@ button:focus {
   background: #ffae42;
 }
 
+#backdrop {
+  background: #00000099;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal {
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: fixed;
+  z-index: 2;
+  width: 90%;
+  overflow: auto;
+  background: white;
+  padding: 4rem 1rem;
+  border-radius: 10px;
+  animation-name: zoomIn;
+  animation-duration: 0.1s;
+}
+
+/* SCROLLBAR */
 .container::-webkit-scrollbar {
   width: 5px;
 }
