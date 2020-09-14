@@ -52,21 +52,22 @@ for (let c = 0; c < arrayLength; c++) {
   parent.append(button);
 }
 
-const newButton = document.createElement("button");
+let newButton;
 
 const addNewColorButton = () => {
+  newButton = document.createElement("button");
   const newColor = document.body.style.backgroundColor;
   newButton.classList.add("button-prop");
   newButton.style.backgroundColor = newColor;
   newButton.addEventListener("click", () => changeColor(newColor));
   parent.append(newButton);
-  console.log("NEW COLOR BUTTON:", newButton);
+  console.log("new color BUTTON:", newButton);
 };
 
 const getNewColorInputName = () => {
   const newColorInputName = document.querySelector("#new-color-input-name")
     .value;
-  console.log("NEW COLOR INPUT NAME:", newColorInputName);
+  console.log("new color INPUT NAME:", newColorInputName);
   newButton.textContent = newColorInputName;
 };
 
