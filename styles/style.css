@@ -180,6 +180,16 @@ button:focus {
   border-radius: 5px;
 }
 
+.name-color-p {
+  margin: 0;
+}
+
+.red-p {
+  color: blue;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
 /* SCROLLBAR */
 .container::-webkit-scrollbar {
   width: 5px;

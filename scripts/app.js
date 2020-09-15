@@ -8,11 +8,6 @@ const changeColor = (color) => {
   document.body.style.backgroundColor = color;
 };
 
-// const red = document.querySelector('.red');
-// red.addEventListener('click', () => {
-//     document.body.style.backgroundColor = 'red';
-// })
-
 const rgbToHex = function (rgb) {
   let hex = Number(rgb).toString(16);
   if (hex.length < 2) {
@@ -64,19 +59,20 @@ const addNewColorButton = () => {
   console.log("new color BUTTON:", newButton);
 };
 
+const newColorInputName = document.querySelector("#new-color-input-name");
 const getNewColorInputName = () => {
-  const newColorInputName = document.querySelector("#new-color-input-name")
-    .value;
-  console.log("new color INPUT NAME:", newColorInputName);
-  newButton.textContent = newColorInputName;
+  const newColorInputNameValue = newColorInputName.value;
+  console.log("new color INPUT NAME:", newColorInputNameValue);
+  newButton.textContent = newColorInputNameValue;
 };
 
 const newColorModal = document.querySelector(".new-color-modal");
 const backdrop = document.querySelector("#backdrop");
-
 const showNewColorModal = () => {
   backdrop.style.display = "block";
   newColorModal.style.display = "block";
+  newColorInputName.focus();
+  newColorInputName.value = "";
 };
 
 const closeNewColorModal = () => {
