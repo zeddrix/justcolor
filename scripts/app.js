@@ -71,9 +71,21 @@ const addNewColorButton = () => {
 const newColorInput = document.querySelector("#new-color-input");
 
 const getNewColorInput = () => {
-  console.log("NEW COLOR INPUT NAME:", newColorInput.value);
   // insert newColorInput.value as a label for the newButton
-  newButton.textContent = newColorInput.value;
+  const newColorInputValue = newColorInput.value;
+  newButton.textContent = newColorInputValue;
+  // console.log("NEW COLOR INPUT NAME:", newColorInput.value);
+
+  let newColorNames;
+
+  if (localStorage.getItem("newColorNames") === null) {
+    newColorNames = [];
+  } else {
+    newColorNames = JSON.parse(localStorage.getItem("newColorNames"));
+  }
+
+  newColorNames.push(newColorInputValue);
+  localStorage.setItem("newColorNames", JSON.stringify(newColorNames));
 };
 
 const newColorModal = document.querySelector(".new-color-modal");
