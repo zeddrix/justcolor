@@ -44,7 +44,7 @@ h1 {
   margin: 0;
 }
 
-.container {
+.colors-container {
   border-top: 2px solid white;
   height: 38vh;
   bottom: 0;
@@ -191,21 +191,21 @@ button:focus {
 }
 
 /* SCROLLBAR */
-.container::-webkit-scrollbar {
+.colors-container::-webkit-scrollbar {
   width: 5px;
 }
-.container::-webkit-scrollbar-track {
+.colors-container::-webkit-scrollbar-track {
   background: none;
 }
-.container::-webkit-scrollbar-thumb {
+.colors-container::-webkit-scrollbar-thumb {
   background: #f5f5f573;
   border-radius: 50px;
   visibility: hidden;
 }
-.container::-webkit-scrollbar-thumb:hover {
+.colors-container::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
-.container:hover::-webkit-scrollbar-thumb {
+.colors-container:hover::-webkit-scrollbar-thumb {
   visibility: visible;
 }

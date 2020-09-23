@@ -1,62 +1,62 @@
-colors = [
+const colors = [
   {
     name: "red",
     label: "red",
-    colorValue: "red",
+    colorHex: "#FF0000",
   },
   {
     name: "blue",
     label: "blue",
-    colorValue: "blue",
+    colorHex: "#0000FF",
   },
   {
     name: "yellow",
     label: "yellow",
-    colorValue: "yellow",
+    colorHex: "#FFFF00",
   },
   {
     name: "green",
     label: "green",
-    colorValue: "green",
+    colorHex: "#00FF00",
   },
   {
     name: "purple",
     label: "purple",
-    colorValue: "purple",
+    colorHex: "#800080",
   },
   {
     name: "orange",
     label: "orange",
-    colorValue: "orange",
+    colorHex: "#ffa500",
   },
   {
     name: "bluegreen",
     label: "blue green",
-    colorValue: "#0d98ba",
+    colorHex: "#0d98ba",
   },
   {
     name: "blueviolet",
     label: "blue violet",
-    colorValue: "blueviolet",
+    colorHex: "#8a2be2",
   },
   {
     name: "yellowgreen",
     label: "yellow green",
-    colorValue: "yellowgreen",
+    colorHex: "#9acd32",
   },
   {
     name: "redviolet",
     label: "red violet",
-    colorValue: "#c71585",
+    colorHex: "#c71585",
   },
   {
     name: "redorange",
     label: "red orange",
-    colorValue: "#ff6600",
+    colorHex: "#ff6600",
   },
   {
     name: "yelloworange",
     label: "yellow orange",
-    colorValue: "#ffae42",
+    colorHex: "#ffae42",
   },
 ];

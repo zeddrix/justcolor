@@ -5,16 +5,16 @@ document.addEventListener("click", function (event) {
     showNewColorModal();
     addNewColorButton();
   } else if (event.target.matches("#okay-btn")) {
-    getNewColorInputName();
+    getNewColorInput();
     closeNewColorModal();
-  }else if (event.target.matches(".just-color-title")) {
+  } else if (event.target.matches(".just-color-title")) {
     justColorTitleToggle();
   }
 });
 
 document.addEventListener("keypress", (event) => {
   if (event.keyCode === 13) {
-    getNewColorInputName();
+    getNewColorInput();
     closeNewColorModal();
   }
 });

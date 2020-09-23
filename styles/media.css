@@ -25,7 +25,7 @@
     height: 6rem;
     font-size: 1.4rem;
   }
-  .container {
+  .colors-container {
     height: 30vh;
   }
   .add-btn {
@@ -59,7 +59,7 @@
     height: 4.5rem;
     font-size: 1rem;
   }
-  .container {
+  .colors-container {
     height: 26vh;
   }
   .add-btn {
