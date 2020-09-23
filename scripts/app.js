@@ -88,6 +88,30 @@ const getNewColorInput = () => {
   localStorage.setItem("newColorNames", JSON.stringify(newColorNames));
 };
 
+const getNewColorNames = () => {
+  if (localStorage.getItem("newColorNames") === null) {
+    newColorNames = [];
+  } else {
+    newColorNames = JSON.parse(localStorage.getItem("newColorNames"));
+  }
+
+  newColorNames.forEach((newColorName) => {
+    const newBackgroundColor = document.body.style.backgroundColor;
+
+    newButton = document.createElement("button");
+    newButton.style.backgroundColor = newBackgroundColor;
+    newButton.addEventListener("click", () => changeColor(newBackgroundColor));
+    newButton.textContent = newColorName;
+    colorsContainer.append(newButton);
+  });
+};
+
+const DOMContentLoaded = () => {
+  document.addEventListener("DOMContentLoaded", getNewColorNames);
+};
+
+DOMContentLoaded();
+
 const newColorModal = document.querySelector(".new-color-modal");
 const backdrop = document.querySelector("#backdrop");
 
