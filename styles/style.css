@@ -91,7 +91,6 @@ button:focus {
 
 .add-btn {
   background: #999 linear-gradient(to bottom, white, black);
-  font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -165,29 +164,32 @@ button:focus {
   width: 90%;
   overflow: auto;
   background: white;
-  padding: 4rem 1rem;
+  padding: 3.5rem 1rem;
   border-radius: 10px;
   animation-name: zoomIn;
   animation-duration: 0.1s;
 }
 
+.name-color-p {
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+
+#new-color-input {
+  font-family: 'Comic Neue', cursive;
+  text-align: center;
+  font-size: 1rem;
+  width: 10rem;
+}
+
 #okay-btn {
-  padding: 0.5rem 0.5rem;
-  width: 5rem;
+  padding: 0.7rem 1.5rem;
+  display: inline-block;
   margin: 1rem auto 0 auto;
   background: darkblue;
   color: white;
   border-radius: 5px;
-}
-
-.name-color-p {
-  margin: 0;
-}
-
-.red-p {
-  color: blue;
-  margin: 0;
-  font-size: 0.8rem;
+  cursor: pointer;
 }
 
 /* SCROLLBAR */

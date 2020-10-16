@@ -31,6 +31,18 @@
   .add-btn {
     font-size: 1.75rem;
   }
+  .modal {
+    width: 60%;
+    padding: 5rem 1rem;
+  }
+  .name-color-p,
+  #new-color-input,
+  #okay-btn {
+    font-size: 1.5rem;
+  }
+  #new-color-input {
+    width: 13rem;
+  }
 }
 
 /* IPAD PRO */
@@ -45,6 +57,18 @@
   }
   .add-btn {
     font-size: 2.3rem;
+  }
+  .modal {
+    width: 60%;
+    padding: 7rem 1rem;
+  }
+  .name-color-p,
+  #new-color-input,
+  #okay-btn {
+    font-size: 2rem;
+  }
+  #new-color-input {
+    width: 13rem;
   }
 }
 
@@ -64,5 +88,17 @@
   }
   .add-btn {
     font-size: 1.1rem;
+  }
+  .modal {
+    width: 30%;
+    padding: 4rem 1rem;
+  }
+  .name-color-p,
+  #new-color-input,
+  #okay-btn {
+    font-size: 1.3rem;
+  }
+  #new-color-input {
+    width: 12rem;
   }
 }
