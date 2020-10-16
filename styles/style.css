@@ -182,14 +182,25 @@ button:focus {
   width: 10rem;
 }
 
-#okay-btn {
+.modal-btn {
   padding: 0.7rem 1.5rem;
   display: inline-block;
   margin: 1rem auto 0 auto;
-  background: darkblue;
   color: white;
   border-radius: 5px;
   cursor: pointer;
+}
+
+#okay-btn {
+  background: darkblue;
+}
+
+#leave-blank-btn {
+  background: black;
+}
+
+#cancel-btn {
+  background: #f07f92;
 }
 
 /* SCROLLBAR */

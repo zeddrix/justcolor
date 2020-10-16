@@ -37,7 +37,7 @@
   }
   .name-color-p,
   #new-color-input,
-  #okay-btn {
+  .modal-btn {
     font-size: 1.5rem;
   }
   #new-color-input {
@@ -64,7 +64,7 @@
   }
   .name-color-p,
   #new-color-input,
-  #okay-btn {
+  .modal-btn {
     font-size: 2rem;
   }
   #new-color-input {
@@ -95,7 +95,7 @@
   }
   .name-color-p,
   #new-color-input,
-  #okay-btn {
+  .modal-btn {
     font-size: 1.3rem;
   }
   #new-color-input {
