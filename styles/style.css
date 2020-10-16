@@ -180,6 +180,8 @@ button:focus {
   text-align: center;
   font-size: 1rem;
   width: 10rem;
+  border: 1px solid black;
+  border-radius: 3px;
 }
 
 .modal-btn {
@@ -195,12 +197,19 @@ button:focus {
   background: darkblue;
 }
 
+.name-required {
+  animation-name: shakeX;
+  animation-duration: 0.75s;
+  background: #ff7990;
+  outline-color: #b80707;
+}
+
 #leave-blank-btn {
   background: black;
 }
 
 #cancel-btn {
-  background: #f07f92;
+  background: #f86880;
 }
 
 /* SCROLLBAR */

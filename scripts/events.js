@@ -6,7 +6,6 @@ document.addEventListener("click", function (event) {
     addNewColorButton();
   } else if (event.target.matches("#okay-btn")) {
     getNewColorInput();
-    closeNewColorModal();
   } else if (event.target.matches(".just-color-title")) {
     justColorTitleToggle();
   }
@@ -15,6 +14,5 @@ document.addEventListener("click", function (event) {
 document.addEventListener("keypress", (event) => {
   if (event.keyCode === 13) {
     getNewColorInput();
-    closeNewColorModal();
   }
 });

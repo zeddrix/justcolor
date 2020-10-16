@@ -75,23 +75,34 @@ const newColorInput = document.querySelector("#new-color-input");
 const getNewColorInput = () => {
   // insert newColorInput.value as a label for the newButton
   const newColorInputValue = newColorInput.value;
-  newButton.textContent = newColorInputValue;
-  // console.log("NEW COLOR INPUT NAME:", newColorInput.value);
-  const newColorNamesObject = {
-    newColorName: newColorInputValue,
-    newColorValue: newBackgroundColor,
-  };
+  if (newColorInputValue !== "") {
+    newButton.textContent = newColorInputValue;
+    // console.log("NEW COLOR INPUT NAME:", newColorInput.value);
+    const newColorNamesObject = {
+      newColorName: newColorInputValue,
+      newColorValue: newBackgroundColor,
+    };
 
-  let newColorNames;
+    let newColorNames;
 
-  if (localStorage.getItem("newColorNames") === null) {
-    newColorNames = [];
-  } else {
-    newColorNames = JSON.parse(localStorage.getItem("newColorNames"));
+    if (localStorage.getItem("newColorNames") === null) {
+      newColorNames = [];
+    } else {
+      newColorNames = JSON.parse(localStorage.getItem("newColorNames"));
+    }
+
+    newColorNames.push(newColorNamesObject);
+    localStorage.setItem("newColorNames", JSON.stringify(newColorNames));
+
+    closeNewColorModal();
+  } else if (newColorInputValue === "") {
+    newColorInput.classList.add("name-required");
+    newColorInput.focus();
+
+    setTimeout(function () {
+      newColorInput.classList.remove("name-required");
+    }, 300);
   }
-
-  newColorNames.push(newColorNamesObject);
-  localStorage.setItem("newColorNames", JSON.stringify(newColorNames));
 };
 
 const getNewColorNames = () => {
