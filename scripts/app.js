@@ -56,16 +56,18 @@ for (let c = 0; c < colors.length; c++) {
 }
 
 let newButton;
+let newBackgroundColor;
 
 const addNewColorButton = () => {
   newButton = document.createElement("button");
   // get current background color of page
-  const newBackgroundColor = document.body.style.backgroundColor;
+  newBackgroundColor = document.body.style.backgroundColor;
   // new button's background color
   newButton.style.backgroundColor = newBackgroundColor;
   // upon click, change page's background color USING the button's background color
   newButton.addEventListener("click", () => changeColor(newBackgroundColor));
   colorsContainer.append(newButton);
+  console.log("newBackgroundColor", newBackgroundColor);
 };
 
 const newColorInput = document.querySelector("#new-color-input");
@@ -75,6 +77,10 @@ const getNewColorInput = () => {
   const newColorInputValue = newColorInput.value;
   newButton.textContent = newColorInputValue;
   // console.log("NEW COLOR INPUT NAME:", newColorInput.value);
+  const newColorNamesObject = {
+    newColorName: newColorInputValue,
+    newColorValue: newBackgroundColor,
+  };
 
   let newColorNames;
 
@@ -84,7 +90,7 @@ const getNewColorInput = () => {
     newColorNames = JSON.parse(localStorage.getItem("newColorNames"));
   }
 
-  newColorNames.push(newColorInputValue);
+  newColorNames.push(newColorNamesObject);
   localStorage.setItem("newColorNames", JSON.stringify(newColorNames));
 };
 
@@ -95,15 +101,15 @@ const getNewColorNames = () => {
     newColorNames = JSON.parse(localStorage.getItem("newColorNames"));
   }
 
-  newColorNames.forEach((newColorName) => {
-    const newBackgroundColor = document.body.style.backgroundColor;
-
+  for (let i = 0; i < newColorNames.length; i++) {
     newButton = document.createElement("button");
-    newButton.style.backgroundColor = newBackgroundColor;
-    newButton.addEventListener("click", () => changeColor(newBackgroundColor));
-    newButton.textContent = newColorName;
+    newButton.style.backgroundColor = newColorNames[i].newColorValue;
+    newButton.addEventListener("click", () =>
+      changeColor(newColorNames[i].newColorValue)
+    );
+    newButton.textContent = newColorNames[i].newColorName;
     colorsContainer.append(newButton);
-  });
+  }
 };
 
 const DOMContentLoaded = () => {
