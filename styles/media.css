@@ -10,7 +10,7 @@
     margin: 0.1rem;
     font-size: 0.7rem;
   }
-  .add-btn {
+  .plus-btn {
     font-size: 0.75rem;
   }
 }
@@ -28,7 +28,7 @@
   .colors-container {
     height: 30vh;
   }
-  .add-btn {
+  .plus-btn {
     font-size: 1.75rem;
   }
   .modal {
@@ -55,7 +55,7 @@
     height: 8rem;
     font-size: 1.7rem;
   }
-  .add-btn {
+  .plus-btn {
     font-size: 2.3rem;
   }
   .modal {
@@ -86,7 +86,7 @@
   .colors-container {
     height: 26vh;
   }
-  .add-btn {
+  .plus-btn {
     font-size: 1.1rem;
   }
   .modal {

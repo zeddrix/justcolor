@@ -10,11 +10,7 @@
 
     colorBtn.addEventListener(
       "mousedown",
-      function (e) {
-        const showEditColorModal = () => {
-          const editColorModal = document.querySelector(".edit-color-modal");
-          editColorModal.style.display = "block";
-        };
+      function () {
         delay = setTimeout(showEditColorModal, longpress);
       },
       true

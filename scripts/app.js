@@ -28,16 +28,16 @@ const getRandomColorValue = () => {
   return Math.floor(Math.random() * 256);
 };
 
-const addBtn = document.querySelector(".add-btn");
+const plusBtn = document.querySelector(".plus-btn");
 
 const disableAddBtn = () => {
-  addBtn.classList.add("disabled");
-  addBtn.setAttribute("disabled", "");
+  plusBtn.classList.add("disabled");
+  plusBtn.setAttribute("disabled", "");
 };
 
 const enableAddBtn = () => {
-  addBtn.classList.remove("disabled");
-  addBtn.removeAttribute("disabled");
+  plusBtn.classList.remove("disabled");
+  plusBtn.removeAttribute("disabled");
 };
 
 const changeToRandomColor = () => {
@@ -148,14 +148,27 @@ const newColorModal = document.querySelector(".new-color-modal");
 const backdrop = document.querySelector("#backdrop");
 
 const showNewColorModal = () => {
-  backdrop.style.display = "block";
   newColorModal.style.display = "block";
+  backdrop.style.display = "block";
 
   newColorInput.focus();
   newColorInput.value = "";
 };
 
 const closeNewColorModal = () => {
-  backdrop.style.display = "none";
   newColorModal.style.display = "none";
+  backdrop.style.display = "none";
 };
+
+// EDIT COLOR MODAL
+const editColorModal = document.querySelector(".edit-color-modal");
+
+const showEditColorModal = () => {
+  editColorModal.style.display = "block";
+  backdrop.style.display = "block";
+};
+
+closeEditColorModal = () => {
+  editColorModal.style.display = "none";
+  backdrop.style.display = "none";
+}
