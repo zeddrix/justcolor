@@ -95,15 +95,15 @@ button:focus {
 }
 
 .disabled {
-  background: white;
+  background: black;
 }
 
 .disabled:hover,
 .disabled:focus {
   box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey,
     0px 10px 5px #999;
-  color: grey;
-  background: white;
+  color: black;
+  background: black;
 }
 
 .red {
