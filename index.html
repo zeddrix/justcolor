@@ -31,7 +31,18 @@
     </div>
     <div class="new-color-modal modal">
       <p class="modal__description">Name your new color button:</p>
-      <input id="new-color-input" class="input-field" type="text" autofocus /> <br />
+      <!-- INPUT THAT ALLOWS ANY CHARACTER -->
+      <!-- <input id="new-color-input" class="input-field" type="text" autofocus /> -->
+      <!-- INPUT THAT ONLY ALLOWS ALPHABETS -->
+      <input
+        id="new-color-input"
+        class="input-field"
+        type="text"
+        autofocus
+        onkeypress="return (event.charCode > 64 && 
+      event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"
+      />
+      <br />
       <div id="cancel-btn" class="modal-btn">Cancel</div>
       <div id="add-btn" class="modal-btn">Add!</div>
     </div>
