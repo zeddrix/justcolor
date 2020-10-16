@@ -94,6 +94,18 @@ button:focus {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.disabled {
+  background: white;
+}
+
+.disabled:hover,
+.disabled:focus {
+  box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey,
+    0px 10px 5px #999;
+  color: grey;
+  background: white;
+}
+
 .red {
   background: red;
 }
@@ -176,7 +188,7 @@ button:focus {
 }
 
 .input-field {
-  font-family: 'Comic Neue', cursive;
+  font-family: "Comic Neue", cursive;
   text-align: center;
   font-size: 1rem;
   width: 10rem;

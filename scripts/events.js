@@ -9,6 +9,8 @@ document.addEventListener("click", function (event) {
     getNewColorInput();
   } else if (event.target.matches(".just-color-title")) {
     justColorTitleToggle();
+  } else if (event.target.matches("button")) {
+    disableAddBtn();
   }
 });
 

@@ -28,6 +28,18 @@ const getRandomColorValue = () => {
   return Math.floor(Math.random() * 256);
 };
 
+const addBtn = document.querySelector(".add-btn");
+
+const disableAddBtn = () => {
+  addBtn.classList.add("disabled");
+  addBtn.setAttribute("disabled", "");
+};
+
+const enableAddBtn = () => {
+  addBtn.classList.remove("disabled");
+  addBtn.removeAttribute("disabled");
+};
+
 const changeToRandomColor = () => {
   // Get a set of three random numbers
   // This already returns a hex value, not rgb
@@ -37,6 +49,7 @@ const changeToRandomColor = () => {
     getRandomColorValue()
   );
   document.body.style.backgroundColor = "#" + rColor;
+  enableAddBtn();
 };
 changeToRandomColor();
 
