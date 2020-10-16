@@ -17,7 +17,7 @@ const colors = [
   {
     name: "green",
     label: "green",
-    colorHex: "#00FF00",
+    colorHex: "green",
   },
   {
     name: "purple",
