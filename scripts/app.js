@@ -76,6 +76,7 @@ const getNewColorInput = () => {
   // insert newColorInput.value as a label for the newButton
   const newColorInputValue = newColorInput.value;
   if (newColorInputValue !== "") {
+    addNewColorButton();
     newButton.textContent = newColorInputValue;
     // console.log("NEW COLOR INPUT NAME:", newColorInput.value);
     const newColorNamesObject = {

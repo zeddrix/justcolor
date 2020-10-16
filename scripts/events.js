@@ -3,7 +3,6 @@ document.addEventListener("click", function (event) {
     changeToRandomColor();
   } else if (event.target.matches(".add-btn")) {
     showNewColorModal();
-    addNewColorButton();
   } else if (event.target.matches("#okay-btn")) {
     getNewColorInput();
   } else if (event.target.matches(".just-color-title")) {
@@ -11,8 +10,9 @@ document.addEventListener("click", function (event) {
   }
 });
 
-document.addEventListener("keypress", (event) => {
-  if (event.keyCode === 13) {
-    getNewColorInput();
-  }
-});
+// !!!!!!!!!!!!!ISSUE: Creates new button even if modal is not open!!!!!!!!!!!!
+// document.addEventListener("keypress", (event) => {
+//   if (event.keyCode === 13) {
+//     getNewColorInput();
+//   }
+// });
