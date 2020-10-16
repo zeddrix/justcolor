@@ -3,6 +3,8 @@ document.addEventListener("click", function (event) {
     changeToRandomColor();
   } else if (event.target.matches(".add-btn")) {
     showNewColorModal();
+  } else if (event.target.matches("#cancel-btn")) {
+    closeNewColorModal();
   } else if (event.target.matches("#okay-btn")) {
     getNewColorInput();
   } else if (event.target.matches(".just-color-title")) {
