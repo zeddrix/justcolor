@@ -35,12 +35,12 @@
     width: 60%;
     padding: 5rem 1rem;
   }
-  .name-color-p,
-  #new-color-input,
+  .modal__description,
+  .input-field,
   .modal-btn {
     font-size: 1.5rem;
   }
-  #new-color-input {
+  .input-field {
     width: 13rem;
   }
 }
@@ -62,12 +62,12 @@
     width: 60%;
     padding: 7rem 1rem;
   }
-  .name-color-p,
-  #new-color-input,
+  .modal__description,
+  .input-field,
   .modal-btn {
     font-size: 2rem;
   }
-  #new-color-input {
+  .input-field {
     width: 13rem;
   }
 }
@@ -93,12 +93,12 @@
     width: 30%;
     padding: 4rem 1rem;
   }
-  .name-color-p,
-  #new-color-input,
+  .modal__description,
+  .input-field,
   .modal-btn {
     font-size: 1.3rem;
   }
-  #new-color-input {
+  .input-field {
     width: 12rem;
   }
 }

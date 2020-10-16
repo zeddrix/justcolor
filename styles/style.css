@@ -170,12 +170,12 @@ button:focus {
   animation-duration: 0.1s;
 }
 
-.name-color-p {
+.modal__description {
   font-size: 1rem;
   margin: 0.5rem;
 }
 
-#new-color-input {
+.input-field {
   font-family: 'Comic Neue', cursive;
   text-align: center;
   font-size: 1rem;
@@ -197,6 +197,10 @@ button:focus {
   background: darkblue;
 }
 
+#cancel-btn {
+  background: black;
+}
+
 .name-required {
   animation-name: shakeX;
   animation-duration: 0.75s;
@@ -204,8 +208,12 @@ button:focus {
   outline-color: #b80707;
 }
 
-#cancel-btn {
-  background: #f86880;
+#delete-btn {
+  background: #ff3657;
+}
+
+#done-btn {
+  background: green;
 }
 
 /* SCROLLBAR */
