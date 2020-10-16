@@ -38,6 +38,7 @@ const changeToRandomColor = () => {
   );
   document.body.style.backgroundColor = "#" + rColor;
 };
+changeToRandomColor();
 
 // 'color' is argument
 // 'colors[c].colorHex' in changeColor(colors[c].colorHex) is the argument
