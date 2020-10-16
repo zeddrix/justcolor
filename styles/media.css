@@ -15,6 +15,24 @@
   }
 }
 
+/* SMALLER TABLETS */
+@media only screen and (min-width: 550px) {
+  .just-color-title {
+    font-size: 10rem;
+  }
+  button {
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.1rem;
+  }
+  .colors-container {
+    height: 25vh;
+  }
+  .plus-btn {
+    font-size: 1.5rem;
+  }
+}
+
 /* IPAD */
 @media only screen and (min-width: 768px) {
   .just-color-title {
