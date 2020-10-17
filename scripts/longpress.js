@@ -8,6 +8,7 @@
   for (let i = 0, j = allColorBtns.length; i < j; i++) {
     colorBtn = allColorBtns[i];
 
+    // FOR DESKTOP
     colorBtn.addEventListener(
       "mousedown",
       function () {
@@ -16,12 +17,26 @@
       true
     );
 
+    // FOR MOBILE DEVICES
+    colorBtn.addEventListener(
+      "touchstart",
+      function () {
+        delay = setTimeout(showEditColorModal, longpress);
+      },
+      true
+    );
+
+    // FOR DESKTOP
     colorBtn.addEventListener("mouseup", function (e) {
-      // On mouse up, we know it is no longer a longpress
       clearTimeout(delay);
     });
 
     colorBtn.addEventListener("mouseout", function (e) {
+      clearTimeout(delay);
+    });
+
+    // FOR MOBILE DEVICES
+    colorBtn.addEventListener("touchend", function (e) {
       clearTimeout(delay);
     });
   }

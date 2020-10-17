@@ -56,7 +56,8 @@ h1 {
   align-items: flex-end;
   padding: 1rem 0;
   position: absolute;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 button {
