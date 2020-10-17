@@ -31,6 +31,18 @@
   .plus-btn {
     font-size: 1.5rem;
   }
+  .modal {
+    width: 75%;
+    padding: 5rem 1rem;
+  }
+  .modal__description,
+  .input-field,
+  .modal-btn {
+    font-size: 1.5rem;
+  }
+  .input-field {
+    width: 13rem;
+  }
 }
 
 /* IPAD */

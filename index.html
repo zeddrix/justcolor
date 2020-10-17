@@ -50,7 +50,16 @@
     </div>
     <div class="edit-color-modal modal">
       <p class="modal__description">Edit color:</p>
-      <input class="input-field" type="text" autofocus /> <br />
+      <input
+        class="input-field"
+        type="text"
+        autofocus
+        onkeypress="return (event.charCode > 64 && event.charCode < 91) 
+    || (event.charCode > 96 && event.charCode < 123) 
+    || (event.charCode === 32)"
+        maxlength="16"
+      />
+      <br />
       <div id="delete-btn" class="modal-btn">Delete</div>
       <div id="done-btn" class="modal-btn">Done</div>
     </div>
