@@ -29,7 +29,14 @@ input {
 input:focus {
   outline: none;
   border: 2px solid black;
-  box-shadow: 0 0 10px #51ff00;
+}
+
+#new-color-input:focus {
+  box-shadow: 0 0 5px green;
+}
+
+#edit-color-input:focus {
+  box-shadow: 0 0 5px blue;
 }
 
 .just-color-title {
