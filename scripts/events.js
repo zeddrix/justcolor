@@ -13,6 +13,9 @@ document.addEventListener("click", (event) => {
     justColorTitleToggle();
   } else if (event.target.matches("button")) {
     disableAddBtn();
+  } else if (event.target.matches("#backdrop")) {
+    closeEditColorModal();
+    closeNewColorModal();
   }
 });
 
