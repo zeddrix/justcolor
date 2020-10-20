@@ -38,7 +38,6 @@
         id="new-color-input"
         class="input-field"
         type="text"
-        autofocus
         onkeypress="return (event.charCode > 64 && event.charCode < 91) 
       || (event.charCode > 96 && event.charCode < 123) 
       || (event.charCode === 32)"
@@ -51,9 +50,9 @@
     <div class="edit-color-modal modal">
       <p class="modal__description">Edit color:</p>
       <input
+        id="edit-color-input"
         class="input-field"
         type="text"
-        autofocus
         onkeypress="return (event.charCode > 64 && event.charCode < 91) 
     || (event.charCode > 96 && event.charCode < 123) 
     || (event.charCode === 32)"

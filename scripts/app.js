@@ -131,7 +131,7 @@ const getNewColorNames = () => {
   for (let i = 0; i < newColorNames.length; i++) {
     newButton = document.createElement("button");
     newButton.style.backgroundColor = newColorNames[i].newColorValue;
-    newButton.classList.add('editable-btn');
+    newButton.classList.add("editable-btn");
     newButton.addEventListener("click", () =>
       changeColor(newColorNames[i].newColorValue)
     );
@@ -168,6 +168,9 @@ const editColorModal = document.querySelector(".edit-color-modal");
 const showEditColorModal = () => {
   editColorModal.style.display = "block";
   backdrop.style.display = "block";
+
+  const editColorInput = document.querySelector("#edit-color-input");
+  editColorInput.focus();
 };
 
 const closeEditColorModal = () => {
