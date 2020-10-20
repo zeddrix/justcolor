@@ -25,7 +25,7 @@ const longpress = 1000;
 document.addEventListener(
   "mousedown",
   (event) => {
-    if (event.target.matches("button")) {
+    if (event.target.matches(".editable-btn")) {
       console.log("MOUSEDOWN");
       delay = setTimeout(showEditColorModal, longpress);
     }
@@ -36,7 +36,7 @@ document.addEventListener(
 document.addEventListener(
   "touchstart",
   (event) => {
-    if (event.target.matches("button")) {
+    if (event.target.matches(".editable-btn")) {
       console.log("TOUCHSTART");
       delay = setTimeout(showEditColorModal, longpress);
     }
@@ -45,21 +45,21 @@ document.addEventListener(
 );
 
 document.addEventListener("mouseup", (event) => {
-  if (event.target.matches("button")) {
+  if (event.target.matches(".editable-btn")) {
     console.log("MOUSEUP");
     clearTimeout(delay);
   }
 });
 
 document.addEventListener("mouseout", (event) => {
-  if (event.target.matches("button")) {
+  if (event.target.matches(".editable-btn")) {
     console.log("MOUSEOUT");
     clearTimeout(delay);
   }
 });
 
 document.addEventListener("touchend", (event) => {
-  if (event.target.matches("button")) {
+  if (event.target.matches(".editable-btn")) {
     console.log("TOUCHEND");
     clearTimeout(delay);
   }

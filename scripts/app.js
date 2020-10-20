@@ -65,6 +65,7 @@ for (let c = 0; c < colors.length; c++) {
   const button = document.createElement("button");
   button.innerText = colors[c].label;
   button.classList.add(colors[c].name);
+  button.classList.add("editable-btn");
   button.addEventListener("click", () => changeColor(colors[c].colorHex));
   colorsContainer.append(button);
 }
@@ -78,6 +79,7 @@ const addNewColorButton = () => {
   newBackgroundColor = document.body.style.backgroundColor;
   // new button's background color
   newButton.style.backgroundColor = newBackgroundColor;
+  newButton.classList.add("editable-btn");
   // upon click, change page's background color USING the button's background color
   newButton.addEventListener("click", () => changeColor(newBackgroundColor));
   colorsContainer.append(newButton);
@@ -129,6 +131,7 @@ const getNewColorNames = () => {
   for (let i = 0; i < newColorNames.length; i++) {
     newButton = document.createElement("button");
     newButton.style.backgroundColor = newColorNames[i].newColorValue;
+    newButton.classList.add('editable-btn');
     newButton.addEventListener("click", () =>
       changeColor(newColorNames[i].newColorValue)
     );
