@@ -26,6 +26,12 @@ input {
   -ms-user-select: text; /* IE 10+ */
 }
 
+input:focus {
+  outline: none;
+  border: 2px solid black;
+  box-shadow: 0 0 10px #51ff00;
+}
+
 .just-color-title {
   /* border: 5px solid white; */
   font-size: 5rem;
