@@ -81,7 +81,6 @@ const addNewColorButton = () => {
   // upon click, change page's background color USING the button's background color
   newButton.addEventListener("click", () => changeColor(newBackgroundColor));
   colorsContainer.append(newButton);
-  console.log("newBackgroundColor", newBackgroundColor);
 };
 
 const newColorInput = document.querySelector("#new-color-input");
@@ -114,7 +113,7 @@ const getNewColorInput = () => {
     newColorInput.classList.add("name-required");
     newColorInput.focus();
 
-    setTimeout(function () {
+    setTimeout(() => {
       newColorInput.classList.remove("name-required");
     }, 300);
   }
@@ -168,7 +167,7 @@ const showEditColorModal = () => {
   backdrop.style.display = "block";
 };
 
-closeEditColorModal = () => {
+const closeEditColorModal = () => {
   editColorModal.style.display = "none";
   backdrop.style.display = "none";
-}
+};

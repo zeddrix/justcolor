@@ -1,4 +1,4 @@
-document.addEventListener("click", function (event) {
+document.addEventListener("click", (event) => {
   if (event.target.matches(".random")) {
     changeToRandomColor();
   } else if (event.target.matches(".plus-btn")) {
@@ -13,6 +13,52 @@ document.addEventListener("click", function (event) {
     justColorTitleToggle();
   } else if (event.target.matches("button")) {
     disableAddBtn();
+  }
+});
+
+let delay;
+const longpress = 1000;
+
+document.addEventListener(
+  "mousedown",
+  (event) => {
+    if (event.target.matches("button")) {
+      console.log("MOUSEDOWN");
+      delay = setTimeout(showEditColorModal, longpress);
+    }
+  },
+  true
+);
+
+document.addEventListener(
+  "touchstart",
+  (event) => {
+    if (event.target.matches("button")) {
+      console.log("TOUCHSTART");
+      delay = setTimeout(showEditColorModal, longpress);
+    }
+  },
+  true
+);
+
+document.addEventListener("mouseup", (event) => {
+  if (event.target.matches("button")) {
+    console.log("MOUSEUP");
+    clearTimeout(delay);
+  }
+});
+
+document.addEventListener("mouseout", (event) => {
+  if (event.target.matches("button")) {
+    console.log("MOUSEOUT");
+    clearTimeout(delay);
+  }
+});
+
+document.addEventListener("touchend", (event) => {
+  if (event.target.matches("button")) {
+    console.log("TOUCHEND");
+    clearTimeout(delay);
   }
 });
 
