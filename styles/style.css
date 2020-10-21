@@ -86,6 +86,9 @@ button {
   width: 3.75rem;
   height: 3.75rem;
   margin: 0.25rem 0.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   transition: all 0.5s;
   border: none;
