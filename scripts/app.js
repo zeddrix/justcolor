@@ -65,7 +65,8 @@ for (let c = 0; c < colors.length; c++) {
   const button = document.createElement("button");
   button.innerText = colors[c].label;
   button.classList.add(colors[c].name);
-  button.classList.add("editable-btn");
+  // COMMENTED SO THAT ONLY NEW BUTTONS CAN BE EDITABLE
+  // button.classList.add("editable-btn");
   button.addEventListener("click", () => changeColor(colors[c].colorHex));
   colorsContainer.append(button);
 }
@@ -163,13 +164,37 @@ const closeNewColorModal = () => {
 };
 
 // EDIT COLOR MODAL
+const editColorInput = document.querySelector("#edit-color-input");
 const editColorModal = document.querySelector(".edit-color-modal");
+let colorNameInLS;
+let selectedColorBtnName;
+
+const getSelectedColorBtn = (event) => {
+  selectedColorBtnName = event.target.textContent;
+  console.log("SELECTED COLOR BUTTON: ", selectedColorBtnName);
+  console.log("newColorNames: ", newColorNames);
+
+  // put the name of selected button on the input field
+  editColorInput.value = selectedColorBtnName;
+};
+
+const doneInEditingColorName = () => {
+  // find newColorName that is equal to the selectedColorBtnName and then set the edited name to that property
+  newColorNames.find(({ newColorName }) => newColorName === selectedColorBtnName).newColorName = editColorInput.value;
+  console.log("editColorInput.value", editColorInput.value);
+  selectedColorBtnName = editColorInput.value;
+  editedSelectedColorBtnName = selectedColorBtnName;
+  console.log("editedSelectedColorBtnName", editedSelectedColorBtnName);
+  localStorage.setItem("newColorNames", JSON.stringify(newColorNames));
+  location.reload();
+
+  closeEditColorModal();
+}
 
 const showEditColorModal = () => {
   editColorModal.style.display = "block";
   backdrop.style.display = "block";
 
-  const editColorInput = document.querySelector("#edit-color-input");
   editColorInput.focus();
 };
 

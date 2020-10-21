@@ -8,7 +8,7 @@ document.addEventListener("click", (event) => {
   } else if (event.target.matches("#add-btn")) {
     getNewColorInput();
   } else if (event.target.matches("#done-btn")) {
-    closeEditColorModal();
+    doneInEditingColorName();
   } else if (event.target.matches(".just-color-title")) {
     justColorTitleToggle();
   } else if (event.target.matches("button")) {
@@ -19,8 +19,30 @@ document.addEventListener("click", (event) => {
   }
 });
 
+// document.addEventListener("keypress", (event) => {
+//   if (event.target.matches("input")) {
+//     return (
+//       (event.charCode > 64 && event.charCode < 91) ||
+//       (event.charCode > 96 && event.charCode < 123) ||
+//       event.charCode === 32
+//     );
+//   }
+// });
+
 let delay;
 const longpress = 1000;
+
+document.addEventListener(
+  "touchstart",
+  (event) => {
+    if (event.target.matches(".editable-btn")) {
+      console.log("-----------------------\nTOUCHSTART");
+      delay = setTimeout(showEditColorModal, longpress);
+      getSelectedColorBtn(event);
+    }
+  },
+  true
+);
 
 document.addEventListener(
   "mousedown",
@@ -28,17 +50,7 @@ document.addEventListener(
     if (event.target.matches(".editable-btn")) {
       console.log("MOUSEDOWN");
       delay = setTimeout(showEditColorModal, longpress);
-    }
-  },
-  true
-);
-
-document.addEventListener(
-  "touchstart",
-  (event) => {
-    if (event.target.matches(".editable-btn")) {
-      console.log("TOUCHSTART");
-      delay = setTimeout(showEditColorModal, longpress);
+      getSelectedColorBtn(event);
     }
   },
   true
@@ -47,13 +59,6 @@ document.addEventListener(
 document.addEventListener("mouseup", (event) => {
   if (event.target.matches(".editable-btn")) {
     console.log("MOUSEUP");
-    clearTimeout(delay);
-  }
-});
-
-document.addEventListener("mouseout", (event) => {
-  if (event.target.matches(".editable-btn")) {
-    console.log("MOUSEOUT");
     clearTimeout(delay);
   }
 });
