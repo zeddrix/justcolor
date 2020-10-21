@@ -7,6 +7,8 @@ document.addEventListener("click", (event) => {
     closeNewColorModal();
   } else if (event.target.matches("#add-btn")) {
     getNewColorInput();
+  } else if (event.target.matches("#delete-btn")) {
+    deleteColorButton();
   } else if (event.target.matches("#done-btn")) {
     doneInEditingColorName();
   } else if (event.target.matches(".just-color-title")) {

@@ -87,6 +87,7 @@ const addNewColorButton = () => {
 };
 
 const newColorInput = document.querySelector("#new-color-input");
+let newColorsArrayObject;
 
 const getNewColorInput = () => {
   // insert newColorInput.value as a label for the newButton
@@ -94,22 +95,21 @@ const getNewColorInput = () => {
   if (newColorInputValue !== "") {
     addNewColorButton();
     newButton.textContent = newColorInputValue;
-    // console.log("NEW COLOR INPUT NAME:", newColorInput.value);
-    const newColorNamesObject = {
+    newColorsArrayObject = {
       newColorName: newColorInputValue,
       newColorValue: newBackgroundColor,
     };
 
-    let newColorNames;
+    let newColorsArray;
 
-    if (localStorage.getItem("newColorNames") === null) {
-      newColorNames = [];
+    if (localStorage.getItem("newColorsArray") === null) {
+      newColorsArray = [];
     } else {
-      newColorNames = JSON.parse(localStorage.getItem("newColorNames"));
+      newColorsArray = JSON.parse(localStorage.getItem("newColorsArray"));
     }
 
-    newColorNames.push(newColorNamesObject);
-    localStorage.setItem("newColorNames", JSON.stringify(newColorNames));
+    newColorsArray.push(newColorsArrayObject);
+    localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
 
     closeNewColorModal();
   } else if (newColorInputValue === "") {
@@ -123,20 +123,20 @@ const getNewColorInput = () => {
 };
 
 const getNewColorNames = () => {
-  if (localStorage.getItem("newColorNames") === null) {
-    newColorNames = [];
+  if (localStorage.getItem("newColorsArray") === null) {
+    newColorsArray = [];
   } else {
-    newColorNames = JSON.parse(localStorage.getItem("newColorNames"));
+    newColorsArray = JSON.parse(localStorage.getItem("newColorsArray"));
   }
 
-  for (let i = 0; i < newColorNames.length; i++) {
+  for (let i = 0; i < newColorsArray.length; i++) {
     newButton = document.createElement("button");
-    newButton.style.backgroundColor = newColorNames[i].newColorValue;
+    newButton.style.backgroundColor = newColorsArray[i].newColorValue;
     newButton.classList.add("editable-btn");
     newButton.addEventListener("click", () =>
-      changeColor(newColorNames[i].newColorValue)
+      changeColor(newColorsArray[i].newColorValue)
     );
-    newButton.textContent = newColorNames[i].newColorName;
+    newButton.textContent = newColorsArray[i].newColorName;
     colorsContainer.append(newButton);
   }
 };
@@ -163,16 +163,15 @@ const closeNewColorModal = () => {
   backdrop.style.display = "none";
 };
 
-// EDIT COLOR MODAL
 const editColorInput = document.querySelector("#edit-color-input");
 const editColorModal = document.querySelector(".edit-color-modal");
 let colorNameInLS;
+let selectedColorBtn;
 let selectedColorBtnName;
 
 const getSelectedColorBtn = (event) => {
-  selectedColorBtnName = event.target.textContent;
-  console.log("SELECTED COLOR BUTTON: ", selectedColorBtnName);
-  console.log("newColorNames: ", newColorNames);
+  selectedColorBtn = event.target;
+  selectedColorBtnName = selectedColorBtn.textContent;
 
   // put the name of selected button on the input field
   editColorInput.value = selectedColorBtnName;
@@ -180,16 +179,36 @@ const getSelectedColorBtn = (event) => {
 
 const doneInEditingColorName = () => {
   // find newColorName that is equal to the selectedColorBtnName and then set the edited name to that property
-  newColorNames.find(({ newColorName }) => newColorName === selectedColorBtnName).newColorName = editColorInput.value;
-  console.log("editColorInput.value", editColorInput.value);
+  // DO NOT FORMAT THIS LINE
+  newColorsArray.find(({ newColorName }) => {
+    return newColorName === selectedColorBtnName;
+  }).newColorName = editColorInput.value;
+
   selectedColorBtnName = editColorInput.value;
   editedSelectedColorBtnName = selectedColorBtnName;
-  console.log("editedSelectedColorBtnName", editedSelectedColorBtnName);
-  localStorage.setItem("newColorNames", JSON.stringify(newColorNames));
+
+  localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
   location.reload();
 
   closeEditColorModal();
-}
+};
+
+const deleteColorButton = () => {
+  selectedColorBtn.remove();
+
+  for (var i = 0; i < newColorsArray.length; i++) {
+    var newColor = newColorsArray[i];
+
+    if (selectedColorBtnName.indexOf(newColor.newColorName) !== -1) {
+      newColorsArray.splice(i, 1);
+      i--;
+    }
+  }
+
+  localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
+
+  closeEditColorModal();
+};
 
 const showEditColorModal = () => {
   editColorModal.style.display = "block";
