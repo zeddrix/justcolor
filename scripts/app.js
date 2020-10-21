@@ -84,6 +84,7 @@ const addNewColorButton = () => {
   // upon click, change page's background color USING the button's background color
   newButton.addEventListener("click", () => changeColor(newBackgroundColor));
   colorsContainer.append(newButton);
+  location.reload();
 };
 
 const newColorInput = document.querySelector("#new-color-input");
