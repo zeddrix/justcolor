@@ -33,6 +33,7 @@ const plusBtn = document.querySelector(".plus-btn");
 const disableAddBtn = () => {
   plusBtn.classList.add("disabled");
   plusBtn.setAttribute("disabled", "");
+  plusBtn.classList.add("tooltip")
 };
 
 const enableAddBtn = () => {
