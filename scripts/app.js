@@ -30,15 +30,16 @@ const getRandomColorValue = () => {
 
 const plusBtn = document.querySelector(".plus-btn");
 
-const disableAddBtn = () => {
+const disablePlusBtn = () => {
   plusBtn.classList.add("disabled");
   plusBtn.setAttribute("disabled", "");
-  plusBtn.classList.add("tooltip")
+  plusBtn.classList.add("tooltip");
 };
 
-const enableAddBtn = () => {
+const enablePlusBtn = () => {
   plusBtn.classList.remove("disabled");
   plusBtn.removeAttribute("disabled");
+  plusBtn.classList.remove("tooltip");
 };
 
 const changeToRandomColor = () => {
@@ -50,7 +51,7 @@ const changeToRandomColor = () => {
     getRandomColorValue()
   );
   document.body.style.backgroundColor = "#" + rColor;
-  enableAddBtn();
+  enablePlusBtn();
 };
 changeToRandomColor();
 
@@ -86,7 +87,8 @@ const addNewColorButton = () => {
   newButton.addEventListener("click", () => changeColor(newBackgroundColor));
   colorsContainer.append(newButton);
 
-  disableAddBtn();
+  location.reload();
+  disablePlusBtn();
 };
 
 const newColorInput = document.querySelector("#new-color-input");

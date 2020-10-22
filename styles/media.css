@@ -16,7 +16,7 @@
     margin: 0.25rem;
     font-size: 0.7rem;
     box-shadow: inset 0px 1px 0px grey, 0px 3.2px 0px 0px lightgrey,
-    0px 7px 5px #999;
+      0px 7px 5px #999;
   }
   .plus-btn {
     font-size: 0.75rem;
@@ -68,7 +68,7 @@
     height: 6rem;
     font-size: 1.4rem;
     box-shadow: inset 0px 1px 0px grey, 0px 5px 0px 0px lightgrey,
-    0px 12px 10px #999;
+      0px 12px 10px #999;
   }
   .colors-container {
     height: 30vh;
@@ -107,7 +107,7 @@
     height: 8rem;
     font-size: 1.7rem;
     box-shadow: inset 0px 1px 0px grey, 0px 5px 0px 0px lightgrey,
-    0px 12px 10px #999;
+      0px 12px 10px #999;
   }
   .plus-btn {
     font-size: 2.3rem;
@@ -146,7 +146,7 @@
     font-size: 1rem;
   }
   .colors-container {
-    height: 26vh;
+    height: 15vh;
     border-top: 3px solid lightgrey;
   }
   .plus-btn {
