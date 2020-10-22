@@ -306,12 +306,13 @@ button:focus {
   font-size: 1rem;
   background-color: black;
   color: #fff;
+  border: 1px solid white;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
   z-index: 500;
-  bottom: 110%;
+  bottom: 90%;
   left: 40%;
   margin-left: -60px;
 }
@@ -329,7 +330,7 @@ span {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: black transparent transparent transparent;
+  border-color: white transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
