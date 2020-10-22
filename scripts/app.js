@@ -72,18 +72,33 @@ const colorPalette = document.querySelector(".color-palette");
 
 for (let c = 0; c < colors.length; c++) {
   const button = document.createElement("button");
-  button.innerText = colors[c].label;
   button.classList.add(colors[c].name);
-  // COMMENTED SO THAT ONLY NEW BUTTONS CAN BE EDITABLE
-  // button.classList.add("editable-btn");
+  button.classList.add("uneditable-btn");
+  button.innerHTML =
+    colors[c].label + "<span class='tooltiptext'>Can't edit this</span>";
   button.addEventListener("click", () => changeColor(colors[c].colorHex));
   colorPalette.append(button);
 }
 
+let uneditableColorBtn;
+const getSelectedColorBtn = (event) => {
+  uneditableColorBtn = event.target;
+};
+
+const showTooltipOnUneditableBtn = () => {
+  uneditableColorBtn.classList.add("tooltip");
+};
+
+const removeTooltipFromUneditableBtn = () => {
+  uneditableColorBtn.classList.remove("tooltip");
+};
+
 const toggleColorPalette = () => {
   colorPalette.classList.toggle("disappear");
-  
-  const toggleColorPaletteBtn = document.querySelector("#toggle-color-palette-btn");
+
+  const toggleColorPaletteBtn = document.querySelector(
+    "#toggle-color-palette-btn"
+  );
   if (toggleColorPaletteBtn.textContent === "▼") {
     toggleColorPaletteBtn.textContent = "▲";
   } else {
@@ -192,7 +207,7 @@ let colorNameInLS;
 let selectedColorBtn;
 let selectedColorBtnName;
 
-const getSelectedColorBtn = (event) => {
+const getSelectedColorBtnName = (event) => {
   selectedColorBtn = event.target;
   selectedColorBtnName = selectedColorBtn.textContent;
 

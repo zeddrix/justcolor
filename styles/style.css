@@ -84,7 +84,7 @@ h1 {
   overflow-x: hidden;
   box-shadow: 0px 5px 10px black;
   animation-name: zoomIn;
-  animation-duration: 0.5s;
+  animation-duration: 0.4s;
 }
 
 #toggle-color-palette-btn {
@@ -322,10 +322,11 @@ span {
   display: none;
 }
 
+/* The bottom arrow of the tooltip */
 .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
-  top: 100%;
+  top: 100%; /* At the bottom of the tooltip */
   left: 50%;
   margin-left: -5px;
   border-width: 5px;

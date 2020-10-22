@@ -21,7 +21,7 @@ document.addEventListener("click", (event) => {
   } else if (event.target.matches("#toggle-color-palette-btn")) {
     toggleColorPalette();
     // myFunction();
-  } 
+  }
 });
 
 // document.addEventListener("keypress", (event) => {
@@ -34,6 +34,7 @@ document.addEventListener("click", (event) => {
 //   }
 // });
 
+// EDITABLE BUTTONS
 let delay;
 const longpress = 1000;
 
@@ -43,7 +44,7 @@ document.addEventListener(
     if (event.target.matches(".editable-btn")) {
       console.log("-----------------------\nTOUCHSTART");
       delay = setTimeout(showEditColorModal, longpress);
-      getSelectedColorBtn(event);
+      getSelectedColorBtnName(event);
     }
   },
   true
@@ -55,7 +56,7 @@ document.addEventListener(
     if (event.target.matches(".editable-btn")) {
       console.log("MOUSEDOWN");
       delay = setTimeout(showEditColorModal, longpress);
-      getSelectedColorBtn(event);
+      getSelectedColorBtnName(event);
     }
   },
   true
@@ -72,6 +73,47 @@ document.addEventListener("touchend", (event) => {
   if (event.target.matches(".editable-btn")) {
     console.log("TOUCHEND");
     clearTimeout(delay);
+  }
+});
+
+// UNEDITABLE BUTTONS
+document.addEventListener(
+  "touchstart",
+  (event) => {
+    if (event.target.matches(".uneditable-btn")) {
+      console.log("-----------------------\nTOUCHSTART");
+      delay = setTimeout(showTooltipOnUneditableBtn, longpress);
+      getSelectedColorBtn(event);
+    }
+  },
+  true
+);
+
+document.addEventListener(
+  "mousedown",
+  (event) => {
+    if (event.target.matches(".uneditable-btn")) {
+      console.log("MOUSEDOWN");
+      delay = setTimeout(showTooltipOnUneditableBtn, longpress);
+      getSelectedColorBtn(event);
+    }
+  },
+  true
+);
+
+document.addEventListener("mouseup", (event) => {
+  if (event.target.matches(".uneditable-btn")) {
+    console.log("MOUSEUP");
+    clearTimeout(delay);
+    removeTooltipFromUneditableBtn();
+  }
+});
+
+document.addEventListener("touchend", (event) => {
+  if (event.target.matches(".uneditable-btn")) {
+    console.log("TOUCHEND");
+    clearTimeout(delay);
+    removeTooltipFromUneditableBtn();
   }
 });
 
