@@ -36,7 +36,9 @@
     width: 5rem;
     height: 5rem;
     font-size: 1.1rem;
-    margin: 0.5rem 0.125rem;
+    margin: 0.6rem 0.4rem;
+    box-shadow: inset 0px 1px 0px grey, 0px 6px 0px 0px lightgrey,
+      0px 14px 10px #999;
   }
   .color-palette {
     height: 30vh;
@@ -77,8 +79,9 @@
     width: 6rem;
     height: 6rem;
     font-size: 1.4rem;
-    box-shadow: inset 0px 1px 0px grey, 0px 5px 0px 0px lightgrey,
-      0px 12px 10px #999;
+    margin: 0.7rem 0.4rem;
+    box-shadow: inset 0px 1px 0px grey, 0px 7px 0px 0px lightgrey,
+      0px 15px 10px #999;
   }
   .color-palette {
     height: 30vh;
@@ -121,8 +124,9 @@
     width: 8rem;
     height: 8rem;
     font-size: 1.7rem;
-    box-shadow: inset 0px 1px 0px grey, 0px 5px 0px 0px lightgrey,
-      0px 12px 10px #999;
+    margin: 0.75rem 0.5rem;
+    box-shadow: inset 0px 1px 0px grey, 0px 10px 0px 0px lightgrey,
+      0px 17px 10px #999;
   }
   .plus-btn {
     font-size: 2.3rem;
@@ -164,6 +168,9 @@
     width: 4.5rem;
     height: 4.5rem;
     font-size: 1rem;
+    margin: 0.5rem;
+    box-shadow: inset 0px 1px 0px grey, 0px 6px 0px 0px lightgrey,
+      0px 10px 10px #999;
   }
   .color-palette {
     height: 15vh;
