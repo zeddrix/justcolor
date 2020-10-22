@@ -7,8 +7,12 @@
   .color-palette {
     height: 35vh;
     width: 90vw;
-    bottom: 1.5rem;
+    bottom: 2.5rem;
     padding: 0.5rem;
+  }
+  #toggle-color-palette-btn {
+    font-size: 1rem;
+    bottom: 0.5rem;
   }
   button {
     width: 3rem;
@@ -37,6 +41,12 @@
   .color-palette {
     height: 30vh;
     border-top: 4px solid lightgrey;
+    bottom: 4rem;
+  }
+  #toggle-color-palette-btn {
+    font-size: 1.5rem;
+    bottom: 0.75rem;
+    padding: 0 2rem;
   }
   .plus-btn {
     font-size: 1.5rem;
@@ -74,8 +84,13 @@
     height: 30vh;
     width: 90vw;
     border-top: 5px solid lightgrey;
-    bottom: 3rem;
+    bottom: 4rem;
     border-radius: 15px;
+  }
+  #toggle-color-palette-btn {
+    font-size: 1.5rem;
+    bottom: 0.75rem;
+    padding: 0 2rem;
   }
   .plus-btn {
     font-size: 1.75rem;
@@ -130,7 +145,12 @@
   .color-palette {
     border-top: 5.5px solid lightgrey;
     box-shadow: 0px 10px 15px black;
-    bottom: 3.5rem;
+    bottom: 5rem;
+  }
+  #toggle-color-palette-btn {
+    font-size: 1.8rem;
+    bottom: 0.85rem;
+    padding: 0 3rem;
   }
 }
 
@@ -148,6 +168,7 @@
   .color-palette {
     height: 15vh;
     border-top: 3px solid lightgrey;
+    bottom: 3.5rem;
   }
   .plus-btn {
     font-size: 1.1rem;
@@ -166,5 +187,17 @@
   }
   .color-palette::-webkit-scrollbar {
     width: 5px;
+  }
+  #toggle-color-palette-btn {
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 0rem 1.75rem;
+    bottom: 0.5rem;
+  }
+  #toggle-color-palette-btn:hover,
+  #toggle-color-palette-btn:active {
+    cursor: pointer;
+    background: #00000080;
+    color: black;
   }
 }
