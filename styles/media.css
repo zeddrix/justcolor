@@ -4,7 +4,7 @@
     font-size: 4rem;
     height: 70vh;
   }
-  .colors-container {
+  .color-palette {
     height: 35vh;
     width: 90vw;
     bottom: 1.5rem;
@@ -34,7 +34,7 @@
     font-size: 1.1rem;
     margin: 0.5rem 0.125rem;
   }
-  .colors-container {
+  .color-palette {
     height: 30vh;
     border-top: 4px solid lightgrey;
   }
@@ -53,7 +53,7 @@
   .input-field {
     width: 13rem;
   }
-  .colors-container::-webkit-scrollbar {
+  .color-palette::-webkit-scrollbar {
     width: 7.5px;
   }
 }
@@ -70,7 +70,7 @@
     box-shadow: inset 0px 1px 0px grey, 0px 5px 0px 0px lightgrey,
       0px 12px 10px #999;
   }
-  .colors-container {
+  .color-palette {
     height: 30vh;
     width: 90vw;
     border-top: 5px solid lightgrey;
@@ -92,7 +92,7 @@
   .input-field {
     width: 13rem;
   }
-  .colors-container::-webkit-scrollbar {
+  .color-palette::-webkit-scrollbar {
     width: 9px;
   }
 }
@@ -124,10 +124,10 @@
   .input-field {
     width: 13rem;
   }
-  .colors-container::-webkit-scrollbar {
+  .color-palette::-webkit-scrollbar {
     width: 10px;
   }
-  .colors-container {
+  .color-palette {
     border-top: 5.5px solid lightgrey;
     box-shadow: 0px 10px 15px black;
     bottom: 3.5rem;
@@ -145,7 +145,7 @@
     height: 4.5rem;
     font-size: 1rem;
   }
-  .colors-container {
+  .color-palette {
     height: 15vh;
     border-top: 3px solid lightgrey;
   }
@@ -164,7 +164,7 @@
   .input-field {
     width: 12rem;
   }
-  .colors-container::-webkit-scrollbar {
+  .color-palette::-webkit-scrollbar {
     width: 5px;
   }
 }

@@ -68,7 +68,7 @@ const changeColor = (color) => {
   document.body.style.backgroundColor = color;
 };
 
-const colorsContainer = document.querySelector(".colors-container");
+const colorPalette = document.querySelector(".color-palette");
 
 for (let c = 0; c < colors.length; c++) {
   const button = document.createElement("button");
@@ -77,8 +77,19 @@ for (let c = 0; c < colors.length; c++) {
   // COMMENTED SO THAT ONLY NEW BUTTONS CAN BE EDITABLE
   // button.classList.add("editable-btn");
   button.addEventListener("click", () => changeColor(colors[c].colorHex));
-  colorsContainer.append(button);
+  colorPalette.append(button);
 }
+
+const toggleColorPalette = () => {
+  colorPalette.classList.toggle("disappear");
+  
+  const toggleColorPaletteBtn = document.querySelector("#toggle-color-palette-btn");
+  if (toggleColorPaletteBtn.textContent === "▼") {
+    toggleColorPaletteBtn.textContent = "▲";
+  } else {
+    toggleColorPaletteBtn.textContent = "▼";
+  }
+};
 
 let newButton;
 let newBackgroundColor;
@@ -92,7 +103,7 @@ const addNewColorButton = () => {
   newButton.classList.add("editable-btn");
   // upon click, change page's background color USING the button's background color
   newButton.addEventListener("click", () => changeColor(newBackgroundColor));
-  colorsContainer.append(newButton);
+  colorPalette.append(newButton);
 
   location.reload();
   disablePlusBtn();
@@ -149,7 +160,7 @@ const getNewColorNames = () => {
       changeColor(newColorsArray[i].newColorValue)
     );
     newButton.textContent = newColorsArray[i].newColorName;
-    colorsContainer.append(newButton);
+    colorPalette.append(newButton);
   }
 };
 

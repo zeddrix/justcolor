@@ -66,7 +66,7 @@ h1 {
   margin: 0;
 }
 
-.colors-container {
+.color-palette {
   border-top: 2px solid lightgrey;
   max-height: 32vh;
   z-index: 1;
@@ -83,6 +83,18 @@ h1 {
   overflow-y: auto;
   overflow-x: hidden;
   box-shadow: 0px 5px 10px black;
+}
+
+#toggle-color-palette-btn {
+  border: 2px solid white;
+  font-size: 1rem;
+  padding: 0rem 1.5rem;
+  position: absolute;
+  bottom: 0.5rem;
+}
+
+.disappear {
+  display: none;
 }
 
 button {
@@ -317,21 +329,21 @@ span {
 }
 
 /* SCROLLBAR */
-.colors-container::-webkit-scrollbar {
+.color-palette::-webkit-scrollbar {
   width: 5px;
 }
-.colors-container::-webkit-scrollbar-track {
+.color-palette::-webkit-scrollbar-track {
   background: none;
 }
-.colors-container::-webkit-scrollbar-thumb {
+.color-palette::-webkit-scrollbar-thumb {
   background: #f5f5f573;
   border-radius: 50px;
   /* visibility: hidden; */
 }
-.colors-container::-webkit-scrollbar-thumb:hover {
+.color-palette::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
-.colors-container:hover::-webkit-scrollbar-thumb {
+.color-palette:hover::-webkit-scrollbar-thumb {
   visibility: visible;
 }
