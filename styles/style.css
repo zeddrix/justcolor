@@ -83,8 +83,6 @@ h1 {
   overflow-y: auto;
   overflow-x: hidden;
   box-shadow: 0px 5px 10px black;
-  animation-name: zoomIn;
-  animation-duration: 0.4s;
 }
 
 #toggle-color-palette-btn {
