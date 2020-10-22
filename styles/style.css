@@ -86,11 +86,19 @@ h1 {
 }
 
 #toggle-color-palette-btn {
-  border: 2px solid white;
+  border-radius: 4px;
   font-size: 1rem;
   padding: 0rem 1.5rem;
   position: absolute;
   bottom: 0.5rem;
+  background: #0000004d;
+  color: #00000080;
+}
+
+#toggle-color-palette-btn:hover {
+  cursor: pointer;
+  background: #00000080;
+  color: black;
 }
 
 .disappear {
