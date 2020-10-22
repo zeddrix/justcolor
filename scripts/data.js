@@ -59,4 +59,19 @@ const colors = [
     label: "yellow orange",
     colorHex: "#ffae42",
   },
+  {
+    name: "black",
+    label: "black",
+    colorHex: "black"
+  },
+  {
+    name: "white",
+    label: "white",
+    colorHex: "white"
+  },
+  {
+    name: "grey",
+    label: "grey",
+    colorHex: "grey"
+  },
 ];

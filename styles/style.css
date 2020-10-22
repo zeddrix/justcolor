@@ -192,6 +192,19 @@ button:focus {
   background: #ffae42;
 }
 
+.black {
+  background: black;
+  color: white;
+}
+
+.white {
+  background: white;
+}
+
+.grey {
+  background: grey;
+}
+
 /* MODAL */
 #backdrop {
   background: #00000099;
