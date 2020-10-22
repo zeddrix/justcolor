@@ -20,7 +20,6 @@ document.addEventListener("click", (event) => {
     closeNewColorModal();
   } else if (event.target.matches("#toggle-color-palette-btn")) {
     toggleColorPalette();
-    // myFunction();
   }
 });
 
@@ -31,6 +30,14 @@ document.addEventListener("click", (event) => {
 //       (event.charCode > 96 && event.charCode < 123) ||
 //       event.charCode === 32
 //     );
+//   }
+// });
+
+
+// !!!!!!!!!!!!!ISSUE: Creates new button even if modal is not open!!!!!!!!!!!!
+// document.addEventListener("keypress", (event) => {
+//   if (event.keyCode === 13) {
+//     getNewColorInput();
 //   }
 // });
 
@@ -116,10 +123,3 @@ document.addEventListener("touchend", (event) => {
     removeTooltipFromUneditableBtn();
   }
 });
-
-// !!!!!!!!!!!!!ISSUE: Creates new button even if modal is not open!!!!!!!!!!!!
-// document.addEventListener("keypress", (event) => {
-//   if (event.keyCode === 13) {
-//     getNewColorInput();
-//   }
-// });

@@ -1,4 +1,19 @@
-// Click JUST COLOR title to fade-out
+const plusBtn = document.querySelector(".plus-btn");
+const colorPalette = document.querySelector(".color-palette");
+const newColorInput = document.querySelector("#new-color-input");
+const newColorModal = document.querySelector(".new-color-modal");
+const backdrop = document.querySelector("#backdrop");
+const editColorInput = document.querySelector("#edit-color-input");
+const editColorModal = document.querySelector(".edit-color-modal");
+let uneditableColorBtn;
+let colorNameInLS;
+let selectedColorBtn;
+let selectedColorBtnName;
+let newButton;
+let newBackgroundColor;
+let newColorsArrayObject;
+
+
 const justColorTitleToggle = () => {
   const justColorTitle = document.querySelector(".just-color-title");
   justColorTitle.classList.toggle("fade-out");
@@ -28,7 +43,21 @@ const getRandomColorValue = () => {
   return Math.floor(Math.random() * 256);
 };
 
-const plusBtn = document.querySelector(".plus-btn");
+// 'color' is argument
+// 'colors[c].colorHex' in changeColor(colors[c].colorHex) is the argument
+const changeColor = (color) => {
+  document.body.style.backgroundColor = color;
+};
+
+for (let c = 0; c < colors.length; c++) {
+  const button = document.createElement("button");
+  button.classList.add(colors[c].name);
+  button.classList.add("uneditable-btn");
+  button.innerHTML =
+    colors[c].label + "<span class='tooltiptext'>Uneditable Button</span>";
+  button.addEventListener("click", () => changeColor(colors[c].colorHex));
+  colorPalette.append(button);
+}
 
 const adaptablePlusBtn = () => {
   plusBtn.style.backgroundColor = document.body.style.backgroundColor;
@@ -62,25 +91,6 @@ const changeToRandomColor = () => {
 };
 changeToRandomColor();
 
-// 'color' is argument
-// 'colors[c].colorHex' in changeColor(colors[c].colorHex) is the argument
-const changeColor = (color) => {
-  document.body.style.backgroundColor = color;
-};
-
-const colorPalette = document.querySelector(".color-palette");
-
-for (let c = 0; c < colors.length; c++) {
-  const button = document.createElement("button");
-  button.classList.add(colors[c].name);
-  button.classList.add("uneditable-btn");
-  button.innerHTML =
-    colors[c].label + "<span class='tooltiptext'>Can't edit this</span>";
-  button.addEventListener("click", () => changeColor(colors[c].colorHex));
-  colorPalette.append(button);
-}
-
-let uneditableColorBtn;
 const getSelectedColorBtn = (event) => {
   uneditableColorBtn = event.target;
 };
@@ -106,9 +116,6 @@ const toggleColorPalette = () => {
   }
 };
 
-let newButton;
-let newBackgroundColor;
-
 const addNewColorButton = () => {
   newButton = document.createElement("button");
   // get current background color of page
@@ -123,9 +130,6 @@ const addNewColorButton = () => {
   location.reload();
   disablePlusBtn();
 };
-
-const newColorInput = document.querySelector("#new-color-input");
-let newColorsArrayObject;
 
 const getNewColorInput = () => {
   // insert newColorInput.value as a label for the newButton
@@ -160,7 +164,7 @@ const getNewColorInput = () => {
   }
 };
 
-const getNewColorNames = () => {
+const getNewColorNamesFromLS = () => {
   if (localStorage.getItem("newColorsArray") === null) {
     newColorsArray = [];
   } else {
@@ -180,32 +184,10 @@ const getNewColorNames = () => {
 };
 
 const DOMContentLoaded = () => {
-  document.addEventListener("DOMContentLoaded", getNewColorNames);
+  document.addEventListener("DOMContentLoaded", getNewColorNamesFromLS);
 };
 
 DOMContentLoaded();
-
-const newColorModal = document.querySelector(".new-color-modal");
-const backdrop = document.querySelector("#backdrop");
-
-const showNewColorModal = () => {
-  newColorModal.style.display = "block";
-  backdrop.style.display = "block";
-
-  newColorInput.focus();
-  newColorInput.value = "";
-};
-
-const closeNewColorModal = () => {
-  newColorModal.style.display = "none";
-  backdrop.style.display = "none";
-};
-
-const editColorInput = document.querySelector("#edit-color-input");
-const editColorModal = document.querySelector(".edit-color-modal");
-let colorNameInLS;
-let selectedColorBtn;
-let selectedColorBtnName;
 
 const getSelectedColorBtnName = (event) => {
   selectedColorBtn = event.target;
@@ -246,6 +228,20 @@ const deleteColorButton = () => {
   localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
 
   closeEditColorModal();
+};
+
+// MODALS
+const showNewColorModal = () => {
+  newColorModal.style.display = "block";
+  backdrop.style.display = "block";
+
+  newColorInput.focus();
+  newColorInput.value = "";
+};
+
+const closeNewColorModal = () => {
+  newColorModal.style.display = "none";
+  backdrop.style.display = "none";
 };
 
 const showEditColorModal = () => {
