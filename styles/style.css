@@ -17,6 +17,9 @@ body {
   font-family: "Architects Daughter", cursive;
   text-align: center;
   margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 input {
@@ -64,19 +67,21 @@ h1 {
 }
 
 .colors-container {
-  border-top: 2px solid white;
-  height: 38vh;
-  bottom: 0;
-  width: 100vw;
+  border-top: 2px solid lightgrey;
+  height: 32vh;
+  background: rgba(0, 0, 0, 0.75);
+  width: 90vw;
+  bottom: 2rem;
+  border-radius: 10px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  /* align-content: flex-end; */
+  justify-content: space-evenly;
   align-items: flex-end;
-  padding: 1rem 0;
+  padding: 0.75rem 0.5rem;
   position: absolute;
   overflow-y: auto;
   overflow-x: hidden;
+  box-shadow: 0px 5px 10px black;
 }
 
 button {
@@ -85,7 +90,7 @@ button {
   line-height: 0.9;
   width: 3.75rem;
   height: 3.75rem;
-  margin: 0.25rem 0.125rem;
+  margin: 0.4rem 0.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,7 +103,7 @@ button {
   cursor: pointer;
   text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey,
-    0px 10px 5px #999;
+    0px 8px 5px #999;
 }
 
 button:hover,
@@ -260,26 +265,6 @@ button:focus {
   background: darkblue;
 }
 
-/* SCROLLBAR */
-.colors-container::-webkit-scrollbar {
-  width: 5px;
-}
-.colors-container::-webkit-scrollbar-track {
-  background: none;
-}
-.colors-container::-webkit-scrollbar-thumb {
-  background: #f5f5f573;
-  border-radius: 50px;
-  visibility: hidden;
-}
-.colors-container::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-.colors-container:hover::-webkit-scrollbar-thumb {
-  visibility: visible;
-}
-
 .tooltip {
   position: relative;
   display: inline-block;
@@ -320,4 +305,24 @@ span {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   display: block;
+}
+
+/* SCROLLBAR */
+.colors-container::-webkit-scrollbar {
+  width: 5px;
+}
+.colors-container::-webkit-scrollbar-track {
+  background: none;
+}
+.colors-container::-webkit-scrollbar-thumb {
+  background: #f5f5f573;
+  border-radius: 50px;
+  /* visibility: hidden; */
+}
+.colors-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.colors-container:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
 }
