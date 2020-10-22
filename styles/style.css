@@ -121,18 +121,13 @@ button:focus {
 
 .plus-btn {
   /* background: #999 linear-gradient(to bottom, white, black); */
-  background: #c5c5c5;
+  /* background: #c5c5c5; */
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .plus-btn:hover,
 .plus-btn:focus {
   color: white;
-}
-
-.disabled {
-  color: black;
-  background: black;
 }
 
 .disabled:hover,
@@ -286,6 +281,7 @@ button:focus {
 
 .tooltip .tooltiptext {
   visibility: hidden;
+  font-family: "Comic Neue", cursive;
   width: 8.5rem;
   font-size: 1rem;
   background-color: black;

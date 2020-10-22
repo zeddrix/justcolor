@@ -30,15 +30,22 @@ const getRandomColorValue = () => {
 
 const plusBtn = document.querySelector(".plus-btn");
 
+const adaptablePlusBtn = () => {
+  plusBtn.style.backgroundColor = document.body.style.backgroundColor;
+};
+
 const disablePlusBtn = () => {
-  plusBtn.classList.add("disabled");
+  plusBtn.style.color = "black";
+  plusBtn.style.backgroundColor = "black";
   plusBtn.setAttribute("disabled", "");
+  plusBtn.classList.add("disabled");
   plusBtn.classList.add("tooltip");
 };
 
 const enablePlusBtn = () => {
-  plusBtn.classList.remove("disabled");
+  adaptablePlusBtn();
   plusBtn.removeAttribute("disabled");
+  plusBtn.classList.remove("disabled");
   plusBtn.classList.remove("tooltip");
 };
 
