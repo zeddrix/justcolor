@@ -116,7 +116,7 @@
 }
 
 /* IPAD PRO */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (min-height: 1360px) {
   .just-color-title {
     font-size: 12rem;
   }
