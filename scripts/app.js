@@ -129,6 +129,8 @@ const addNewColorButton = () => {
 
   localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
   disablePlusBtn();
+  newButton.focus();
+  newButton.click();
 };
 
 const getNewColorInput = () => {
