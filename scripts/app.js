@@ -13,7 +13,6 @@ let newButton;
 let newBackgroundColor;
 let newColorsArrayObject;
 
-
 const justColorTitleToggle = () => {
   const justColorTitle = document.querySelector(".just-color-title");
   justColorTitle.classList.toggle("fade-out");
@@ -49,15 +48,17 @@ const changeColor = (color) => {
   document.body.style.backgroundColor = color;
 };
 
-for (let c = 0; c < colors.length; c++) {
-  const button = document.createElement("button");
-  button.classList.add(colors[c].name);
-  button.classList.add("uneditable-btn");
-  button.innerHTML =
-    colors[c].label + "<span class='tooltiptext'>Uneditable Button</span>";
-  button.addEventListener("click", () => changeColor(colors[c].colorHex));
-  colorPalette.append(button);
-}
+const renderBuiltInColorButtons = () => {
+  for (let c = 0; c < colors.length; c++) {
+    const button = document.createElement("button");
+    button.classList.add(colors[c].name);
+    button.classList.add("uneditable-btn");
+    button.innerHTML =
+      colors[c].label + "<span class='tooltiptext'>Uneditable Button</span>";
+    button.addEventListener("click", () => changeColor(colors[c].colorHex));
+    colorPalette.append(button);
+  }
+};
 
 const adaptablePlusBtn = () => {
   plusBtn.style.backgroundColor = document.body.style.backgroundColor;
@@ -89,7 +90,6 @@ const changeToRandomColor = () => {
   document.body.style.backgroundColor = "#" + rColor;
   enablePlusBtn();
 };
-changeToRandomColor();
 
 const getSelectedColorBtn = (event) => {
   uneditableColorBtn = event.target;
@@ -187,8 +187,6 @@ const DOMContentLoaded = () => {
   document.addEventListener("DOMContentLoaded", getNewColorNamesFromLS);
 };
 
-DOMContentLoaded();
-
 const getSelectedColorBtnName = (event) => {
   selectedColorBtn = event.target;
   selectedColorBtnName = selectedColorBtn.textContent;
@@ -255,3 +253,8 @@ const closeEditColorModal = () => {
   editColorModal.style.display = "none";
   backdrop.style.display = "none";
 };
+
+// initialization; entry point
+changeToRandomColor();
+renderBuiltInColorButtons();
+DOMContentLoaded();
