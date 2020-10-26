@@ -1,9 +1,9 @@
 const plusBtn = document.querySelector(".plus-btn");
 const colorPalette = document.querySelector(".color-palette");
-const newColorInput = document.querySelector("#new-color-input");
-const newColorModal = document.querySelector(".new-color-modal");
 const backdrop = document.querySelector("#backdrop");
+const newColorInput = document.querySelector("#new-color-input");
 const editColorInput = document.querySelector("#edit-color-input");
+const newColorModal = document.querySelector(".new-color-modal");
 const editColorModal = document.querySelector(".edit-color-modal");
 let uneditableColorBtn;
 let colorNameInLS;
@@ -127,7 +127,7 @@ const addNewColorButton = () => {
   newButton.addEventListener("click", () => changeColor(newBackgroundColor));
   colorPalette.append(newButton);
 
-  location.reload();
+  localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
   disablePlusBtn();
 };
 
@@ -137,6 +137,7 @@ const getNewColorInput = () => {
   if (newColorInputValue !== "") {
     addNewColorButton();
     newButton.textContent = newColorInputValue;
+    console.log(`newButton.textContent: '${newButton.textContent}'`);
     newColorsArrayObject = {
       newColorName: newColorInputValue,
       newColorValue: newBackgroundColor,
@@ -193,20 +194,28 @@ const getSelectedColorBtnName = (event) => {
 
   // put the name of selected button on the input field
   editColorInput.value = selectedColorBtnName;
+
+  console.log(
+    `selectedColorBtn.textContent: '${selectedColorBtn.textContent}'`
+  );
 };
 
 const doneInEditingColorName = () => {
   // find newColorName that is equal to the selectedColorBtnName and then set the edited name to that property
-  // DO NOT FORMAT THIS LINE
-  newColorsArray.find(({ newColorName }) => {
-    return newColorName === selectedColorBtnName;
-  }).newColorName = editColorInput.value;
+  selectedColorBtnName = selectedColorBtn.textContent;
+  if (selectedColorBtnName !== editColorInput.value) {
+    selectedColorBtn.textContent = editColorInput.value;
 
-  selectedColorBtn.textContent = editColorInput.value;
+    newColorsArray.find(({ newColorName }) => {
+      return newColorName === selectedColorBtnName;
+    }).newColorName = editColorInput.value;
 
-  localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
+    localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
 
-  closeEditColorModal();
+    closeEditColorModal();
+  } else {
+    closeEditColorModal();
+  }
 };
 
 const deleteColorButton = () => {
@@ -224,6 +233,7 @@ const deleteColorButton = () => {
   localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
 
   closeEditColorModal();
+  enablePlusBtn();
 };
 
 // MODALS
