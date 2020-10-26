@@ -207,7 +207,7 @@ const getSelectedColorBtnName = (event) => {
 };
 
 const doneInEditingColorName = () => {
-  // find newColorName that is equal to the selectedColorBtnName and then set the edited name to that property
+  // find newColorValue that is equal to the selectedColorBtnName and then set the edited name to that property
   selectedColorBtnName = selectedColorBtn.textContent;
   if (selectedColorBtnName !== editColorInput.value) {
     selectedColorBtn.textContent = editColorInput.value;

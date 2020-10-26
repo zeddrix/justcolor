@@ -34,12 +34,17 @@ document.addEventListener("click", (event) => {
 // });
 
 
-// !!!!!!!!!!!!!ISSUE: Creates new button even if modal is not open!!!!!!!!!!!!
-// document.addEventListener("keypress", (event) => {
-//   if (event.keyCode === 13) {
-//     getNewColorInput();
-//   }
-// });
+newColorInput.addEventListener("keypress", (event) => {
+  if (event.keyCode === 13) {
+    getNewColorInput();
+  }
+});
+
+editColorInput.addEventListener("keypress", (event) => {
+  if (event.keyCode === 13) {
+    doneInEditingColorName();
+  }
+});
 
 // EDITABLE BUTTONS
 let delay;
