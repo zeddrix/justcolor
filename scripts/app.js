@@ -202,11 +202,9 @@ const doneInEditingColorName = () => {
     return newColorName === selectedColorBtnName;
   }).newColorName = editColorInput.value;
 
-  selectedColorBtnName = editColorInput.value;
-  editedSelectedColorBtnName = selectedColorBtnName;
+  selectedColorBtn.textContent = editColorInput.value;
 
   localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
-  location.reload();
 
   closeEditColorModal();
 };
