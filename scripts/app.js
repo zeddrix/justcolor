@@ -190,6 +190,7 @@ const DOMContentLoaded = () => {
   document.addEventListener("DOMContentLoaded", getNewColorNamesFromLS);
 };
 
+let selectedColorBtnRGB;
 const getSelectedColorBtnName = (event) => {
   selectedColorBtn = event.target;
   selectedColorBtnName = selectedColorBtn.textContent;
@@ -200,6 +201,9 @@ const getSelectedColorBtnName = (event) => {
   console.log(
     `selectedColorBtn.textContent: '${selectedColorBtn.textContent}'`
   );
+
+  selectedColorBtnRGB = selectedColorBtn.style.backgroundColor;
+  console.log(`selectedColorBtnRGB: '${selectedColorBtnRGB}'`);
 };
 
 const doneInEditingColorName = () => {
@@ -208,8 +212,8 @@ const doneInEditingColorName = () => {
   if (selectedColorBtnName !== editColorInput.value) {
     selectedColorBtn.textContent = editColorInput.value;
 
-    newColorsArray.find(({ newColorName }) => {
-      return newColorName === selectedColorBtnName;
+    newColorsArray.find(({ newColorValue }) => {
+      return newColorValue === selectedColorBtnRGB;
     }).newColorName = editColorInput.value;
 
     localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
