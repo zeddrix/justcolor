@@ -68,9 +68,9 @@ h1 {
 
 .color-palette {
   border-top: 2px solid lightgrey;
-  max-height: 32vh;
+  height: 32vh;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.5);
   width: 90vw;
   bottom: 2.75rem;
   border-radius: 10px;
@@ -242,7 +242,7 @@ button:focus {
   width: 90%;
   overflow: auto;
   background: white;
-  padding: 3.5rem 1rem;
+  padding: 3rem 1rem;
   border-radius: 10px;
   animation-name: zoomIn;
   animation-duration: 0.1s;
@@ -302,8 +302,8 @@ button:focus {
 .tooltip .tooltiptext {
   visibility: hidden;
   font-family: "Comic Neue", cursive;
-  width: 8.5rem;
-  font-size: 1rem;
+  width: 7.5rem;
+  font-size: 0.75rem;
   background-color: black;
   color: #fff;
   border: 1px solid white;
@@ -313,7 +313,7 @@ button:focus {
   position: absolute;
   z-index: 500;
   bottom: 90%;
-  left: 40%;
+  left: 50%;
   margin-left: -60px;
 }
 
