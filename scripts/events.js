@@ -23,17 +23,6 @@ document.addEventListener("click", (event) => {
   }
 });
 
-// document.addEventListener("keypress", (event) => {
-//   if (event.target.matches("input")) {
-//     return (
-//       (event.charCode > 64 && event.charCode < 91) ||
-//       (event.charCode > 96 && event.charCode < 123) ||
-//       event.charCode === 32
-//     );
-//   }
-// });
-
-
 newColorInput.addEventListener("keypress", (event) => {
   if (event.keyCode === 13) {
     getNewColorInput();

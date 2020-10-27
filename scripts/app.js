@@ -10,8 +10,9 @@ let colorNameInLS;
 let selectedColorBtn;
 let selectedColorBtnName;
 let newButton;
+let newColorsArray;
 let newBackgroundColor;
-let newColorsArrayObject;
+let selectedColorBtnRGB;
 
 const justColorTitleToggle = () => {
   const justColorTitle = document.querySelector(".just-color-title");
@@ -126,8 +127,6 @@ const addNewColorButton = () => {
   // upon click, change page's background color USING the button's background color
   newButton.addEventListener("click", () => changeColor(newBackgroundColor));
   colorPalette.append(newButton);
-
-  localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
   disablePlusBtn();
   newButton.focus();
   newButton.click();
@@ -139,20 +138,15 @@ const getNewColorInput = () => {
   if (newColorInputValue !== "") {
     addNewColorButton();
     newButton.textContent = newColorInputValue;
-    console.log(`newButton.textContent: '${newButton.textContent}'`);
-    newColorsArrayObject = {
+    const newColorsArrayObject = {
       newColorName: newColorInputValue,
       newColorValue: newBackgroundColor,
     };
-
-    let newColorsArray;
-
     if (localStorage.getItem("newColorsArray") === null) {
       newColorsArray = [];
     } else {
       newColorsArray = JSON.parse(localStorage.getItem("newColorsArray"));
     }
-
     newColorsArray.push(newColorsArrayObject);
     localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
 
@@ -160,7 +154,6 @@ const getNewColorInput = () => {
   } else if (newColorInputValue === "") {
     newColorInput.classList.add("name-required");
     newColorInput.focus();
-
     setTimeout(() => {
       newColorInput.classList.remove("name-required");
     }, 300);
@@ -190,34 +183,24 @@ const DOMContentLoaded = () => {
   document.addEventListener("DOMContentLoaded", getNewColorNamesFromLS);
 };
 
-let selectedColorBtnRGB;
 const getSelectedColorBtnName = (event) => {
   selectedColorBtn = event.target;
   selectedColorBtnName = selectedColorBtn.textContent;
-
   // put the name of selected button on the input field
   editColorInput.value = selectedColorBtnName;
-
-  console.log(
-    `selectedColorBtn.textContent: '${selectedColorBtn.textContent}'`
-  );
-
   selectedColorBtnRGB = selectedColorBtn.style.backgroundColor;
-  console.log(`selectedColorBtnRGB: '${selectedColorBtnRGB}'`);
 };
 
 const doneInEditingColorName = () => {
   // find newColorValue that is equal to the selectedColorBtnName and then set the edited name to that property
-  selectedColorBtnName = selectedColorBtn.textContent;
   if (selectedColorBtnName !== editColorInput.value) {
     selectedColorBtn.textContent = editColorInput.value;
-
-    newColorsArray.find(({ newColorValue }) => {
-      return newColorValue === selectedColorBtnRGB;
-    }).newColorName = editColorInput.value;
-
+    const findResult = newColorsArray.find(({ newColorValue }) => {
+      let booleanValue = newColorValue === selectedColorBtnRGB;
+      return booleanValue;
+    });
+    findResult.newColorName = editColorInput.value;
     localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
-
     closeEditColorModal();
   } else {
     closeEditColorModal();
@@ -226,10 +209,8 @@ const doneInEditingColorName = () => {
 
 const deleteColorButton = () => {
   selectedColorBtn.remove();
-
   for (var i = 0; i < newColorsArray.length; i++) {
     var newColor = newColorsArray[i];
-
     if (selectedColorBtnName.indexOf(newColor.newColorName) !== -1) {
       newColorsArray.splice(i, 1);
       i--;
@@ -246,7 +227,6 @@ const deleteColorButton = () => {
 const showNewColorModal = () => {
   newColorModal.style.display = "block";
   backdrop.style.display = "block";
-
   newColorInput.focus();
   newColorInput.value = "";
 };
@@ -259,7 +239,6 @@ const closeNewColorModal = () => {
 const showEditColorModal = () => {
   editColorModal.style.display = "block";
   backdrop.style.display = "block";
-
   editColorInput.focus();
 };
 
