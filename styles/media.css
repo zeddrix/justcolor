@@ -51,6 +51,15 @@
 }
 
 /* SMALLER TABLETS */
+@media only screen and (min-width: 420px) {
+  .modal {
+    width: 70%;
+    padding: 3.5rem 1rem;
+    border-radius: 6px;
+  }
+}
+
+/* TABLETS */
 @media only screen and (min-width: 550px) {
   .just-color-title {
     font-size: 10rem;
