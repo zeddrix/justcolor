@@ -199,8 +199,8 @@ h1 {
 
 #toggle-color-palette-btn {
 	border-radius: 4px;
-	font-size: 1rem;
-	padding: 0rem 1.5rem;
+	font-size: 0.8rem;
+	padding: 0.1rem 1.5rem;
 	bottom: 0.5rem;
 	position: absolute;
 	background: #0000004d;
