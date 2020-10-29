@@ -305,7 +305,8 @@
 			0px 10px 10px #999;
 	}
 	.color-palette {
-		height: 15vh;
+    /* height: 15vh; */
+    	height: 7rem;
 		border-top: 3px solid lightgrey;
 		bottom: 3rem;
 	}

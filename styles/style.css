@@ -141,13 +141,13 @@ input:focus {
 	margin: 1rem 0.7rem 0 0.7rem;
 }
 
-.about-just-color__link {
+.settings__div__info-link {
 	color: #ff4684;
 	text-decoration: none;
 }
 
-.about-just-color__link:hover,
-.about-just-color__link:focus {
+.settings__div__info-link:hover,
+.settings__div__info-link:focus {
 	color: #ff0055;
 	text-decoration: underline;
 }
