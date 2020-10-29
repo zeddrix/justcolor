@@ -6,7 +6,7 @@ const editColorInput = document.querySelector("#edit-color-input");
 const newColorModal = document.querySelector(".new-color-modal");
 const editColorModal = document.querySelector(".edit-color-modal");
 const settingsDiv = document.querySelector("#settings__div");
-const toggleButtonCircles = document.querySelectorAll('.toggle-button__circle');
+const toggleButtonCircles = document.querySelectorAll(".toggle-button__circle");
 let uneditableColorBtn;
 let colorNameInLS;
 let selectedColorBtn;
@@ -123,11 +123,14 @@ const addNewColorButton = () => {
   newButton = document.createElement("button");
   // get current background color of page
   newBackgroundColor = document.body.style.backgroundColor;
+  // this variable is really for this function only
+  const colorValue = document.body.style.backgroundColor;
   // new button's background color
   newButton.style.backgroundColor = newBackgroundColor;
-  newButton.classList.add("editable-btn");
   // upon click, change page's background color USING the button's background color
-  newButton.addEventListener("click", () => changeColor(newBackgroundColor));
+  newButton.addEventListener("click", () => changeColor(colorValue));
+  console.log("addedEventListener with color: ", newBackgroundColor);
+  newButton.classList.add("editable-btn");
   colorPalette.append(newButton);
   disablePlusBtn();
   newButton.focus();
@@ -250,24 +253,24 @@ const closeEditColorModal = () => {
 };
 
 const openSettings = () => {
-  settingsDiv.style.display = "block"
+  settingsDiv.style.display = "block";
   backdrop.style.display = "block";
   for (let i = 0; i < toggleButtonCircles.length; i++) {
     const background = toggleButtonCircles[i];
     background.classList.remove("colored");
     background.classList.add("transparent");
   }
-}
+};
 
 const closeSettings = () => {
-  settingsDiv.style.display = "none"
+  settingsDiv.style.display = "none";
   backdrop.style.display = "none";
   for (let i = 0; i < toggleButtonCircles.length; i++) {
     const background = toggleButtonCircles[i];
     background.classList.remove("transparent");
     background.classList.add("colored");
   }
-}
+};
 
 // initialization; entry point
 changeToRandomColor();
