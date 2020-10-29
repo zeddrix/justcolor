@@ -247,6 +247,18 @@ const closeEditColorModal = () => {
   backdrop.style.display = "none";
 };
 
+const settingsDiv = document.querySelector("#settings__div");
+
+const openSettings = () => {
+  settingsDiv.style.display = "block"
+  backdrop.style.display = "block";
+}
+
+const closeSettings = () => {
+  settingsDiv.style.display = "none"
+  backdrop.style.display = "none";
+}
+
 // initialization; entry point
 changeToRandomColor();
 renderBuiltInColorButtons();
