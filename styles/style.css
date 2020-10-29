@@ -42,6 +42,27 @@ input:focus {
 	box-shadow: 0 0 5px blue;
 }
 
+.about-just-color {
+  width: 100vw;
+  text-align: right;
+  padding-top: 0.7rem;
+}
+
+.about-just-color a {
+  font-size: 1rem;
+  margin-right: 1.1rem;
+  font-family: "Segoe UI";
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.about-just-color:hover a,
+.about-just-color:focus a {
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .just-color-title {
 	/* border: 5px solid white; */
 	font-size: 5rem;

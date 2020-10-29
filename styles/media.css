@@ -1,5 +1,12 @@
 /* MOBILE */
 @media only screen and (max-width: 319px) {
+  .about-just-color {
+    padding-top: 0.5rem;
+  }
+  .about-just-color a {
+    font-size: 0.8rem;
+    margin-right: 1rem;
+  }
   .just-color-title {
     font-size: 4rem;
     height: 70vh;
@@ -57,10 +64,24 @@
     padding: 3.5rem 1rem;
     border-radius: 6px;
   }
+  .about-just-color {
+    padding-top: 0.75rem;
+  }
+  .about-just-color a {
+    font-size: 1.15rem;
+    margin-right: 1.5rem;
+  }
 }
 
-/* TABLETS */
+/* AMAZON TABLETS */
 @media only screen and (min-width: 550px) {
+  .about-just-color {
+    padding-top: 1rem;
+  }
+  .about-just-color a {
+    font-size: 1.5rem;
+    margin-right: 1.75rem;
+  }
   .just-color-title {
     font-size: 10rem;
   }
@@ -121,6 +142,13 @@
 
 /* IPAD */
 @media only screen and (min-width: 768px) {
+  .about-just-color {
+    padding-top: 1.25rem;
+  }
+  .about-just-color a {
+    font-size: 1.7rem;
+    margin-right: 2.5rem;
+  }
   .just-color-title {
     font-size: 10rem;
   }
@@ -184,6 +212,13 @@
 
 /* IPAD PRO */
 @media only screen and (min-width: 1024px) and (min-height: 1360px) {
+  .about-just-color {
+    padding-top: 1.5rem;
+  }
+  .about-just-color a {
+    font-size: 2rem;
+    margin-right: 3rem;
+  }
   .just-color-title {
     font-size: 12rem;
   }
@@ -245,6 +280,13 @@
 
 /* DESKTOP */
 @media only screen and (min-width: 1200px) {
+  .about-just-color {
+    padding-top: 0.5rem;
+  }
+  .about-just-color a {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
   .just-color-title {
     font-size: 13rem;
     height: 85vh;
