@@ -1,5 +1,10 @@
 /* MOBILE */
 @media only screen and (max-width: 319px) {
+	.toggle-button__circle {
+		width: 5px;
+		height: 5px;
+		margin: 0 1px;
+	}
 	#settings__div {
 		margin: 2rem 1.5rem 0.5rem 0.5rem;
 		padding: 1rem;
@@ -138,6 +143,14 @@
 
 /* IPAD */
 @media only screen and (min-width: 768px) {
+	.toggle-button__circle {
+		width: 10px;
+		height: 10px;
+		margin: 0 3px;
+	}
+	#settings__toggle-button {
+		margin-right: 1rem;
+	}
 	.just-color-title {
 		font-size: 10rem;
 	}
@@ -201,6 +214,14 @@
 
 /* IPAD PRO */
 @media only screen and (min-width: 1024px) and (min-height: 1360px) {
+	.toggle-button__circle {
+		width: 15px;
+		height: 15px;
+		margin: 0 3px;
+	}
+	#settings__toggle-button {
+		margin-right: 1.25rem;
+	}
 	.just-color-title {
 		font-size: 12rem;
 	}
@@ -262,6 +283,14 @@
 
 /* DESKTOP */
 @media only screen and (min-width: 1200px) {
+  .toggle-button__circle {
+		width: 7px;
+    height: 7px;
+    margin: 0 2px;
+  }
+  #settings__toggle-button {
+    margin-right: 1rem;
+  }
 	.just-color-title {
 		font-size: 13rem;
 		height: 85vh;
