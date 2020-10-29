@@ -281,11 +281,11 @@
 /* DESKTOP */
 @media only screen and (min-width: 1200px) {
   .about-just-color {
-    padding-top: 0.5rem;
+    padding-top: 1.25rem;
   }
   .about-just-color a {
     font-size: 1.2rem;
-    margin-right: 1rem;
+    margin-right: 2.75rem;
   }
   .just-color-title {
     font-size: 13rem;
