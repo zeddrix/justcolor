@@ -1,347 +1,322 @@
 /* MOBILE */
 @media only screen and (max-width: 319px) {
-  .settings__buttons {
-    padding-top: 0.5rem;
-  }
-  .settings__buttons * {
-    font-size: 0.8rem;
-    margin-right: 1rem;
-  }
-  .just-color-title {
-    font-size: 4rem;
-    height: 70vh;
-  }
-  .color-palette {
-    height: 33vh;
-    width: 90vw;
-    bottom: 2.5rem;
-    padding: 0.5rem;
-  }
-  .tooltip .tooltiptext {
-    font-size: 0.65rem;
-    width: 6rem;
-    left: 75%;
-    padding: 3px 0;
-  }
-  .modal {
-    width: 90%;
-    padding: 2.5rem 1rem;
-    border-radius: 6px;
-  }
-  .modal__description,
-  .input-field,
-  .modal-btn {
-    font-size: 0.85rem;
-  }
-  .input-field {
-    width: 9rem;
-  }
-  .modal-btn {
-    padding: 0.6rem 1.1rem;
-    margin-top: 0.5rem;
-  }
-  #toggle-color-palette-btn {
-    font-size: 1rem;
-    bottom: 0.5rem;
-  }
-  button {
-    width: 3rem;
-    height: 3rem;
-    margin: 0.25rem;
-    font-size: 0.7rem;
-    box-shadow: inset 0px 1px 0px grey, 0px 3.2px 0px 0px lightgrey,
-      0px 7px 5px #999;
-  }
-  .plus-btn {
-    font-size: 0.75rem;
-  }
+	#settings__div {
+		margin: 2rem 1.5rem 0.5rem 0.5rem;
+		padding: 1rem;
+		height: 15rem;
+	}
+	.settings-p {
+		font-size: 0.8rem;
+	}
+	.settings__div__headers {
+		font-size: 1rem;
+		margin: 0.5rem 1rem;
+	}
+	.settings__div__info {
+		font-size: 0.8rem;
+		margin: 0.5rem 1rem;
+		margin-bottom: 1rem;
+	}
+	.just-color-title {
+		font-size: 4rem;
+		height: 70vh;
+	}
+	.color-palette {
+		height: 33vh;
+		width: 90vw;
+		bottom: 2.5rem;
+		padding: 0.5rem;
+	}
+	.tooltip .tooltiptext {
+		font-size: 0.65rem;
+		width: 6rem;
+		left: 75%;
+		padding: 3px 0;
+	}
+	.modal {
+		width: 90%;
+		padding: 2.5rem 1rem;
+		border-radius: 6px;
+	}
+	.modal__description,
+	.input-field,
+	.modal-btn {
+		font-size: 0.85rem;
+	}
+	.input-field {
+		width: 9rem;
+	}
+	.modal-btn {
+		padding: 0.6rem 1.1rem;
+		margin-top: 0.5rem;
+	}
+	#toggle-color-palette-btn {
+		font-size: 1rem;
+		bottom: 0.5rem;
+	}
+	button {
+		width: 3rem;
+		height: 3rem;
+		margin: 0.25rem;
+		font-size: 0.7rem;
+		box-shadow: inset 0px 1px 0px grey, 0px 3.2px 0px 0px lightgrey,
+			0px 7px 5px #999;
+	}
+	.plus-btn {
+		font-size: 0.75rem;
+	}
 }
 
 /* SMALLER TABLETS */
 @media only screen and (min-width: 420px) {
-  .modal {
-    width: 70%;
-    padding: 3.5rem 1rem;
-    border-radius: 6px;
-  }
-  .settings__buttons {
-    padding-top: 0.75rem;
-  }
-  .settings__buttons * {
-    font-size: 1.15rem;
-    margin-right: 1.5rem;
-  }
+	.modal {
+		width: 70%;
+		padding: 3.5rem 1rem;
+		border-radius: 6px;
+	}
 }
 
 /* AMAZON TABLETS */
 @media only screen and (min-width: 550px) {
-  .settings__buttons {
-    padding-top: 1rem;
-  }
-  .settings__buttons * {
-    font-size: 1.5rem;
-    margin-right: 1.75rem;
-  }
-  .just-color-title {
-    font-size: 10rem;
-  }
-  button {
-    width: 5rem;
-    height: 5rem;
-    font-size: 1.1rem;
-    margin: 0.6rem 0.4rem;
-    box-shadow: inset 0px 1px 0px grey, 0px 6px 0px 0px lightgrey,
-      0px 14px 10px #999;
-  }
-  .color-palette {
-    height: 30vh;
-    border-top: 4px solid lightgrey;
-    bottom: 4rem;
-  }
-  #toggle-color-palette-btn {
-    font-size: 1.5rem;
-    bottom: 0.75rem;
-    padding: 0 2rem;
-  }
-  .tooltip .tooltiptext {
-    font-size: 1rem;
-    width: 9rem;
-    left: 35%;
-    padding: 6px 0;
-  }
-  #new-color-input:focus {
-    box-shadow: 0 0 10px green;
-  }
-  #edit-color-input:focus {
-    box-shadow: 0 0 10px blue;
-  }
-  .plus-btn {
-    font-size: 1.5rem;
-  }
-  .modal {
-    width: 75%;
-    padding: 5rem 1rem;
-  }
-  .modal-btn {
-    border-radius: 7px;
-    padding: 1rem 1.8rem;
-  }
-  .modal__description,
-  .input-field,
-  .modal-btn {
-    font-size: 1.5rem;
-  }
-  .input-field {
-    width: 15rem;
-    margin: 0.3rem;
-  }
-  .color-palette::-webkit-scrollbar {
-    width: 7.5px;
-  }
+	.just-color-title {
+		font-size: 10rem;
+	}
+	button {
+		width: 5rem;
+		height: 5rem;
+		font-size: 1.1rem;
+		margin: 0.6rem 0.4rem;
+		box-shadow: inset 0px 1px 0px grey, 0px 6px 0px 0px lightgrey,
+			0px 14px 10px #999;
+	}
+	.color-palette {
+		height: 30vh;
+		border-top: 4px solid lightgrey;
+		bottom: 4rem;
+	}
+	#toggle-color-palette-btn {
+		font-size: 1.5rem;
+		bottom: 0.75rem;
+		padding: 0 2rem;
+	}
+	.tooltip .tooltiptext {
+		font-size: 1rem;
+		width: 9rem;
+		left: 35%;
+		padding: 6px 0;
+	}
+	#new-color-input:focus {
+		box-shadow: 0 0 10px green;
+	}
+	#edit-color-input:focus {
+		box-shadow: 0 0 10px blue;
+	}
+	.plus-btn {
+		font-size: 1.5rem;
+	}
+	.modal {
+		width: 75%;
+		padding: 5rem 1rem;
+	}
+	.modal-btn {
+		border-radius: 7px;
+		padding: 1rem 1.8rem;
+	}
+	.modal__description,
+	.input-field,
+	.modal-btn {
+		font-size: 1.5rem;
+	}
+	.input-field {
+		width: 15rem;
+		margin: 0.3rem;
+	}
+	.color-palette::-webkit-scrollbar {
+		width: 7.5px;
+	}
 }
 
 /* IPAD */
 @media only screen and (min-width: 768px) {
-  .settings__buttons {
-    padding-top: 1.25rem;
-  }
-  .settings__buttons * {
-    font-size: 1.7rem;
-    margin-right: 2.5rem;
-  }
-  .just-color-title {
-    font-size: 10rem;
-  }
-  button {
-    width: 6rem;
-    height: 6rem;
-    font-size: 1.4rem;
-    margin: 0.7rem 0.4rem;
-    box-shadow: inset 0px 1px 0px grey, 0px 7px 0px 0px lightgrey,
-      0px 15px 10px #999;
-  }
-  .color-palette {
-    height: 38vh;
-    width: 90vw;
-    border-top: 5px solid lightgrey;
-    bottom: 4rem;
-    border-radius: 15px;
-  }
-  #toggle-color-palette-btn {
-    font-size: 1.5rem;
-    bottom: 0.75rem;
-    padding: 0 2rem;
-  }
-  #new-color-input:focus {
-    box-shadow: 0 0 10px green;
-  }
+	.just-color-title {
+		font-size: 10rem;
+	}
+	button {
+		width: 6rem;
+		height: 6rem;
+		font-size: 1.4rem;
+		margin: 0.7rem 0.4rem;
+		box-shadow: inset 0px 1px 0px grey, 0px 7px 0px 0px lightgrey,
+			0px 15px 10px #999;
+	}
+	.color-palette {
+		height: 38vh;
+		width: 90vw;
+		border-top: 5px solid lightgrey;
+		bottom: 4rem;
+		border-radius: 15px;
+	}
+	#toggle-color-palette-btn {
+		font-size: 1.5rem;
+		bottom: 0.75rem;
+		padding: 0 2rem;
+	}
+	#new-color-input:focus {
+		box-shadow: 0 0 10px green;
+	}
 
-  #edit-color-input:focus {
-    box-shadow: 0 0 10px blue;
-  }
-  .plus-btn {
-    font-size: 1.75rem;
-  }
-  .modal {
-    width: 65%;
-    padding: 5rem 1rem;
-  }
-  .modal-btn {
-    padding: 1rem 1.8rem;
-    border-radius: 8px;
-  }
-  .modal__description,
-  .input-field,
-  .modal-btn {
-    font-size: 1.5rem;
-  }
-  .tooltip .tooltiptext {
-    font-size: 1.2rem;
-    width: 11rem;
-    left: 20%;
-    padding: 6px 0;
-  }
-  .input-field {
-    width: 15rem;
-    margin: 0.2rem;
-  }
-  .color-palette::-webkit-scrollbar {
-    width: 9px;
-  }
+	#edit-color-input:focus {
+		box-shadow: 0 0 10px blue;
+	}
+	.plus-btn {
+		font-size: 1.75rem;
+	}
+	.modal {
+		width: 65%;
+		padding: 5rem 1rem;
+	}
+	.modal-btn {
+		padding: 1rem 1.8rem;
+		border-radius: 8px;
+	}
+	.modal__description,
+	.input-field,
+	.modal-btn {
+		font-size: 1.5rem;
+	}
+	.tooltip .tooltiptext {
+		font-size: 1.2rem;
+		width: 11rem;
+		left: 20%;
+		padding: 6px 0;
+	}
+	.input-field {
+		width: 15rem;
+		margin: 0.2rem;
+	}
+	.color-palette::-webkit-scrollbar {
+		width: 9px;
+	}
 }
 
 /* IPAD PRO */
 @media only screen and (min-width: 1024px) and (min-height: 1360px) {
-  .settings__buttons {
-    padding-top: 1.5rem;
-  }
-  .settings__buttons * {
-    font-size: 2rem;
-    margin-right: 3rem;
-  }
-  .just-color-title {
-    font-size: 12rem;
-  }
-  button {
-    width: 7.5rem;
-    height: 7.5rem;
-    font-size: 1.7rem;
-    margin: 0.75rem 0.5rem;
-    box-shadow: inset 0px 1px 0px grey, 0px 10px 0px 0px lightgrey,
-      0px 17px 10px #999;
-  }
-  .plus-btn {
-    font-size: 2.3rem;
-  }
-  .modal {
-    width: 60%;
-    padding: 6rem 1rem;
-  }
-  .modal-btn {
-    padding: 1rem 2.5rem;
-    border-radius: 10px;
-    margin-top: 1.75rem;
-  }
-  .modal__description,
-  .input-field,
-  .modal-btn {
-    font-size: 2rem;
-  }
-  .input-field {
-    width: 20rem;
-  }
-  .color-palette::-webkit-scrollbar {
-    width: 10px;
-  }
-  .color-palette {
-    border-top: 5.5px solid lightgrey;
-    box-shadow: 0px 10px 15px black;
-    bottom: 5rem;
-    height: 35vh;
-  }
-  #new-color-input:focus {
-    box-shadow: 0 0 10px green;
-  }
-  .tooltip .tooltiptext {
-    font-size: 1.2rem;
-    width: 11rem;
-    left: 27%;
-    padding: 6px 0;
-  }
-  #edit-color-input:focus {
-    box-shadow: 0 0 10px blue;
-  }
-  #toggle-color-palette-btn {
-    font-size: 1.8rem;
-    bottom: 0.85rem;
-    padding: 0 3rem;
-  }
+	.just-color-title {
+		font-size: 12rem;
+	}
+	button {
+		width: 7.5rem;
+		height: 7.5rem;
+		font-size: 1.7rem;
+		margin: 0.75rem 0.5rem;
+		box-shadow: inset 0px 1px 0px grey, 0px 10px 0px 0px lightgrey,
+			0px 17px 10px #999;
+	}
+	.plus-btn {
+		font-size: 2.3rem;
+	}
+	.modal {
+		width: 60%;
+		padding: 6rem 1rem;
+	}
+	.modal-btn {
+		padding: 1rem 2.5rem;
+		border-radius: 10px;
+		margin-top: 1.75rem;
+	}
+	.modal__description,
+	.input-field,
+	.modal-btn {
+		font-size: 2rem;
+	}
+	.input-field {
+		width: 20rem;
+	}
+	.color-palette::-webkit-scrollbar {
+		width: 10px;
+	}
+	.color-palette {
+		border-top: 5.5px solid lightgrey;
+		box-shadow: 0px 10px 15px black;
+		bottom: 5rem;
+		height: 35vh;
+	}
+	#new-color-input:focus {
+		box-shadow: 0 0 10px green;
+	}
+	.tooltip .tooltiptext {
+		font-size: 1.2rem;
+		width: 11rem;
+		left: 27%;
+		padding: 6px 0;
+	}
+	#edit-color-input:focus {
+		box-shadow: 0 0 10px blue;
+	}
+	#toggle-color-palette-btn {
+		font-size: 1.8rem;
+		bottom: 0.85rem;
+		padding: 0 3rem;
+	}
 }
 
 /* DESKTOP */
 @media only screen and (min-width: 1200px) {
-  .settings__buttons {
-    padding-top: 1.25rem;
-  }
-  .settings__buttons * {
-    font-size: 1.2rem;
-    margin-right: 2.75rem;
-  }
-  .just-color-title {
-    font-size: 13rem;
-    height: 85vh;
-  }
-  button {
-    width: 4.5rem;
-    height: 4.5rem;
-    font-size: 1rem;
-    margin: 0.5rem;
-    box-shadow: inset 0px 1px 0px grey, 0px 6px 0px 0px lightgrey,
-      0px 10px 10px #999;
-  }
-  .color-palette {
-    height: 15vh;
-    border-top: 3px solid lightgrey;
-    bottom: 3.5rem;
-  }
-  .plus-btn {
-    font-size: 1.1rem;
-  }
-  .modal {
-    width: 30%;
-    padding: 4rem 1rem;
-  }
-  .modal__description,
-  .input-field,
-  .modal-btn {
-    font-size: 1.3rem;
-  }
-  .input-field {
-    width: 12.5rem;
-  }
-  .modal-btn {
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-  }
-  .color-palette::-webkit-scrollbar {
-    width: 5px;
-  }
-  #toggle-color-palette-btn {
-    border-radius: 4px;
-    font-size: 1.2rem;
-    padding: 0rem 1.75rem;
-    bottom: 0.5rem;
-  }
-  #toggle-color-palette-btn:hover,
-  #toggle-color-palette-btn:active {
-    cursor: pointer;
-    background: #00000080;
-    color: black;
-  }
-  .tooltip .tooltiptext {
-    font-size: 1rem;
-    width: 9rem;
-    left: 35%;
-    padding: 6px 0;
-  }
+	.just-color-title {
+		font-size: 13rem;
+		height: 85vh;
+	}
+	button {
+		width: 4.5rem;
+		height: 4.5rem;
+		font-size: 1rem;
+		margin: 0.5rem;
+		box-shadow: inset 0px 1px 0px grey, 0px 6px 0px 0px lightgrey,
+			0px 10px 10px #999;
+	}
+	.color-palette {
+		height: 15vh;
+		border-top: 3px solid lightgrey;
+		bottom: 3.5rem;
+	}
+	.plus-btn {
+		font-size: 1.1rem;
+	}
+	.modal {
+		width: 30%;
+		padding: 4rem 1rem;
+	}
+	.modal__description,
+	.input-field,
+	.modal-btn {
+		font-size: 1.3rem;
+	}
+	.input-field {
+		width: 12.5rem;
+	}
+	.modal-btn {
+		padding: 0.8rem 1.5rem;
+		border-radius: 5px;
+	}
+	.color-palette::-webkit-scrollbar {
+		width: 5px;
+	}
+	#toggle-color-palette-btn {
+		border-radius: 4px;
+		font-size: 1.2rem;
+		padding: 0rem 1.75rem;
+		bottom: 0.5rem;
+	}
+	#toggle-color-palette-btn:hover,
+	#toggle-color-palette-btn:active {
+		cursor: pointer;
+		background: #00000080;
+		color: black;
+	}
+	.tooltip .tooltiptext {
+		font-size: 1rem;
+		width: 9rem;
+		left: 35%;
+		padding: 6px 0;
+	}
 }
