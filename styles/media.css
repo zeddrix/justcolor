@@ -1,9 +1,9 @@
 /* MOBILE */
 @media only screen and (max-width: 319px) {
-  .about-just-color {
+  .main-menu__buttons {
     padding-top: 0.5rem;
   }
-  .about-just-color a {
+  .main-menu__buttons * {
     font-size: 0.8rem;
     margin-right: 1rem;
   }
@@ -64,10 +64,10 @@
     padding: 3.5rem 1rem;
     border-radius: 6px;
   }
-  .about-just-color {
+  .main-menu__buttons {
     padding-top: 0.75rem;
   }
-  .about-just-color a {
+  .main-menu__buttons * {
     font-size: 1.15rem;
     margin-right: 1.5rem;
   }
@@ -75,10 +75,10 @@
 
 /* AMAZON TABLETS */
 @media only screen and (min-width: 550px) {
-  .about-just-color {
+  .main-menu__buttons {
     padding-top: 1rem;
   }
-  .about-just-color a {
+  .main-menu__buttons * {
     font-size: 1.5rem;
     margin-right: 1.75rem;
   }
@@ -142,10 +142,10 @@
 
 /* IPAD */
 @media only screen and (min-width: 768px) {
-  .about-just-color {
+  .main-menu__buttons {
     padding-top: 1.25rem;
   }
-  .about-just-color a {
+  .main-menu__buttons * {
     font-size: 1.7rem;
     margin-right: 2.5rem;
   }
@@ -212,10 +212,10 @@
 
 /* IPAD PRO */
 @media only screen and (min-width: 1024px) and (min-height: 1360px) {
-  .about-just-color {
+  .main-menu__buttons {
     padding-top: 1.5rem;
   }
-  .about-just-color a {
+  .main-menu__buttons * {
     font-size: 2rem;
     margin-right: 3rem;
   }
@@ -280,10 +280,10 @@
 
 /* DESKTOP */
 @media only screen and (min-width: 1200px) {
-  .about-just-color {
+  .main-menu__buttons {
     padding-top: 1.25rem;
   }
-  .about-just-color a {
+  .main-menu__buttons * {
     font-size: 1.2rem;
     margin-right: 2.75rem;
   }

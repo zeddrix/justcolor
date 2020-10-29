@@ -22,6 +22,10 @@ body {
 	justify-content: center;
 }
 
+p {
+	margin: 0;
+}
+
 input {
 	user-select: text; /* Standard syntax */
 	-webkit-user-select: text; /* Chrome, Opera, Safari */
@@ -42,25 +46,89 @@ input:focus {
 	box-shadow: 0 0 5px blue;
 }
 
-.about-just-color {
-  width: 100vw;
-  text-align: right;
-  padding-top: 0.7rem;
+.main-menu__toggle-button__div {
+	/* border: 2px solid white; */
+	width: 100%;
+	height: 8vh;
+	padding: 1rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
 
-.about-just-color a {
-  font-size: 1rem;
-  margin-right: 1.1rem;
-  font-family: "Segoe UI";
-  color: whitesmoke;
-  text-decoration: none;
+#main-menu__toggle-button {
+	cursor: pointer;
+	padding: 1.5rem 0;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
 
-.about-just-color:hover a,
-.about-just-color:focus a {
-  color: black;
-  cursor: pointer;
-  text-decoration: underline;
+.toggle-button__circle {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: whitesmoke;
+	display: block;
+	margin: 0 2px;
+}
+
+.main-menu__div {
+	margin-top: 3rem;
+	background: rgba(0, 0, 0, 0.65);
+	border-radius: 7.5px;
+	width: 20rem;
+	height: 17rem;
+	padding: 0.2rem;
+	overflow: auto;
+}
+
+.main-menu__div__headers,
+.settings-p {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	color: whitesmoke;
+	text-decoration: none;
+	margin: 0.5rem;
+}
+
+.settings-p {
+	font-size: 1rem;
+	color: #aaaaaa;
+	border-bottom: 1px solid grey;
+	padding-bottom: 5px;
+}
+
+.main-menu__div__headers {
+	font-size: 1.3rem;
+}
+
+.main-menu__div__info {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	color: #cccccc;
+	text-decoration: none;
+	text-align: left;
+	margin: 0 2rem;
+}
+
+.about-just-color__link {
+	color: #20c4b5;
+	text-decoration: none;
+}
+
+.about-just-color__link:hover,
+.about-just-color__link:focus {
+	color: #1aa599;
+	text-decoration: underline;
+}
+
+.main-menu__div__sharing-buttons {
+	margin-top: 1.75rem;
 }
 
 .just-color-title {
