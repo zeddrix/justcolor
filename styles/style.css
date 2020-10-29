@@ -13,13 +13,13 @@
 }
 
 body {
-	/* overflow: hidden; */
 	font-family: "Architects Daughter", cursive;
 	text-align: center;
 	margin: 0;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
+	overflow-x: hidden;
 }
 
 p {
@@ -142,13 +142,13 @@ input:focus {
 }
 
 .about-just-color__link {
-	color: #20c4b5;
+	color: #ff4684;
 	text-decoration: none;
 }
 
 .about-just-color__link:hover,
 .about-just-color__link:focus {
-	color: #1aa599;
+	color: #ff0055;
 	text-decoration: underline;
 }
 
@@ -456,21 +456,26 @@ span {
 }
 
 /* SCROLLBAR */
-.color-palette::-webkit-scrollbar {
+.color-palette::-webkit-scrollbar, 
+#settings__div::-webkit-scrollbar {
 	width: 5px;
 }
-.color-palette::-webkit-scrollbar-track {
+.color-palette::-webkit-scrollbar-track, 
+#settings__div::-webkit-scrollbar-track {
 	background: none;
 }
-.color-palette::-webkit-scrollbar-thumb {
+.color-palette::-webkit-scrollbar-thumb, 
+#settings__div::-webkit-scrollbar-thumb {
 	background: #f5f5f573;
 	border-radius: 50px;
 	/* visibility: hidden; */
 }
-.color-palette::-webkit-scrollbar-thumb:hover {
+.color-palette::-webkit-scrollbar-thumb:hover, 
+#settings__div::-webkit-scrollbar-thumb:hover {
 	background: #555;
 }
 
-.color-palette:hover::-webkit-scrollbar-thumb {
+.color-palette:hover::-webkit-scrollbar-thumb, 
+#settings__div:hover::-webkit-scrollbar-thumb {
 	visibility: visible;
 }
