@@ -1,7 +1,7 @@
 document.addEventListener("click", (event) => {
-  if (event.target.matches(".random")) {
-    changeToRandomColor();
-  } else if (event.target.matches(".plus-btn")) {
+  if (event.target.matches(".arbitrary-btn")) {
+    changeToArbitraryColor();
+  } else if (event.target.matches(".append-btn")) {
     showNewColorModal();
   } else if (event.target.matches("#cancel-btn")) {
     closeNewColorModal();
@@ -14,13 +14,13 @@ document.addEventListener("click", (event) => {
   } else if (event.target.matches(".just-color-title")) {
     justColorTitleToggle();
   } else if (event.target.matches("button")) {
-    disablePlusBtn();
+    disableAppendBtn();
   } else if (event.target.matches("#backdrop")) {
     closeEditColorModal();
     closeNewColorModal();
     closeSettings();
-  } else if (event.target.matches("#toggle-color-palette-btn")) {
-    toggleColorPalette();
+  } else if (event.target.matches("#toggle-palette-btn")) {
+    togglePalette();
   } else if (event.target.matches("#settings__toggle-button, .toggle-button__circle")) {
     openSettings();
   }

@@ -180,7 +180,7 @@ h1 {
 	margin: 0;
 }
 
-.color-palette {
+.palette {
 	border-top: 2px solid lightgrey;
 	height: 32vh;
 	z-index: 1;
@@ -199,7 +199,7 @@ h1 {
 	box-shadow: 0px 5px 10px black;
 }
 
-#toggle-color-palette-btn {
+#toggle-palette-btn {
 	border-radius: 4px;
 	font-size: 0.8rem;
 	padding: 0.1rem 1.5rem;
@@ -209,7 +209,7 @@ h1 {
 	color: #00000080;
 }
 
-#toggle-color-palette-btn:active {
+#toggle-palette-btn:active {
 	cursor: pointer;
 	background: #00000080;
 	color: black;
@@ -249,18 +249,18 @@ button:focus {
 }
 
 /* COLOR BUTTONS */
-.random {
+.arbitrary-btn {
 	background: conic-gradient(from 45deg, red, blue, green, yellow, red);
 }
 
-.plus-btn {
+.append-btn {
 	/* background: #999 linear-gradient(to bottom, white, black); */
 	/* background: #c5c5c5; */
 	font-family: sans-serif;
 }
 
-.plus-btn:hover,
-.plus-btn:focus {
+.append-btn:hover,
+.append-btn:focus {
 	color: white;
 }
 
@@ -459,26 +459,26 @@ span {
 }
 
 /* SCROLLBAR */
-.color-palette::-webkit-scrollbar, 
+.palette::-webkit-scrollbar, 
 #settings__div::-webkit-scrollbar {
 	width: 5px;
 }
-.color-palette::-webkit-scrollbar-track, 
+.palette::-webkit-scrollbar-track, 
 #settings__div::-webkit-scrollbar-track {
 	background: none;
 }
-.color-palette::-webkit-scrollbar-thumb, 
+.palette::-webkit-scrollbar-thumb, 
 #settings__div::-webkit-scrollbar-thumb {
 	background: #f5f5f573;
 	border-radius: 50px;
 	/* visibility: hidden; */
 }
-.color-palette::-webkit-scrollbar-thumb:hover, 
+.palette::-webkit-scrollbar-thumb:hover, 
 #settings__div::-webkit-scrollbar-thumb:hover {
 	background: #555;
 }
 
-.color-palette:hover::-webkit-scrollbar-thumb, 
+.palette:hover::-webkit-scrollbar-thumb, 
 #settings__div:hover::-webkit-scrollbar-thumb {
 	visibility: visible;
 }

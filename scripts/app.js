@@ -1,5 +1,5 @@
-const plusBtn = document.querySelector(".plus-btn");
-const colorPalette = document.querySelector(".color-palette");
+const appendBtn = document.querySelector(".append-btn");
+const palette = document.querySelector(".palette");
 const backdrop = document.querySelector("#backdrop");
 const newColorInput = document.querySelector("#new-color-input");
 const editColorInput = document.querySelector("#edit-color-input");
@@ -40,8 +40,8 @@ const fullColorHex = (r, g, b) => {
   return red + green + blue;
 };
 
-// return any RANDOM number from 0-256
-const getRandomColorValue = () => {
+// return any Arbitrary number from 0-256
+const getArbitraryColorValue = () => {
   return Math.floor(Math.random() * 256);
 };
 
@@ -59,39 +59,39 @@ const renderBuiltInColorButtons = () => {
     button.innerHTML =
       colors[c].label + "<span class='tooltiptext'>Uneditable Button</span>";
     button.addEventListener("click", () => changeColor(colors[c].colorHex));
-    colorPalette.append(button);
+    palette.append(button);
   }
 };
 
-const adaptablePlusBtn = () => {
-  plusBtn.style.backgroundColor = document.body.style.backgroundColor;
+const adaptableAppendBtn = () => {
+  appendBtn.style.backgroundColor = document.body.style.backgroundColor;
 };
 
-const disablePlusBtn = () => {
-  plusBtn.style.color = "black";
-  plusBtn.style.backgroundColor = "black";
-  plusBtn.setAttribute("disabled", "");
-  plusBtn.classList.add("disabled");
-  plusBtn.classList.add("tooltip");
+const disableAppendBtn = () => {
+  appendBtn.style.color = "black";
+  appendBtn.style.backgroundColor = "black";
+  appendBtn.setAttribute("disabled", "");
+  appendBtn.classList.add("disabled");
+  appendBtn.classList.add("tooltip");
 };
 
-const enablePlusBtn = () => {
-  adaptablePlusBtn();
-  plusBtn.removeAttribute("disabled");
-  plusBtn.classList.remove("disabled");
-  plusBtn.classList.remove("tooltip");
+const enableAppendBtn = () => {
+  adaptableAppendBtn();
+  appendBtn.removeAttribute("disabled");
+  appendBtn.classList.remove("disabled");
+  appendBtn.classList.remove("tooltip");
 };
 
-const changeToRandomColor = () => {
-  // Get a set of three random numbers
+const changeToArbitraryColor = () => {
+  // Get a set of three arbitrary numbers
   // This already returns a hex value, not rgb
   const rColor = fullColorHex(
-    getRandomColorValue(),
-    getRandomColorValue(),
-    getRandomColorValue()
+    getArbitraryColorValue(),
+    getArbitraryColorValue(),
+    getArbitraryColorValue()
   );
   document.body.style.backgroundColor = "#" + rColor;
-  enablePlusBtn();
+  enableAppendBtn();
 };
 
 const getSelectedColorBtn = (event) => {
@@ -106,16 +106,16 @@ const removeTooltipFromUneditableBtn = () => {
   uneditableColorBtn.classList.remove("tooltip");
 };
 
-const toggleColorPalette = () => {
-  colorPalette.classList.toggle("disappear");
+const togglePalette = () => {
+  palette.classList.toggle("disappear");
 
-  const toggleColorPaletteBtn = document.querySelector(
-    "#toggle-color-palette-btn"
+  const togglePaletteBtn = document.querySelector(
+    "#toggle-palette-btn"
   );
-  if (toggleColorPaletteBtn.textContent === "▼") {
-    toggleColorPaletteBtn.textContent = "▲";
+  if (togglePaletteBtn.textContent === "▼") {
+    togglePaletteBtn.textContent = "▲";
   } else {
-    toggleColorPaletteBtn.textContent = "▼";
+    togglePaletteBtn.textContent = "▼";
   }
 };
 
@@ -129,10 +129,9 @@ const addNewColorButton = () => {
   newButton.style.backgroundColor = newBackgroundColor;
   // upon click, change page's background color USING the button's background color
   newButton.addEventListener("click", () => changeColor(colorValue));
-  console.log("addedEventListener with color: ", newBackgroundColor);
   newButton.classList.add("editable-btn");
-  colorPalette.append(newButton);
-  disablePlusBtn();
+  palette.append(newButton);
+  disableAppendBtn();
   newButton.focus();
   newButton.click();
 };
@@ -180,7 +179,7 @@ const getNewColorNamesFromLS = () => {
       changeColor(newColorsArray[i].newColorValue)
     );
     newButton.textContent = newColorsArray[i].newColorName;
-    colorPalette.append(newButton);
+    palette.append(newButton);
   }
 };
 
@@ -225,7 +224,7 @@ const deleteColorButton = () => {
   localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
 
   closeEditColorModal();
-  enablePlusBtn();
+  enableAppendBtn();
 };
 
 // MODALS
@@ -273,6 +272,6 @@ const closeSettings = () => {
 };
 
 // initialization; entry point
-changeToRandomColor();
+changeToArbitraryColor();
 renderBuiltInColorButtons();
 DOMContentLoaded();

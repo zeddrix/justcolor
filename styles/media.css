@@ -26,7 +26,7 @@
 		font-size: 4rem;
 		height: 70vh;
 	}
-	.color-palette {
+	.palette {
 		height: 33vh;
 		width: 90vw;
 		bottom: 2.25rem;
@@ -55,7 +55,7 @@
 		padding: 0.6rem 1.1rem;
 		margin-top: 0.5rem;
 	}
-	#toggle-color-palette-btn {
+	#toggle-palette-btn {
 		font-size: 0.75rem;
     bottom: 0.3rem;
 	}
@@ -67,7 +67,7 @@
 		box-shadow: inset 0px 1px 0px grey, 0px 3.2px 0px 0px lightgrey,
 			0px 7px 5px #999;
 	}
-	.plus-btn {
+	.append-btn {
 		font-size: 0.75rem;
 	}
 }
@@ -94,12 +94,12 @@
 		box-shadow: inset 0px 1px 0px grey, 0px 6px 0px 0px lightgrey,
 			0px 14px 10px #999;
 	}
-	.color-palette {
+	.palette {
 		height: 30vh;
 		border-top: 4px solid lightgrey;
 		bottom: 4rem;
 	}
-	#toggle-color-palette-btn {
+	#toggle-palette-btn {
 		font-size: 1.5rem;
 		bottom: 0.75rem;
 		padding: 0 2rem;
@@ -116,7 +116,7 @@
 	#edit-color-input:focus {
 		box-shadow: 0 0 10px blue;
 	}
-	.plus-btn {
+	.append-btn {
 		font-size: 1.5rem;
 	}
 	.modal {
@@ -136,7 +136,7 @@
 		width: 15rem;
 		margin: 0.3rem;
 	}
-	.color-palette::-webkit-scrollbar {
+	.palette::-webkit-scrollbar {
 		width: 7.5px;
 	}
 }
@@ -162,14 +162,14 @@
 		box-shadow: inset 0px 1px 0px grey, 0px 7px 0px 0px lightgrey,
 			0px 15px 10px #999;
 	}
-	.color-palette {
+	.palette {
 		height: 30vh;
 		width: 90vw;
 		border-top: 5px solid lightgrey;
 		bottom: 4rem;
 		border-radius: 15px;
 	}
-	#toggle-color-palette-btn {
+	#toggle-palette-btn {
 		font-size: 1.25rem;
 		bottom: 0.75rem;
 		padding: 0 2rem;
@@ -181,7 +181,7 @@
 	#edit-color-input:focus {
 		box-shadow: 0 0 10px blue;
 	}
-	.plus-btn {
+	.append-btn {
 		font-size: 1.75rem;
 	}
 	.modal {
@@ -207,7 +207,7 @@
 		width: 15rem;
 		margin: 0.2rem;
 	}
-	.color-palette::-webkit-scrollbar {
+	.palette::-webkit-scrollbar {
 		width: 9px;
 	}
 }
@@ -233,14 +233,14 @@
 		box-shadow: inset 0px 1px 0px grey, 0px 7px 0px 0px lightgrey,
 			0px 15px 10px #999;
 	}
-	.color-palette {
+	.palette {
 		height: 29vh;
 		width: 90vw;
 		border-top: 5px solid lightgrey;
 		bottom: 5rem;
 		border-radius: 15px;
 	}
-	.plus-btn {
+	.append-btn {
 		font-size: 2.3rem;
 	}
 	.modal {
@@ -260,7 +260,7 @@
 	.input-field {
 		width: 20rem;
 	}
-	.color-palette::-webkit-scrollbar {
+	.palette::-webkit-scrollbar {
 		width: 10px;
 	}
 	#new-color-input:focus {
@@ -275,7 +275,7 @@
 	#edit-color-input:focus {
 		box-shadow: 0 0 10px blue;
 	}
-	#toggle-color-palette-btn {
+	#toggle-palette-btn {
 		font-size: 1.8rem;
 		bottom: 0.85rem;
 		padding: 0.1rem 3rem;
@@ -304,13 +304,13 @@
 		box-shadow: inset 0px 1px 0px grey, 0px 6px 0px 0px lightgrey,
 			0px 10px 10px #999;
 	}
-	.color-palette {
+	.palette {
     /* height: 15vh; */
     	height: 7rem;
 		border-top: 3px solid lightgrey;
 		bottom: 3rem;
 	}
-	.plus-btn {
+	.append-btn {
 		font-size: 1.1rem;
 	}
 	.modal {
@@ -329,17 +329,17 @@
 		padding: 0.8rem 1.5rem;
 		border-radius: 5px;
 	}
-	.color-palette::-webkit-scrollbar {
+	.palette::-webkit-scrollbar {
 		width: 5px;
 	}
-	#toggle-color-palette-btn {
+	#toggle-palette-btn {
 		border-radius: 4px;
 		font-size: 1rem;
 		padding: 0.1rem 1.75rem;
 		bottom: 0.5rem;
 	}
-	#toggle-color-palette-btn:hover,
-	#toggle-color-palette-btn:active {
+	#toggle-palette-btn:hover,
+	#toggle-palette-btn:active {
 		cursor: pointer;
 		background: #00000080;
 		color: black;
