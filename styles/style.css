@@ -78,7 +78,7 @@ input:focus {
 	display: block;
 	margin: 0 2px;
 	border: 1px solid whitesmoke;
-	box-shadow: 1px 1px 5px #505050;
+	box-shadow: 1px 1px 3px #505050;
 }
 
 .colored {
@@ -107,6 +107,7 @@ input:focus {
 	z-index: 15;
 	animation-name: fadeInTopRight;
 	animation-duration: 0.15s;
+	box-shadow: 5px 5px 15px black;
 }
 
 .settings__div__headers,
@@ -183,7 +184,7 @@ h1 {
 	border-top: 2px solid lightgrey;
 	height: 32vh;
 	z-index: 1;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.6);
 	width: 90vw;
 	bottom: 2.75rem;
 	border-radius: 10px;
@@ -364,7 +365,7 @@ button:focus {
 	border-radius: 10px;
 	animation-name: zoomIn;
 	animation-duration: 0.1s;
-	box-shadow: 5px 5px 10px black;
+	box-shadow: 5px 5px 15px black;
 }
 
 .modal__description {
