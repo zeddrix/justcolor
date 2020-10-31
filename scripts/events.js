@@ -11,7 +11,7 @@ document.addEventListener("click", (event) => {
     deleteColorButton();
   } else if (event.target.matches("#done-btn")) {
     doneInEditingColorName();
-  } else if (event.target.matches(".just-color-title")) {
+  } else if (event.target.matches(".justcolor-title")) {
     justColorTitleToggle();
   } else if (event.target.matches("button")) {
     disableAppendBtn();

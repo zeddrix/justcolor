@@ -22,7 +22,7 @@
 		margin: 0.5rem 1rem;
 		margin-bottom: 1rem;
 	}
-	.just-color-title {
+	.justcolor-title {
 		font-size: 4rem;
 		height: 70vh;
 	}
@@ -83,7 +83,7 @@
 
 /* AMAZON TABLETS */
 @media only screen and (min-width: 550px) {
-	.just-color-title {
+	.justcolor-title {
 		font-size: 10rem;
 	}
 	button {
@@ -151,7 +151,7 @@
 	#settings__toggle-button {
 		margin-right: 1rem;
 	}
-	.just-color-title {
+	.justcolor-title {
 		font-size: 10rem;
 	}
 	button {
@@ -222,7 +222,7 @@
 	#settings__toggle-button {
 		margin-right: 1.25rem;
 	}
-	.just-color-title {
+	.justcolor-title {
 		font-size: 12rem;
 	}
   button {
@@ -311,7 +311,7 @@
   #settings__toggle-button {
     margin-right: 1rem;
   }
-	.just-color-title {
+	.justcolor-title {
 		font-size: 13rem;
 		height: 85vh;
 	}
