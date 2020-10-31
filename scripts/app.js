@@ -18,7 +18,7 @@ let newBackgroundColor;
 let selectedColorBtnRGB;
 
 const justColorTitleToggle = () => {
-  const justColorTitle = document.querySelector(".just-color-title");
+  const justColorTitle = document.querySelector(".justcolor-title");
   justColorTitle.classList.toggle("fade-out");
 };
 
