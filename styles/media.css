@@ -284,6 +284,25 @@
 
 /* DESKTOP */
 @media only screen and (min-width: 1200px) {
+	button, 
+	.disabled,
+	.disabled:hover,
+	.disabled:focus {
+		box-shadow: inset 0px 1px 0px grey, 0px 6px 0px 0px lightgrey,
+			0px 10px 10px #999;
+	}
+	.disabled:hover,
+	.disabled:focus {
+		color: black;
+		background: black;
+		cursor: default;
+	}
+	button {
+		width: 4.5rem;
+		height: 4.5rem;
+		font-size: 1rem;
+		margin: 0.5rem;
+	}
   .toggle-button__circle {
 		width: 7px;
     height: 7px;
@@ -295,14 +314,6 @@
 	.just-color-title {
 		font-size: 13rem;
 		height: 85vh;
-	}
-	button {
-		width: 4.5rem;
-		height: 4.5rem;
-		font-size: 1rem;
-		margin: 0.5rem;
-		box-shadow: inset 0px 1px 0px grey, 0px 6px 0px 0px lightgrey,
-			0px 10px 10px #999;
 	}
 	.palette {
     /* height: 15vh; */

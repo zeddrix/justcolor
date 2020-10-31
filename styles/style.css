@@ -241,8 +241,6 @@ button {
 	text-align: center;
 	cursor: pointer;
 	text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
-	box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey,
-		0px 8px 5px #999;
 }
 
 button:hover,
@@ -250,6 +248,21 @@ button:focus {
 	color: #dfe7ea;
 	box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey,
 		0px 2px 5px #999;
+}
+
+button, 
+.disabled,
+.disabled:hover,
+.disabled:focus {
+	box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey,
+		0px 8px 5px #999;
+}
+
+.disabled:hover,
+.disabled:focus {
+	color: black;
+	background: black;
+	cursor: default;
 }
 
 /* COLOR BUTTONS */
@@ -266,15 +279,6 @@ button:focus {
 .append-btn:hover,
 .append-btn:focus {
 	color: white;
-}
-
-.disabled:hover,
-.disabled:focus {
-	box-shadow: inset 0px 1px 0px grey, 0px 3px 0px 0px lightgrey,
-		0px 8px 5px #999;
-	color: black;
-	background: black;
-	cursor: default;
 }
 
 .red {
