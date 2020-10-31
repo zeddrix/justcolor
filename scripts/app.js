@@ -1,6 +1,7 @@
 const appendBtn = document.querySelector(".append-btn");
 const palette = document.querySelector(".palette");
 const backdrop = document.querySelector("#backdrop");
+const invisibleBackdrop = document.querySelector("#invisible-backdrop");
 const newColorInput = document.querySelector("#new-color-input");
 const editColorInput = document.querySelector("#edit-color-input");
 const newColorModal = document.querySelector(".new-color-modal");
@@ -58,7 +59,7 @@ const renderBuiltInColorButtons = () => {
     button.classList.add("uneditable-btn");
     button.innerHTML =
       colors[c].label + "<span class='tooltiptext'>Uneditable Button</span>";
-    button.addEventListener("click", () => changeColor(colors[c].colorHex));
+    button.addEventListener("mousedown", () => changeColor(colors[c].colorHex));
     palette.append(button);
   }
 };
@@ -127,7 +128,7 @@ const addNewColorButton = () => {
   // new button's background color
   newButton.style.backgroundColor = newBackgroundColor;
   // upon click, change page's background color USING the button's background color
-  newButton.addEventListener("click", () => changeColor(colorValue));
+  newButton.addEventListener("mousedown", () => changeColor(colorValue));
   newButton.classList.add("editable-btn");
   palette.append(newButton);
   disableAppendBtn();
@@ -174,7 +175,7 @@ const getNewColorNamesFromLS = () => {
     newButton = document.createElement("button");
     newButton.style.backgroundColor = newColorsArray[i].newColorValue;
     newButton.classList.add("editable-btn");
-    newButton.addEventListener("click", () =>
+    newButton.addEventListener("mousedown", () =>
       changeColor(newColorsArray[i].newColorValue)
     );
     newButton.textContent = newColorsArray[i].newColorName;
@@ -249,8 +250,6 @@ const closeEditColorModal = () => {
   editColorModal.style.display = "none";
   backdrop.style.display = "none";
 };
-
-const invisibleBackdrop = document.querySelector("#invisible-backdrop");
 
 const openSettings = () => {
   invisibleBackdrop.style.display = "block";
