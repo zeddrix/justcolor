@@ -83,6 +83,9 @@
 
 /* AMAZON TABLETS */
 @media only screen and (min-width: 550px) {
+	#settings__div {
+		margin: 3.75rem 3rem;
+	}
 	.justcolor-title {
 		font-size: 10rem;
 	}
@@ -147,6 +150,9 @@
 		width: 10px;
 		height: 10px;
 		margin: 0 3px;
+	}
+	#settings__div {
+		margin: 3.75rem 3rem;
 	}
 	#settings__toggle-button {
 		margin-right: 1rem;
@@ -218,6 +224,9 @@
 		width: 15px;
 		height: 15px;
 		margin: 0 3px;
+	}
+	#settings__div {
+		margin: 4.75rem 4rem;
 	}
 	#settings__toggle-button {
 		margin-right: 1.25rem;
