@@ -18,6 +18,7 @@ document.addEventListener("click", (event) => {
   } else if (event.target.matches("#backdrop")) {
     closeEditColorModal();
     closeNewColorModal();
+  } else if (event.target.matches("#invisible-backdrop")) {
     closeSettings();
   } else if (event.target.matches("#toggle-palette-btn")) {
     togglePalette();

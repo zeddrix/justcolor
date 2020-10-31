@@ -57,7 +57,7 @@
 	}
 	#toggle-palette-btn {
 		font-size: 0.75rem;
-    bottom: 0.3rem;
+    	bottom: 0.3rem;
 	}
 	button {
 		width: 3rem;
@@ -284,24 +284,13 @@
 
 /* DESKTOP */
 @media only screen and (min-width: 1200px) {
-	button, 
-	.disabled,
-	.disabled:hover,
-	.disabled:focus {
-		box-shadow: inset 0px 1px 0px grey, 0px 6px 0px 0px lightgrey,
-			0px 10px 10px #999;
-	}
-	.disabled:hover,
-	.disabled:focus {
-		color: black;
-		background: black;
-		cursor: default;
-	}
 	button {
 		width: 4.5rem;
 		height: 4.5rem;
 		font-size: 1rem;
 		margin: 0.5rem;
+		box-shadow: inset 0px 1px 0px grey, 0px 6px 0px 0px lightgrey,
+			0px 10px 10px #999;
 	}
   .toggle-button__circle {
 		width: 7px;

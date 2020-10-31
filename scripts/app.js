@@ -68,14 +68,15 @@ const adaptableAppendBtn = () => {
 };
 
 const disableAppendBtn = () => {
-  appendBtn.style.color = "black";
-  appendBtn.style.backgroundColor = "black";
+  appendBtn.style.color = "#202020";
+  appendBtn.style.backgroundColor = "#202020";
   appendBtn.setAttribute("disabled", "");
   appendBtn.classList.add("disabled");
   appendBtn.classList.add("tooltip");
 };
 
 const enableAppendBtn = () => {
+  appendBtn.style.color = "black";
   adaptableAppendBtn();
   appendBtn.removeAttribute("disabled");
   appendBtn.classList.remove("disabled");
@@ -249,8 +250,10 @@ const closeEditColorModal = () => {
   backdrop.style.display = "none";
 };
 
+const invisibleBackdrop = document.querySelector("#invisible-backdrop");
+
 const openSettings = () => {
-  backdrop.style.display = "block";
+  invisibleBackdrop.style.display = "block";
   settingsDiv.style.opacity = 1;
   settingsDiv.style.visibility = "visible";
   settingsDiv.style.transform = "scale(1)";
@@ -263,7 +266,7 @@ const openSettings = () => {
 };
 
 const closeSettings = () => {
-  backdrop.style.display = "none";
+  invisibleBackdrop.style.display = "none";
   settingsDiv.style.opacity = 0;
   settingsDiv.style.visibility = "hidden";
   settingsDiv.style.transform = "scale(.9)";
