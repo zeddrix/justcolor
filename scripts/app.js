@@ -109,9 +109,7 @@ const removeTooltipFromUneditableBtn = () => {
 const togglePalette = () => {
   palette.classList.toggle("disappear");
 
-  const togglePaletteBtn = document.querySelector(
-    "#toggle-palette-btn"
-  );
+  const togglePaletteBtn = document.querySelector("#toggle-palette-btn");
   if (togglePaletteBtn.textContent === "▼") {
     togglePaletteBtn.textContent = "▲";
   } else {
@@ -252,8 +250,11 @@ const closeEditColorModal = () => {
 };
 
 const openSettings = () => {
-  settingsDiv.style.display = "block";
   backdrop.style.display = "block";
+  settingsDiv.style.opacity = 1;
+  settingsDiv.style.visibility = "visible";
+  settingsDiv.style.transform = "scale(1)";
+
   for (let i = 0; i < toggleButtonCircles.length; i++) {
     const background = toggleButtonCircles[i];
     background.classList.remove("colored");
@@ -262,8 +263,11 @@ const openSettings = () => {
 };
 
 const closeSettings = () => {
-  settingsDiv.style.display = "none";
   backdrop.style.display = "none";
+  settingsDiv.style.opacity = 0;
+  settingsDiv.style.visibility = "hidden";
+  settingsDiv.style.transform = "scale(.9)";
+
   for (let i = 0; i < toggleButtonCircles.length; i++) {
     const background = toggleButtonCircles[i];
     background.classList.remove("transparent");
