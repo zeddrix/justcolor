@@ -1,4 +1,3 @@
-// MODALS
 const showNewColorModal = () => {
    newColorModal.style.display = "block";
    backdrop.style.display = "block";

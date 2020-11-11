@@ -60,6 +60,7 @@ const renderBuiltInColorButtons = () => {
     button.innerHTML =
       colors[c].label + "<span class='tooltiptext'>Uneditable Button</span>";
     button.addEventListener("mousedown", () => changeColor(colors[c].colorHex));
+    button.addEventListener("touchdown", () => changeColor(colors[c].colorHex));
     palette.append(button);
   }
 };
@@ -121,14 +122,11 @@ const togglePalette = () => {
 
 const addNewColorButton = () => {
   newButton = document.createElement("button");
-  // get current background color of page
   newBackgroundColor = document.body.style.backgroundColor;
-  // this variable is really for this function only
   const colorValue = document.body.style.backgroundColor;
-  // new button's background color
   newButton.style.backgroundColor = newBackgroundColor;
-  // upon click, change page's background color USING the button's background color
   newButton.addEventListener("mousedown", () => changeColor(colorValue));
+  newButton.addEventListener("touchdown", () => changeColor(colorValue));
   newButton.classList.add("editable-btn");
   palette.append(newButton);
   disableAppendBtn();
@@ -137,7 +135,6 @@ const addNewColorButton = () => {
 };
 
 const getNewColorInput = () => {
-  // insert newColorInput.value as a label for the newButton
   const newColorInputValue = newColorInput.value;
   if (newColorInputValue !== "") {
     addNewColorButton();
@@ -178,6 +175,9 @@ const getNewColorNamesFromLS = () => {
     newButton.addEventListener("mousedown", () =>
       changeColor(newColorsArray[i].newColorValue)
     );
+    newButton.addEventListener("touchdown", () =>
+      changeColor(newColorsArray[i].newColorValue)
+    );
     newButton.textContent = newColorsArray[i].newColorName;
     palette.append(newButton);
   }
@@ -190,7 +190,6 @@ const DOMContentLoaded = () => {
 const getSelectedColorBtnName = (event) => {
   selectedColorBtn = event.target;
   selectedColorBtnName = selectedColorBtn.textContent;
-  // put the name of selected button on the input field
   editColorInput.value = selectedColorBtnName;
   selectedColorBtnRGB = selectedColorBtn.style.backgroundColor;
 };
@@ -227,7 +226,6 @@ const deleteColorButton = () => {
   enableAppendBtn();
 };
 
-// initialization; entry point
 changeToArbitraryColor();
 renderBuiltInColorButtons();
 DOMContentLoaded();
