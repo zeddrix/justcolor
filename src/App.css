@@ -47,7 +47,7 @@ input:focus {
 }
 
 /* SETTINGS */
-.settings__toggle-button__div {
+.settings__toggle-btn__div {
 	/* border: 2px solid white; */
 	width: 100%;
 	height: 8vh;
@@ -62,7 +62,7 @@ input:focus {
 	justify-content: flex-end;
 }
 
-#settings__toggle-button {
+#settings__toggle-btn {
 	cursor: pointer;
 	padding: 1.5rem 0;
 	position: fixed;
@@ -71,7 +71,7 @@ input:focus {
 	justify-content: flex-end;
 }
 
-.toggle-button__circle {
+.circle {
 	width: 7px;
 	height: 7px;
 	border-radius: 50%;
@@ -96,8 +96,8 @@ input:focus {
 }
 
 #settings__div {
-	/* visibility: hidden;
-	opacity: 0; */
+	visibility: hidden;
+	opacity: 0;
 	margin: 2.5rem 2rem 0.5rem 0.5rem;
 	background: black;
 	border-radius: 7.5px;
@@ -501,7 +501,7 @@ span {
 /* MEDIA QUERIES */
 /* MOBILE */
 @media only screen and (max-width: 319px) {
-	.toggle-button__circle {
+	.circle {
 		width: 5px;
 		height: 5px;
 		margin: 0 1px;
@@ -647,7 +647,7 @@ span {
 
 /* IPAD */
 @media only screen and (min-width: 768px) {
-	.toggle-button__circle {
+	.circle {
 		width: 10px;
 		height: 10px;
 		margin: 0 3px;
@@ -655,7 +655,7 @@ span {
 	#settings__div {
 		margin: 3.75rem 3rem;
 	}
-	#settings__toggle-button {
+	#settings__toggle-btn {
 		margin-right: 1rem;
 	}
 	.justcolor-title {
@@ -721,7 +721,7 @@ span {
 
 /* IPAD PRO */
 @media only screen and (min-width: 1024px) and (min-height: 1360px) {
-	.toggle-button__circle {
+	.circle {
 		width: 15px;
 		height: 15px;
 		margin: 0 3px;
@@ -729,7 +729,7 @@ span {
 	#settings__div {
 		margin: 4.75rem 4rem;
 	}
-	#settings__toggle-button {
+	#settings__toggle-btn {
 		margin-right: 1.25rem;
 	}
 	.justcolor-title {
@@ -802,12 +802,12 @@ span {
 		box-shadow: inset 0px 1px 0px grey, 0px 6px 0px 0px lightgrey,
 			0px 10px 10px #999;
 	}
-	.toggle-button__circle {
+	.circle {
 		width: 7px;
 		height: 7px;
 		margin: 0 2px;
 	}
-	#settings__toggle-button {
+	#settings__toggle-btn {
 		margin-right: 1rem;
 	}
 	.justcolor-title {

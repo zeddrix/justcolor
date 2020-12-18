@@ -22,7 +22,7 @@ document.addEventListener("click", (event) => {
     closeSettings();
   } else if (event.target.matches("#toggle-palette-btn")) {
     togglePalette();
-  } else if (event.target.matches("#settings__toggle-button, .toggle-button__circle")) {
+  } else if (event.target.matches("#settings__toggle-btn, .circle")) {
     openSettings();
   }
 });

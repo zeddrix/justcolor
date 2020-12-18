@@ -7,7 +7,7 @@ const editColorInput = document.querySelector("#edit-color-input");
 const newColorModal = document.querySelector(".new-color-modal");
 const editColorModal = document.querySelector(".edit-color-modal");
 const settingsDiv = document.querySelector("#settings__div");
-const toggleButtonCircles = document.querySelectorAll(".toggle-button__circle");
+const toggleButtonCircles = document.querySelectorAll(".circle");
 let uneditableColorBtn;
 let colorNameInLS;
 let selectedColorBtn;
