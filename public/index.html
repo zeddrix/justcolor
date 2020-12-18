@@ -10,9 +10,6 @@
 			content="What's your favorite color? Or do you have many favorite colors? With JustColor, you can enjoy all the various colors you can think of, including your favorite color(s), by simply painting your webpage with the color buttons you create! So try it out! JustColor, and enjoy!"
 		/>
 		<title>JustColor!</title>
-		<link rel="stylesheet" href="styles/style.css" />
-		<link rel="stylesheet" href="styles/media.css" />
-		<link rel="stylesheet" href="styles/sharingbutton.css" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
 			rel="stylesheet"
@@ -30,30 +27,12 @@
 	<body>
 		<div id="backdrop"></div>
 		<div id="invisible-backdrop"></div>
-		<div class="palette">
-			<!-- <button class="red button-prop" onclick="changeColor('rgb(255, 0, 0)')">r</button> -->
-			<button class="arbitrary-btn"></button>
-			<button class="append-btn">
-				+
-				<span class="tooltiptext">No Duplicating</span>
-			</button>
-		</div>
-		<div id="toggle-palette-btn">▼</div>
 		<div class="new-color-modal modal">
 			<p class="modal__description">Name your new color button:</p>
-			<!-- INPUT THAT ALLOWS ANY CHARACTER -->
-			<!-- <input id="new-color-input" class="input-field" type="text" autofocus /> -->
-			<!-- INPUT THAT ALLOWS ALPHABETS ONLY-->
 			<input
 				id="new-color-input"
 				class="input-field"
 				type="text"
-				onkeypress="return (event.charCode > 64 && event.charCode < 91) 
-      || (event.charCode > 96 && event.charCode < 123) 
-      || (event.charCode === 32)"
-				ontouchstart="return (event.charCode > 64 && event.charCode < 91) 
-      || (event.charCode > 96 && event.charCode < 123) 
-      || (event.charCode === 32)"
 				maxlength="16"
 			/>
 			<br />
@@ -66,12 +45,6 @@
 				id="edit-color-input"
 				class="input-field"
 				type="text"
-				onkeypress="return (event.charCode > 64 && event.charCode < 91) 
-    || (event.charCode > 96 && event.charCode < 123) 
-    || (event.charCode === 32)"
-				ontouchstart="return (event.charCode > 64 && event.charCode < 91) 
-    || (event.charCode > 96 && event.charCode < 123) 
-    || (event.charCode === 32)"
 				maxlength="16"
 			/>
 			<br />

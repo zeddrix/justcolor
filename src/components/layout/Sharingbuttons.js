@@ -8,7 +8,7 @@ const Sharingbuttons = () => {
           className="share-btn__link"
           href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjustcolor.zeddrix.com%2F"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
           aria-label="">
           <div className="share-btn share-btn--fb share-btn--small">
             <div aria-hidden="true" className="share-btn__icon share-btn__icon--solid">
@@ -22,7 +22,7 @@ const Sharingbuttons = () => {
           className="share-btn__link"
           href="https://twitter.com/intent/tweet/?text=An%20awesome%20and%20cool%20app%20to%20enjoy%20different%20colors!&amp;url=https%3A%2F%2Fjustcolor.zeddrix.com%2F"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
           aria-label="">
           <div className="share-btn share-btn--twitter share-btn--small">
             <div aria-hidden="true" className="share-btn__icon share-btn__icon--solid">
@@ -36,7 +36,7 @@ const Sharingbuttons = () => {
           className="share-btn__link"
           href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=An%20awesome%20and%20cool%20app%20to%20enjoy%20different%20colors!&amp;caption=An%20awesome%20and%20cool%20app%20to%20enjoy%20different%20colors!&amp;content=https%3A%2F%2Fjustcolor.zeddrix.com%2F&amp;canonicalUrl=https%3A%2F%2Fjustcolor.zeddrix.com%2F&amp;shareSource=tumblr_share_button"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
           aria-label="">
           <div className="share-btn share-btn--tumblr share-btn--small">
             <div aria-hidden="true" className="share-btn__icon share-btn__icon--solid">
@@ -50,7 +50,7 @@ const Sharingbuttons = () => {
           className="share-btn__link"
           href="mailto:?subject=An%20awesome%20and%20cool%20app%20to%20enjoy%20different%20colors!&amp;body=https%3A%2F%2Fjustcolor.zeddrix.com%2F"
           target="_self"
-          rel="noopener"
+          rel="noreferrer"
           aria-label="">
           <div className="share-btn share-btn--email share-btn--small">
             <div aria-hidden="true"
@@ -65,7 +65,7 @@ const Sharingbuttons = () => {
           className="share-btn__link"
           href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fjustcolor.zeddrix.com%2F&amp;media=https%3A%2F%2Fjustcolor.zeddrix.com%2F&amp;description=An%20awesome%20and%20cool%20app%20to%20enjoy%20different%20colors!"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
           aria-label="">
           <div className="share-btn share-btn--pinterest share-btn--small">
             <div aria-hidden="true" className="share-btn__icon share-btn__icon--solid">
