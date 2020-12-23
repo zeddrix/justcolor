@@ -12,7 +12,7 @@
 	-webkit-tap-highlight-color: transparent;
 }
 
-body {
+.App {
 	font-family: 'Architects Daughter', cursive;
 	text-align: center;
 	margin: 0;
