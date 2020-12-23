@@ -22,23 +22,8 @@ const justColorTitleToggle = () => {
   justColorTitle.classList.toggle("fade-out");
 };
 
-// 'color' is argument
-// 'colors[c].colorHex' in changeColor(colors[c].colorHex) is the argument
 const changeColor = (color) => {
   document.body.style.backgroundColor = color;
-};
-
-const renderBuiltInColorButtons = () => {
-  for (let c = 0; c < colors.length; c++) {
-    const button = document.createElement("button");
-    button.classList.add(colors[c].name);
-    button.classList.add("uneditable-btn");
-    button.innerHTML =
-      colors[c].label + "<span class='tooltiptext'>Uneditable Button</span>";
-    button.addEventListener("mousedown", () => changeColor(colors[c].colorHex));
-    button.addEventListener("touchdown", () => changeColor(colors[c].colorHex));
-    palette.append(button);
-  }
 };
 
 const adaptableAppendBtn = () => {
