@@ -22,30 +22,6 @@ const justColorTitleToggle = () => {
   justColorTitle.classList.toggle("fade-out");
 };
 
-// converts rgb color value into hexadecimal
-const rgbToHex = (rgb) => {
-  // converts any value from 0-256 into a hex value of 0-F
-  let hex = Number(rgb).toString(16);
-  if (hex.length < 2) {
-    // Add '0' to a 1 digit hex value
-    hex = "0" + hex;
-  }
-  return hex;
-};
-
-const fullColorHex = (r, g, b) => {
-  // This already returns a hex value, not rgb
-  const red = rgbToHex(r);
-  const green = rgbToHex(g);
-  const blue = rgbToHex(b);
-  return red + green + blue;
-};
-
-// return any Arbitrary number from 0-256
-const getArbitraryColorValue = () => {
-  return Math.floor(Math.random() * 256);
-};
-
 // 'color' is argument
 // 'colors[c].colorHex' in changeColor(colors[c].colorHex) is the argument
 const changeColor = (color) => {
@@ -83,18 +59,6 @@ const enableAppendBtn = () => {
   appendBtn.removeAttribute("disabled");
   appendBtn.classList.remove("disabled");
   appendBtn.classList.remove("tooltip");
-};
-
-const changeToArbitraryColor = () => {
-  // Get a set of three arbitrary numbers
-  // This already returns a hex value, not rgb
-  const rColor = fullColorHex(
-    getArbitraryColorValue(),
-    getArbitraryColorValue(),
-    getArbitraryColorValue()
-  );
-  document.body.style.backgroundColor = "#" + rColor;
-  enableAppendBtn();
 };
 
 const getSelectedColorBtn = (event) => {
