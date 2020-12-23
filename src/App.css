@@ -245,7 +245,10 @@ button {
 		0px 10px 7px #999;
 }
 
-button:hover,
+button:hover {
+	color: #ccc;
+}
+
 button:focus {
 	color: #dfe7ea;
 	box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey,
