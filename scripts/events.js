@@ -13,8 +13,6 @@ document.addEventListener("click", (event) => {
     doneInEditingColorName();
   } else if (event.target.matches(".justcolor-title")) {
     justColorTitleToggle();
-  } else if (event.target.matches("button")) {
-    disableAppendBtn();
   } else if (event.target.matches("#backdrop")) {
     closeEditColorModal();
     closeNewColorModal();

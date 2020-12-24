@@ -30,20 +30,6 @@ const adaptableAppendBtn = () => {
   appendBtn.style.backgroundColor = document.body.style.backgroundColor;
 };
 
-const disableAppendBtn = () => {
-  appendBtn.style.color = "#202020";
-  appendBtn.style.backgroundColor = "#202020";
-  appendBtn.setAttribute("disabled", "");
-  appendBtn.classList.add("disabled");
-};
-
-const enableAppendBtn = () => {
-  appendBtn.style.color = "black";
-  adaptableAppendBtn();
-  appendBtn.removeAttribute("disabled");
-  appendBtn.classList.remove("disabled");
-};
-
 const getSelectedColorBtn = (event) => {
   uneditableColorBtn = event.target;
 };
@@ -68,7 +54,6 @@ const addNewColorButton = () => {
   newButton.addEventListener("touchdown", () => changeColor(colorValue));
   newButton.classList.add("editable-btn");
   palette.append(newButton);
-  disableAppendBtn();
   newButton.focus();
   newButton.click();
 };
@@ -162,7 +147,6 @@ const deleteColorButton = () => {
   localStorage.setItem("newColorsArray", JSON.stringify(newColorsArray));
 
   closeEditColorModal();
-  enableAppendBtn();
 };
 
 changeToArbitraryColor();

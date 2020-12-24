@@ -267,19 +267,6 @@ button:focus {
 		0px 2px 5px #999;
 }
 
-.disabled,
-.disabled:hover,
-.disabled:focus {
-	box-shadow: none;
-}
-
-.disabled:hover,
-.disabled:focus {
-	color: #202020;
-	background: #202020;
-	cursor: default;
-}
-
 /* COLOR BUTTONS */
 .arbitrary-btn {
 	background: conic-gradient(from 45deg, red, blue, green, yellow, red);
