@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { Fragment, useEffect } from 'react';
 
 const Arbitrary = () => {
+  useEffect(() => {
+    changeToArbitraryColor()
+  }, []);
+
   return (
-    <div>
+    <Fragment>
       <button className="arbitrary-btn" onClick={changeToArbitraryColor}></button>
-    </div>
+    </Fragment>
   )
 }
 
