@@ -12,6 +12,18 @@
 	-webkit-tap-highlight-color: transparent;
 }
 
+@font-face {
+	font-family: 'Architects Daughter';
+	src: url(./fonts/ArchitectsDaughter-Regular.ttf) format('truetype');
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'Comic Neue';
+	src: url(./fonts/ComicNeue-Regular.ttf) format('truetype');
+	font-display: fallback;
+}
+
 .App {
 	font-family: 'Architects Daughter', cursive;
 	text-align: center;
