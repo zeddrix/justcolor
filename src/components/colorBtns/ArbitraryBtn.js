@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from 'react';
 
-const Arbitrary = () => {
+const ArbitraryBtn = () => {
   useEffect(() => {
     changeToArbitraryColor()
   }, []);
@@ -41,4 +41,4 @@ const changeToArbitraryColor = () => {
   // enableAppendBtn();
 };
 
-export default Arbitrary;
+export default ArbitraryBtn;
