@@ -83,22 +83,17 @@ const InitialBtns = () => {
     document.body.style.backgroundColor = color;
   };
 
-  let colorList = [];
-  for (let c = 0; c < colors.length; c++) {
-    colorList.push(
-      <button
-        className={`${colors[c].className} uneditable-btn`}
-        onMouseDown={() => changeColor(colors[c].colorHex)}
-        key={c}
-      >
-        {colors[c].label}
-        <span className='tooltiptext'>Uneditable Button</span>
-      </button>)
-  }
-
   return (
     <Fragment>
-      {colorList}
+      {colors.map((color, i) =>
+        <button
+          className={`${color.className} uneditable-btn`}
+          onMouseDown={() => changeColor(color.colorHex)}
+          key={i}
+        >
+          {color.label}
+          <span className='tooltiptext'>Uneditable Button</span>
+        </button>)}
     </Fragment>
   )
 }
