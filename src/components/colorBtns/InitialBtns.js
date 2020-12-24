@@ -92,7 +92,6 @@ const InitialBtns = () => {
           key={i}
         >
           {color.label}
-          <span className='tooltiptext'>Uneditable Button</span>
         </button>)}
     </Fragment>
   )

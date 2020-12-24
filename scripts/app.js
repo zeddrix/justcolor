@@ -35,7 +35,6 @@ const disableAppendBtn = () => {
   appendBtn.style.backgroundColor = "#202020";
   appendBtn.setAttribute("disabled", "");
   appendBtn.classList.add("disabled");
-  appendBtn.classList.add("tooltip");
 };
 
 const enableAppendBtn = () => {
@@ -43,19 +42,10 @@ const enableAppendBtn = () => {
   adaptableAppendBtn();
   appendBtn.removeAttribute("disabled");
   appendBtn.classList.remove("disabled");
-  appendBtn.classList.remove("tooltip");
 };
 
 const getSelectedColorBtn = (event) => {
   uneditableColorBtn = event.target;
-};
-
-const showTooltipOnUneditableBtn = () => {
-  uneditableColorBtn.classList.add("tooltip");
-};
-
-const removeTooltipFromUneditableBtn = () => {
-  uneditableColorBtn.classList.remove("tooltip");
 };
 
 const togglePalette = () => {

@@ -32,13 +32,12 @@ const getArbitraryColorValue = () => {
 };
 
 const changeToArbitraryColor = () => {
-  const rColor = fullColorHex(
+  const aColor = fullColorHex(
     getArbitraryColorValue(),
     getArbitraryColorValue(),
     getArbitraryColorValue()
   );
-  document.body.style.backgroundColor = "#" + rColor;
-  // enableAppendBtn();
+  document.body.style.backgroundColor = "#" + aColor;
 };
 
 export default ArbitraryBtn;
