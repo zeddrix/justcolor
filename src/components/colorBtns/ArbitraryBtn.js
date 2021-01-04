@@ -1,15 +1,11 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 const ArbitraryBtn = () => {
   useEffect(() => {
     changeToArbitraryColor()
   }, []);
 
-  return (
-    <Fragment>
-      <button className="arbitrary-btn" onClick={changeToArbitraryColor}></button>
-    </Fragment>
-  )
+  return <button className="arbitrary-btn" onClick={changeToArbitraryColor}></button>;
 }
 
 const rgbToHex = (rgb) => {

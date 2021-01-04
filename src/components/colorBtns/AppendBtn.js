@@ -1,13 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 const AppendBtn = () => {
-  return (
-    <Fragment>
-      <button className="append-btn" >
-        +
-      </button >
-    </Fragment >
-  )
+  return <button className="append-btn" >+</button >;
 }
 
 export default AppendBtn;
