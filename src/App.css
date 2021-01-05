@@ -24,6 +24,12 @@
 	font-display: fallback;
 }
 
+@font-face {
+	font-family: 'MPLUSRounded1c';
+	src: url(./fonts/MPLUSRounded1c-Black.ttf) format('truetype');
+	font-display: fallback;
+}
+
 .App {
 	font-family: 'Architects Daughter', cursive;
 	text-align: center;
@@ -274,7 +280,7 @@ button:focus {
 
 .append-btn {
 	color: black;
-	font-family: sans-serif;
+	font-family: MPLUSRounded1c;
 }
 
 .append-btn:hover,
@@ -531,7 +537,7 @@ button:focus {
 			0px 7px 5px #999;
 	}
 	.append-btn {
-		font-size: 0.75rem;
+		font-size: 0.9rem;
 	}
 }
 
@@ -759,13 +765,12 @@ button:focus {
 		height: 85vh;
 	}
 	.palette {
-		/* height: 15vh; */
 		height: 7rem;
 		border-top: 3px solid lightgrey;
 		bottom: 3rem;
 	}
 	.append-btn {
-		font-size: 1.1rem;
+		font-size: 1.3rem;
 	}
 	.modal {
 		width: 30%;
