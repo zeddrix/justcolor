@@ -57,7 +57,8 @@ input {
 	-webkit-user-select: text; /* Chrome, Opera, Safari */
 	-moz-user-select: text; /* Firefox 2+ */
 	-ms-user-select: text; /* IE 10+ */
-	user-select: unset;
+
+	caret-color: black;
 }
 
 input:focus {
@@ -132,7 +133,7 @@ input:focus {
 	}
 }
 
-#settings__div {
+#settings {
 	visibility: hidden;
 	opacity: 0;
 	margin: 2rem 2rem 0.5rem 0.5rem;
@@ -147,7 +148,7 @@ input:focus {
 	animation: visFade ease-in 0.2s;
 }
 
-.settings__div__headers,
+.settings__headers,
 .settings-p {
 	font-family: sans-serif;
 	color: whitesmoke;
@@ -162,13 +163,13 @@ input:focus {
 	padding-bottom: 7.5px;
 }
 
-.settings__div__headers {
+.settings__headers {
 	font-size: 1.3rem;
 	text-align: left;
 	margin: 0.75rem 1.5rem 0.5rem 1.75rem;
 }
 
-.settings__div__info {
+.settings__info {
 	font-family: sans-serif;
 	color: #cccccc;
 	text-decoration: none;
@@ -176,17 +177,17 @@ input:focus {
 	margin: 0 1.75rem;
 }
 
-.settings__div__sharing-buttons {
+.settings__sharing-buttons {
 	margin: 1rem 0.7rem 0 0.7rem;
 }
 
-.settings__div__info-link {
+.settings__info-link {
 	color: #ff4684;
 	text-decoration: none;
 }
 
-.settings__div__info-link:hover,
-.settings__div__info-link:focus {
+.settings__info-link:hover,
+.settings__info-link:focus {
 	color: #ff0055;
 	text-decoration: underline;
 }
@@ -464,26 +465,26 @@ button:focus {
 
 /* SCROLLBAR */
 .palette::-webkit-scrollbar,
-#settings__div::-webkit-scrollbar {
+#settings::-webkit-scrollbar {
 	width: 5px;
 }
 .palette::-webkit-scrollbar-track,
-#settings__div::-webkit-scrollbar-track {
+#settings::-webkit-scrollbar-track {
 	background: none;
 }
 .palette::-webkit-scrollbar-thumb,
-#settings__div::-webkit-scrollbar-thumb {
+#settings::-webkit-scrollbar-thumb {
 	background: #f5f5f573;
 	border-radius: 50px;
 	/* visibility: hidden; */
 }
 .palette::-webkit-scrollbar-thumb:hover,
-#settings__div::-webkit-scrollbar-thumb:hover {
+#settings::-webkit-scrollbar-thumb:hover {
 	background: #555;
 }
 
 .palette:hover::-webkit-scrollbar-thumb,
-#settings__div:hover::-webkit-scrollbar-thumb {
+#settings:hover::-webkit-scrollbar-thumb {
 	visibility: visible;
 }
 
@@ -495,7 +496,7 @@ button:focus {
 		height: 5px;
 		margin: 0 1px;
 	}
-	#settings__div {
+	#settings {
 		margin: 2rem 1.5rem 0.5rem 0.5rem;
 		padding: 1rem;
 		height: 15rem;
@@ -503,11 +504,11 @@ button:focus {
 	.settings-p {
 		font-size: 0.8rem;
 	}
-	.settings__div__headers {
+	.settings__headers {
 		font-size: 1rem;
 		margin: 0.5rem 1rem;
 	}
-	.settings__div__info {
+	.settings__info {
 		font-size: 0.8rem;
 		margin: 0.5rem 1rem;
 		margin-bottom: 1rem;
@@ -567,7 +568,7 @@ button:focus {
 
 /* AMAZON TABLETS */
 @media only screen and (min-width: 550px) {
-	#settings__div {
+	#settings {
 		margin: 3.75rem 3rem;
 	}
 	.justcolor-title {
@@ -629,7 +630,7 @@ button:focus {
 		height: 10px;
 		margin: 0 3px;
 	}
-	#settings__div {
+	#settings {
 		margin: 3.75rem 3rem;
 	}
 	#settings__toggle-btn {
@@ -697,7 +698,7 @@ button:focus {
 		height: 15px;
 		margin: 0 3px;
 	}
-	#settings__div {
+	#settings {
 		margin: 4.75rem 4rem;
 	}
 	#settings__toggle-btn {
@@ -775,7 +776,7 @@ button:focus {
 	#settings__toggle-btn {
 		margin-right: 1rem;
 	}
-	#settings__div {
+	#settings {
 		margin: 2.75rem;
 	}
 	.justcolor-title {

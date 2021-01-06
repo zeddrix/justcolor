@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sharingbuttons = () => {
   return (
-    <div className="settings__div__sharing-buttons">
+    <div className="settings__sharing-buttons">
       <a
         className="share-btn__link"
         href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjustcolor.zeddrix.com%2F"
