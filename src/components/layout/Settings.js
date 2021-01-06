@@ -3,7 +3,7 @@ import Sharingbuttons from './Sharingbuttons';
 
 const Settings = () => {
   return (
-    <div className="flex-div">
+    <div id="invisible-backdrop">
       <div id="settings__div">
         <p className="settings-p">Settings</p>
         <p className="settings__div__headers">About</p>

@@ -9,13 +9,11 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      <div id="backdrop" />
-      <div id="invisible-backdrop" />
       <ToggleBtn />
-      <Settings />
+      {/* <Settings /> */}
       <Palette />
-      <EditModal />
-      <AddModal />
+      {/* <EditModal /> */}
+      {/* <AddModal /> */}
     </div>
   );
 }
