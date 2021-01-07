@@ -2,7 +2,7 @@ import React from 'react';
 import ToggleBtn from '../src/components/layout/ToggleBtn';
 import Palette from '../src/components/layout/Palette';
 import EditModal from '../src/components/modals/EditModal';
-import AddModal from '../src/components/modals/AddModal';
+import AppendModal from './components/modals/AppendModal';
 import './App.css';
 
 import { Provider } from 'react-redux';
@@ -15,7 +15,7 @@ const App = () => {
         <ToggleBtn />
         <Palette />
         {/* <EditModal /> */}
-        {/* <AddModal /> */}
+        {/* <AppendModal /> */}
       </div>
     </Provider>
   );

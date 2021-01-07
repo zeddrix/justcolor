@@ -1,12 +1,12 @@
 import React from 'react'
 
-const AddModal = () => {
+const AppendModal = () => {
   return (
     <div id="backdrop">
-      <div className="new-color-modal modal">
+      <div className="append-modal modal">
         <p className="modal__description">Name your new color button:</p>
         <input
-          id="new-color-input"
+          id="append-modal__input"
           className="input-field"
           type="text"
           maxLength="16"
@@ -20,4 +20,4 @@ const AddModal = () => {
   )
 }
 
-export default AddModal
+export default AppendModal;
