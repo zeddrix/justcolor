@@ -13,9 +13,9 @@ const ToggleBtn = () => {
   return (
     <div className="settings__toggle-btn__div">
       <div id="settings__toggle-btn" onClick={() => dispatch(showSettings())}>
-        <span className="circle colored"></span>
-        <span className="circle colored"></span>
-        <span className="circle colored"></span>
+        <span className={'circle ' + (toggleShowSettings ? 'transparent' : 'colored')}></span >
+        <span className={'circle ' + (toggleShowSettings ? 'transparent' : 'colored')}></span >
+        <span className={'circle ' + (toggleShowSettings ? 'transparent' : 'colored')}></span >
       </div>
       {toggleShowSettings && <Settings />}
     </div>
