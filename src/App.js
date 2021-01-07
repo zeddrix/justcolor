@@ -15,7 +15,7 @@ const App = () => {
         <ToggleBtn />
         <Palette />
         {/* <EditModal /> */}
-        <AppendModal />
+        {/* <AppendModal /> */}
       </div>
     </Provider>
   );
