@@ -7,8 +7,8 @@ const Settings = () => {
   const dispatch = useDispatch();
 
   return (
-    <div id="invisible-backdrop" onClick={() => {
-      dispatch(hideSettings());
+    <div id="invisible-backdrop" onClick={(e) => {
+      e.target === document.querySelector("#invisible-backdrop") && dispatch(hideSettings());
     }}>
       <div id="settings">
         <p className="settings-p">Settings</p>
