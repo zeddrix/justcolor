@@ -1,9 +1,15 @@
 import React from 'react';
-import Sharingbuttons from './Sharingbuttons';
+import { hideSettings } from '../../actions/modalActions';
+import Sharingbuttons from '../layout/Sharingbuttons';
+import { useDispatch } from "react-redux";
 
 const Settings = () => {
+  const dispatch = useDispatch();
+
   return (
-    <div id="invisible-backdrop">
+    <div id="invisible-backdrop" onClick={() => {
+      dispatch(hideSettings());
+    }}>
       <div id="settings">
         <p className="settings-p">Settings</p>
         <p className="settings__headers">About</p>

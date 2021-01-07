@@ -134,8 +134,6 @@ input:focus {
 }
 
 #settings {
-	visibility: hidden;
-	opacity: 0;
 	margin: 2rem 2rem 0.5rem 0.5rem;
 	background: black;
 	border-radius: 7.5px;
@@ -143,7 +141,7 @@ input:focus {
 	height: 20rem;
 	padding: 0.75rem;
 	overflow: auto;
-	z-index: 15;
+	z-index: 150;
 	box-shadow: 5px 5px 15px black;
 	animation: visFade ease-in 0.2s;
 }
