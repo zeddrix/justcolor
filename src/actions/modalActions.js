@@ -23,3 +23,15 @@ export const hideAppendModal = () => {
     type: c.HIDE_APPEND_MODAL,
   };
 };
+
+export const showEditModal = () => {
+  return {
+    type: c.SHOW_EDIT_MODAL,
+  };
+};
+
+export const hideEditModal = () => {
+  return {
+    type: c.HIDE_EDIT_MODAL,
+  };
+};

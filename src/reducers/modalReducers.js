@@ -21,3 +21,14 @@ export const toggleShowAppendModalReducer = (state = false, action) => {
       return state;
   }
 };
+
+export const toggleShowEditModalReducer = (state = false, action) => {
+  switch (action.type) {
+    case c.SHOW_EDIT_MODAL:
+      return { show: true };
+    case c.HIDE_EDIT_MODAL:
+      return { show: false };
+    default:
+      return state;
+  }
+};
