@@ -6,7 +6,10 @@ const EditModal = () => {
   const dispatch = useDispatch();
 
   return (
-    <div id="backdrop">
+    <div
+      id="backdrop"
+      onClick={(e) => { e.target === document.querySelector("#backdrop") && dispatch(hideEditModal()); }}
+    >
       <div className="edit-color-modal modal">
         <p className="modal__description">Edit color button:</p>
         <input

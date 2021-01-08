@@ -11,7 +11,7 @@ const Palette = () => {
         <AppendBtn />
         <InitialBtns />
       </div>
-      <div id="toggle-palette-btn">▼</div>
+      <div id="palette-toggle-btn">▼</div>
     </Fragment>
   )
 }

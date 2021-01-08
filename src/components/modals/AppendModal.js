@@ -6,7 +6,10 @@ const AppendModal = () => {
   const dispatch = useDispatch();
 
   return (
-    <div id="backdrop">
+    <div
+      id="backdrop"
+      onClick={(e) => { e.target === document.querySelector("#backdrop") && dispatch(hideAppendModal()); }}
+    >
       <div className="append-modal modal">
         <p className="modal__description">Name your new color button:</p>
         <input
