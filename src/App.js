@@ -1,8 +1,6 @@
 import React from 'react';
 import ToggleBtn from '../src/components/layout/ToggleBtn';
 import Palette from '../src/components/layout/Palette';
-import EditModal from '../src/components/modals/EditModal';
-import AppendModal from './components/modals/AppendModal';
 import './App.css';
 
 import { Provider } from 'react-redux';
@@ -14,8 +12,6 @@ const App = () => {
       <div className="App">
         <ToggleBtn />
         <Palette />
-        {/* <EditModal /> */}
-        {/* <AppendModal /> */}
       </div>
     </Provider>
   );

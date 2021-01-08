@@ -11,3 +11,15 @@ export const hideSettings = () => {
     type: c.HIDE_SETTINGS,
   };
 };
+
+export const showAppendModal = () => {
+  return {
+    type: c.SHOW_APPEND_MODAL,
+  };
+};
+
+export const hideAppendModal = () => {
+  return {
+    type: c.HIDE_APPEND_MODAL,
+  };
+};

@@ -10,3 +10,14 @@ export const toggleShowSettingsReducer = (state = false, action) => {
       return state;
   }
 };
+
+export const toggleShowAppendModalReducer = (state = false, action) => {
+  switch (action.type) {
+    case c.SHOW_APPEND_MODAL:
+      return { show: true };
+    case c.HIDE_APPEND_MODAL:
+      return { show: false };
+    default:
+      return state;
+  }
+};

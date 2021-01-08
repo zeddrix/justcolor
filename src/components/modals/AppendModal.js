@@ -1,6 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { hideAppendModal } from '../../actions/modalActions';
+import { useDispatch } from "react-redux";
 
 const AppendModal = () => {
+  const dispatch = useDispatch();
+
   return (
     <div id="backdrop">
       <div className="append-modal modal">
@@ -11,9 +15,14 @@ const AppendModal = () => {
           type="text"
           maxLength="16"
           placeholder="Enter name..."
+          autoFocus
         />
         <br />
-        <div id="cancel-btn" className="modal-btn">Cancel</div>
+        <div
+          id="cancel-btn"
+          className="modal-btn"
+          onClick={() => dispatch(hideAppendModal())}
+        >Cancel</div>
         <div id="add-btn" className="modal-btn">Add!</div>
       </div>
     </div>
