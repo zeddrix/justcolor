@@ -37,7 +37,7 @@ const getSelectedColorBtn = (event) => {
 const togglePalette = () => {
   palette.classList.toggle("disappear");
 
-  const togglePaletteBtn = document.querySelector("#toggle-palette-btn");
+  const togglePaletteBtn = document.querySelector("#palette-toggle-btn");
   if (togglePaletteBtn.textContent === "▼") {
     togglePaletteBtn.textContent = "▲";
   } else {
