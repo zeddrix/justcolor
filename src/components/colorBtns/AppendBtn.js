@@ -1,15 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { useDispatch } from "react-redux";
 import { showAppendModal } from '../../actions/modalActions';
 
 const AppendBtn = () => {
   const dispatch = useDispatch();
 
-  return (
-    <Fragment>
-      <button className="append-btn" onClick={() => dispatch(showAppendModal())}>+</button>
-    </Fragment>
-  );
+  return <button className="append-btn" onClick={() => dispatch(showAppendModal())}>+</button>;
 };
 
 export default AppendBtn;
