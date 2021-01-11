@@ -1,28 +1,47 @@
-import React, { Fragment } from 'react';
-import { useDispatch } from "react-redux";
+import React, { Fragment, useEffect, useState } from 'react';
+import { useDispatch, useSelector, connect } from 'react-redux';
 import { initialColors } from './InitialColors';
 import { showEditModal } from '../../actions/modalActions';
+import { changeColor, getColors } from '../../actions/colorActions';
 
 const InitialBtns = () => {
   const dispatch = useDispatch();
+  const colorState = useSelector((state) => state.colorState);
+  const { colors } = colorState;
+  const [combinedColors, setCombinedColors] = useState(initialColors);
+  const [isCombinedColors, setIsCombinedColors] = useState(false);
 
-  const changeColor = (color) => {
-    document.body.style.backgroundColor = color;
-  };
+  useEffect(() => {
+    if (!colors) {
+      dispatch(getColors());
+    } else {
+      if (!isCombinedColors) {
+        setCombinedColors([...initialColors, ...colors]);
+        setIsCombinedColors(true);
+      }
+      // console.log(combinedColors);
+    };
+  }, [isCombinedColors, combinedColors, colors, dispatch]);
 
   return (
     <Fragment>
-      {initialColors.map((color, i) =>
+      {combinedColors.map((color, i) =>
         <button
           className={color.className}
-          onMouseDown={() => changeColor(color.colorHex)}
+          onMouseDown={() => changeColor(color.rgb)}
           onDoubleClick={() => dispatch(showEditModal())}
           key={i}
         >
-          {color.label}
-        </button>)}
-    </Fragment>
+          {color.colorName}
+        </button>)
+      }
+    </Fragment >
   )
-}
+};
 
-export default InitialBtns;
+const mapStateToProps = state => ({
+  color: state.color
+});
+
+export default connect(mapStateToProps, { getColors })
+  (InitialBtns);

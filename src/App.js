@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from "react-redux";
-import ToggleBtn from '../src/components/layout/ToggleBtn';
+import SettingsToggleBtn from '../src/components/layout/SettingsToggleBtn';
 import Palette from '../src/components/layout/Palette';
 import AppendModal from '../src/components/modals/AppendModal';
 import EditModal from '../src/components/modals/EditModal';
@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <ToggleBtn />
+      <SettingsToggleBtn />
       <Palette />
       {toggleShowAppendModal && <AppendModal />}
       {toggleShowEditModal && <EditModal />}

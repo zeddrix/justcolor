@@ -1,77 +1,77 @@
 export const initialColors = [
   {
     className: "red",
-    label: "red",
-    colorHex: "#FF0000",
+    colorName: "red",
+    rgb: "#FF0000",
   },
   {
     className: "blue",
-    label: "blue",
-    colorHex: "#0000FF",
+    colorName: "blue",
+    rgb: "#0000FF",
   },
   {
     className: "yellow",
-    label: "yellow",
-    colorHex: "#FFFF00",
+    colorName: "yellow",
+    rgb: "#FFFF00",
   },
   {
     className: "green",
-    label: "green",
-    colorHex: "green",
+    colorName: "green",
+    rgb: "green",
   },
   {
     className: "purple",
-    label: "purple",
-    colorHex: "#800080",
+    colorName: "purple",
+    rgb: "#800080",
   },
   {
     className: "orange",
-    label: "orange",
-    colorHex: "#ffa500",
+    colorName: "orange",
+    rgb: "#ffa500",
   },
   {
     className: "bluegreen",
-    label: "blue green",
-    colorHex: "#0d98ba",
+    colorName: "blue green",
+    rgb: "#0d98ba",
   },
   {
     className: "blueviolet",
-    label: "blue violet",
-    colorHex: "#8a2be2",
+    colorName: "blue violet",
+    rgb: "#8a2be2",
   },
   {
     className: "yellowgreen",
-    label: "yellow green",
-    colorHex: "#9acd32",
+    colorName: "yellow green",
+    rgb: "#9acd32",
   },
   {
     className: "redviolet",
-    label: "red violet",
-    colorHex: "#c71585",
+    colorName: "red violet",
+    rgb: "#c71585",
   },
   {
     className: "redorange",
-    label: "red orange",
-    colorHex: "#ff6600",
+    colorName: "red orange",
+    rgb: "#ff6600",
   },
   {
     className: "yelloworange",
-    label: "yellow orange",
-    colorHex: "#ffae42",
+    colorName: "yellow orange",
+    rgb: "#ffae42",
   },
   {
     className: "black",
-    label: "black",
-    colorHex: "black"
+    colorName: "black",
+    rgb: "black"
   },
   {
     className: "white",
-    label: "white",
-    colorHex: "white"
+    colorName: "white",
+    rgb: "white"
   },
   {
     className: "grey",
-    label: "grey",
-    colorHex: "grey"
+    colorName: "grey",
+    rgb: "grey"
   },
 ];

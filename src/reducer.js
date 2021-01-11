@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+import colorReducer from './reducers/colorReducer';
 
 import {
   toggleShowSettingsReducer,
@@ -10,6 +11,7 @@ const reducer = combineReducers({
   toggleShowSettingsState: toggleShowSettingsReducer,
   toggleShowAppendModalState: toggleShowAppendModalReducer,
   toggleShowEditModalState: toggleShowEditModalReducer,
+  colorState: colorReducer,
 });
 
 export default reducer;

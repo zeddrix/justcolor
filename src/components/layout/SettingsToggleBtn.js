@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { showSettings } from '../../actions/modalActions';
 import Settings from '../modals/Settings';
 
-const ToggleBtn = () => {
+const SettingsToggleBtn = () => {
   const dispatch = useDispatch();
 
   const toggleShowSettings = useSelector(
@@ -22,4 +22,4 @@ const ToggleBtn = () => {
   )
 };
 
-export default ToggleBtn;
+export default SettingsToggleBtn;
