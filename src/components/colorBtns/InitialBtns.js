@@ -27,7 +27,7 @@ const InitialBtns = () => {
     <Fragment>
       {combinedColors.map((color, i) =>
         <button
-          className={color.className}
+          style={{ background: color.rgb }}
           onMouseDown={() => changeColor(color.rgb)}
           onDoubleClick={() => dispatch(showEditModal())}
           key={i}
