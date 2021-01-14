@@ -1,26 +1,25 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import { useDispatch, useSelector, connect } from 'react-redux';
-import { initialColors } from './InitialColors';
+import { connect, useDispatch, useSelector } from 'react-redux';
+import { initialColors } from './initialColors';
 import { showEditModal } from '../../actions/modalActions';
 import { changeColor, getColors } from '../../actions/colorActions';
 
 const InitialBtns = () => {
   const dispatch = useDispatch();
-  const colorState = useSelector((state) => state.colorState);
-  const { colors } = colorState;
+  const getColorsState = useSelector((state) => state.getColorsState);
+  const { colors } = getColorsState;
+
   const [combinedColors, setCombinedColors] = useState(initialColors);
   const [isCombinedColors, setIsCombinedColors] = useState(false);
 
   useEffect(() => {
     if (!colors) {
       dispatch(getColors());
-    } else {
-      if (!isCombinedColors) {
-        setCombinedColors([...initialColors, ...colors]);
-        setIsCombinedColors(true);
-      }
-      // console.log(combinedColors);
-    };
+    } else if (!isCombinedColors) {
+      setCombinedColors([...initialColors, ...colors]);
+      setIsCombinedColors(true);
+    }
+    console.log(combinedColors);
   }, [isCombinedColors, combinedColors, colors, dispatch]);
 
   return (
@@ -30,6 +29,7 @@ const InitialBtns = () => {
           style={{ background: color.rgb }}
           onMouseDown={() => changeColor(color.rgb)}
           onDoubleClick={() => dispatch(showEditModal())}
+          className={(color.rgb === 'rgb(0, 0, 0)') ? 'black' : undefined}
           key={i}
         >
           {color.colorName}

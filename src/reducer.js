@@ -1,17 +1,21 @@
 import { combineReducers } from "redux";
-import colorReducer from './reducers/colorReducer';
 
 import {
   toggleShowSettingsReducer,
   toggleShowAppendModalReducer,
   toggleShowEditModalReducer
 } from "./reducers/modalReducers";
+import {
+  getColorsReducer,
+  appendNewColorReducer
+} from './reducers/colorReducer';
 
 const reducer = combineReducers({
   toggleShowSettingsState: toggleShowSettingsReducer,
   toggleShowAppendModalState: toggleShowAppendModalReducer,
   toggleShowEditModalState: toggleShowEditModalReducer,
-  colorState: colorReducer,
+  getColorsState: getColorsReducer,
+  appendNewColorState: appendNewColorReducer,
 });
 
 export default reducer;

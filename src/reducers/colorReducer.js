@@ -1,13 +1,8 @@
-import { GET_COLORS } from '../actions/constants';
+import * as c from '../actions/constants';
 
-const initialState = {
-  colors: null,
-  current: null,
-};
-
-const colorReducer = (state = initialState, action) => {
+export const getColorsReducer = (state = { colors: null }, action) => {
   switch (action.type) {
-    case GET_COLORS:
+    case c.GET_COLORS:
       return {
         ...state,
         colors: action.payload,
@@ -17,4 +12,14 @@ const colorReducer = (state = initialState, action) => {
   }
 };
 
-export default colorReducer;
+export const appendNewColorReducer = (state = {}, action) => {
+  switch (action.type) {
+    case c.APPEND_NEW_COLOR:
+      return {
+        ...state,
+        newColor: action.payload
+      };
+    default:
+      return state;
+  }
+};

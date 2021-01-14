@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import ArbitraryBtn from '../colorBtns/ArbitraryBtn';
-import InitialBtns from '../colorBtns/InitialBtns';
+import ColorBtns from '../colorBtns/ColorBtns';
 import AppendBtn from '../colorBtns/AppendBtn';
 
 const Palette = () => {
@@ -9,7 +9,7 @@ const Palette = () => {
       <div className="palette">
         <ArbitraryBtn />
         <AppendBtn />
-        <InitialBtns />
+        <ColorBtns />
       </div>
       <div id="palette-toggle-btn">▼</div>
     </Fragment>
