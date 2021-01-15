@@ -24,7 +24,8 @@ const ColorBtns = () => {
           style={{ background: color.rgb }}
           onMouseDown={() => changeColor(color.rgb)}
           onDoubleClick={() => dispatch(showEditModal())}
-          className={(color.rgb === 'rgb(0, 0, 0)') ? 'black' : undefined}
+          className={color.colorName.split(' ')[0].length > 9 ? 'word-break' :
+            (color.rgb === 'rgb(0, 0, 0)') ? 'black' : undefined}
           key={i}
         >
           {color.colorName}
