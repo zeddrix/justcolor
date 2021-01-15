@@ -1,11 +1,15 @@
 import React from 'react';
-import { useDispatch } from "react-redux";
+import { useDispatch } from 'react-redux';
 import { showAppendModal } from '../../actions/modalActions';
 
 const AppendBtn = () => {
-  const dispatch = useDispatch();
+	const dispatch = useDispatch();
 
-  return <button className="append-btn" onClick={() => dispatch(showAppendModal())}>+</button>;
+	return (
+		<button className='append-btn' onClick={() => dispatch(showAppendModal())}>
+			+
+		</button>
+	);
 };
 
 export default AppendBtn;
