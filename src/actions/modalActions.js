@@ -35,3 +35,15 @@ export const hideEditModal = () => {
     type: c.HIDE_EDIT_MODAL,
   };
 };
+
+export const showPalette = () => {
+  return {
+    type: c.SHOW_PALETTE,
+  };
+};
+
+export const hidePalette = () => {
+  return {
+    type: c.HIDE_PALETTE,
+  };
+};

@@ -32,3 +32,14 @@ export const toggleShowEditModalReducer = (state = false, action) => {
       return state;
   }
 };
+
+export const togglePaletteReducer = (state = true, action) => {
+  switch (action.type) {
+    case c.HIDE_PALETTE:
+      return { show: false };
+    case c.SHOW_PALETTE:
+      return { show: true };
+    default:
+      return state;
+  }
+};

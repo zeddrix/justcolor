@@ -11,7 +11,6 @@ const Palette = () => {
         <AppendBtn />
         <ColorBtns />
       </div>
-      <div id="palette-toggle-btn">▼</div>
     </Fragment>
   )
 }

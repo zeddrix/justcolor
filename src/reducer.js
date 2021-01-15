@@ -3,7 +3,8 @@ import { combineReducers } from "redux";
 import {
   toggleShowSettingsReducer,
   toggleShowAppendModalReducer,
-  toggleShowEditModalReducer
+  toggleShowEditModalReducer,
+  togglePaletteReducer
 } from "./reducers/modalReducers";
 import {
   renderAllColorsReducer,
@@ -11,9 +12,13 @@ import {
 } from './reducers/colorReducer';
 
 const reducer = combineReducers({
+  // Modals
   toggleShowSettingsState: toggleShowSettingsReducer,
   toggleShowAppendModalState: toggleShowAppendModalReducer,
   toggleShowEditModalState: toggleShowEditModalReducer,
+  togglePaletteState: togglePaletteReducer,
+
+  // Colors
   renderAllColorsState: renderAllColorsReducer,
   appendNewColorState: appendNewColorReducer,
 });
