@@ -1,30 +1,25 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux';
-import { initialColors } from './initialColors';
 import { showEditModal } from '../../actions/modalActions';
-import { changeColor, getNewColorsFromLs } from '../../actions/colorActions';
+import { changeColor, renderAllColors } from '../../actions/colorActions';
 
-const InitialBtns = () => {
+const ColorBtns = () => {
   const dispatch = useDispatch();
-  const getNewColorsFromLsState = useSelector((state) => state.getNewColorsFromLsState);
-  const { newColors } = getNewColorsFromLsState;
-
-  const [combinedColors, setCombinedColors] = useState(initialColors);
-  const [isCombinedColors, setIsCombinedColors] = useState(false);
+  const renderAllColorsState = useSelector((state) => state.renderAllColorsState);
+  const { allColors } = renderAllColorsState;
+  const [allColorsRendered, setAllColorsRendered] = useState(false);
 
   useEffect(() => {
-    if (!newColors) {
-      dispatch(getNewColorsFromLs());
-    } else if (!isCombinedColors) {
-      setCombinedColors([...initialColors, ...newColors]);
-      setIsCombinedColors(true);
+    if (!allColorsRendered) {
+      dispatch(renderAllColors());
+      setAllColorsRendered(true);
     }
-    console.log(combinedColors);
-  }, [isCombinedColors, combinedColors, newColors, dispatch]);
+    console.log(allColors);
+  }, [dispatch, allColors, allColorsRendered]);
 
   return (
     <Fragment>
-      {combinedColors.map((color, i) =>
+      {allColors.map((color, i) =>
         <button
           style={{ background: color.rgb }}
           onMouseDown={() => changeColor(color.rgb)}
@@ -43,5 +38,5 @@ const mapStateToProps = state => ({
   color: state.color
 });
 
-export default connect(mapStateToProps, { getNewColorsFromLs })
-  (InitialBtns);
+export default connect(mapStateToProps, { renderAllColors })
+  (ColorBtns);

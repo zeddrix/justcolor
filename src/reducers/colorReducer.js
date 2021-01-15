@@ -1,11 +1,12 @@
 import * as c from '../actions/constants';
+import { initialColors } from '../components/colorBtns/initialColors';
 
-export const getNewColorsFromLsReducer = (state = { newColors: null }, action) => {
+export const renderAllColorsReducer = (state = { allColors: initialColors }, action) => {
   switch (action.type) {
-    case c.GET_NEW_COLORS_FROM_LS:
+    case c.RENDER_ALL_COLORS:
       return {
         ...state,
-        newColors: action.payload,
+        allColors: initialColors.concat(action.payload),
       };
     default:
       return state;

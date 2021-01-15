@@ -4,7 +4,7 @@ export const changeColor = (color) => {
   document.body.style.backgroundColor = color;
 };
 
-export const getNewColorsFromLs = () => dispatch => {
+export const renderAllColors = () => dispatch => {
   let newColors;
 
   if (localStorage.getItem("newColors") === null) {
@@ -14,7 +14,7 @@ export const getNewColorsFromLs = () => dispatch => {
   };
 
   dispatch({
-    type: c.GET_NEW_COLORS_FROM_LS,
+    type: c.RENDER_ALL_COLORS,
     payload: newColors
   });
 };
