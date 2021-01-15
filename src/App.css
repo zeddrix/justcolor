@@ -281,7 +281,7 @@ button:hover {
 	color: #ccc;
 }
 
-button:focus {
+button:not(.arbitrary-btn):focus {
 	color: #dfe7ea;
 	box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey,
 		0px 2px 5px #999;
@@ -297,9 +297,17 @@ button:focus {
 	background: conic-gradient(from 45deg, red, blue, green, yellow, red);
 }
 
+.arbitrary-btn:active {
+	transition: all 0.01s;
+	/* background: conic-gradient(from 45deg, blue, green, yellow, red, blue); */
+	box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey,
+		0px 2px 5px #999;
+}
+
 .append-btn {
 	color: black;
 	font-family: MPLUSRounded1c;
+	transition: all 0.1s;
 }
 
 .append-btn:hover,
