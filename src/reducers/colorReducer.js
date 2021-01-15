@@ -6,7 +6,7 @@ export const renderAllColorsReducer = (state = { allColors: initialColors }, act
     case c.RENDER_ALL_COLORS:
       return {
         ...state,
-        allColors: initialColors.concat(action.payload),
+        allColors: [...initialColors, ...action.payload],
       };
     default:
       return state;
