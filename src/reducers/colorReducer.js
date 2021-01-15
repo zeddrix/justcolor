@@ -1,11 +1,11 @@
 import * as c from '../actions/constants';
 
-export const getColorsReducer = (state = { colors: null }, action) => {
+export const getNewColorsFromLsReducer = (state = { newColors: null }, action) => {
   switch (action.type) {
-    case c.GET_COLORS:
+    case c.GET_NEW_COLORS_FROM_LS:
       return {
         ...state,
-        colors: action.payload,
+        newColors: action.payload,
       };
     default:
       return state;

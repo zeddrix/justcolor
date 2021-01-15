@@ -2,25 +2,25 @@ import React, { Fragment, useEffect, useState } from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { initialColors } from './initialColors';
 import { showEditModal } from '../../actions/modalActions';
-import { changeColor, getColors } from '../../actions/colorActions';
+import { changeColor, getNewColorsFromLs } from '../../actions/colorActions';
 
 const InitialBtns = () => {
   const dispatch = useDispatch();
-  const getColorsState = useSelector((state) => state.getColorsState);
-  const { colors } = getColorsState;
+  const getNewColorsFromLsState = useSelector((state) => state.getNewColorsFromLsState);
+  const { newColors } = getNewColorsFromLsState;
 
   const [combinedColors, setCombinedColors] = useState(initialColors);
   const [isCombinedColors, setIsCombinedColors] = useState(false);
 
   useEffect(() => {
-    if (!colors) {
-      dispatch(getColors());
+    if (!newColors) {
+      dispatch(getNewColorsFromLs());
     } else if (!isCombinedColors) {
-      setCombinedColors([...initialColors, ...colors]);
+      setCombinedColors([...initialColors, ...newColors]);
       setIsCombinedColors(true);
     }
     console.log(combinedColors);
-  }, [isCombinedColors, combinedColors, colors, dispatch]);
+  }, [isCombinedColors, combinedColors, newColors, dispatch]);
 
   return (
     <Fragment>
@@ -43,5 +43,5 @@ const mapStateToProps = state => ({
   color: state.color
 });
 
-export default connect(mapStateToProps, { getColors })
+export default connect(mapStateToProps, { getNewColorsFromLs })
   (InitialBtns);

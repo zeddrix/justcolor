@@ -4,18 +4,18 @@ export const changeColor = (color) => {
   document.body.style.backgroundColor = color;
 };
 
-export const getColors = () => dispatch => {
-  let colors;
+export const getNewColorsFromLs = () => dispatch => {
+  let newColors;
 
-  if (localStorage.getItem("colors") === null) {
-    colors = [];
+  if (localStorage.getItem("newColors") === null) {
+    newColors = [];
   } else {
-    colors = JSON.parse(localStorage.getItem("colors"));
+    newColors = JSON.parse(localStorage.getItem("newColors"));
   };
 
   dispatch({
-    type: c.GET_COLORS,
-    payload: colors
+    type: c.GET_NEW_COLORS_FROM_LS,
+    payload: newColors
   });
 };
 

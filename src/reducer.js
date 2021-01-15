@@ -6,7 +6,7 @@ import {
   toggleShowEditModalReducer
 } from "./reducers/modalReducers";
 import {
-  getColorsReducer,
+  getNewColorsFromLsReducer,
   appendNewColorReducer
 } from './reducers/colorReducer';
 
@@ -14,7 +14,7 @@ const reducer = combineReducers({
   toggleShowSettingsState: toggleShowSettingsReducer,
   toggleShowAppendModalState: toggleShowAppendModalReducer,
   toggleShowEditModalState: toggleShowEditModalReducer,
-  getColorsState: getColorsReducer,
+  getNewColorsFromLsState: getNewColorsFromLsReducer,
   appendNewColorState: appendNewColorReducer,
 });
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux';
-import { hideAppendModal, showEditModal } from '../../actions/modalActions';
-import { appendNewColor, changeColor } from '../../actions/colorActions';
+import { hideAppendModal } from '../../actions/modalActions';
+import { appendNewColor } from '../../actions/colorActions';
 
 const AppendModal = () => {
   const dispatch = useDispatch();
@@ -28,18 +28,6 @@ const AppendModal = () => {
     console.log(newColor);
 
     dispatch(appendNewColor(newColor));
-
-    return (
-      <button
-        style={{ background: newColor.rgb }}
-        onMouseDown={() => changeColor(newColor.rgb)}
-        onDoubleClick={() => dispatch(showEditModal())}
-        className={(newColor.rgb === 'rgb(0, 0, 0)') ? 'black' : undefined}
-      // key={i}
-      >
-        {newColor.colorName}
-      </button>
-    )
   };
 
   return (
