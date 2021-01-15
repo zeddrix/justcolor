@@ -266,7 +266,7 @@ button {
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
-	transition: all 0.5s;
+	transition: all 0.4s;
 	border: none;
 	outline: none;
 	text-decoration: none;
