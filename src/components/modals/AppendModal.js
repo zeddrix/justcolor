@@ -33,7 +33,7 @@ const AppendModal = () => {
   return (
     <div
       id="backdrop"
-      onClick={(e) => { e.target === document.querySelector("#backdrop") && dispatch(hideAppendModal()); }}
+      onMouseDown={(e) => { e.target === document.querySelector("#backdrop") && dispatch(hideAppendModal()); }}
     >
       <div className="append-modal modal">
         <p className="modal__description">Name your new color button:</p>

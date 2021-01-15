@@ -8,7 +8,7 @@ const EditModal = () => {
   return (
     <div
       id="backdrop"
-      onClick={(e) => { e.target === document.querySelector("#backdrop") && dispatch(hideEditModal()); }}
+      onMouseDown={(e) => { e.target === document.querySelector("#backdrop") && dispatch(hideEditModal()); }}
     >
       <div className="edit-color-modal modal">
         <p className="modal__description">Edit color button:</p>
