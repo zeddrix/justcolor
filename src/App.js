@@ -5,13 +5,13 @@ import AppendModal from '../src/components/modals/AppendModal';
 import EditModal from '../src/components/modals/EditModal';
 import Palette from '../src/components/layout/Palette';
 import PaletteToggleBtn from './components/layout/PaletteToggleBtn';
-import { changeToArbitraryColor } from './components/colorBtns/ArbitraryBtn';
 
 import './App.css';
 
 const App = () => {
 	useEffect(() => {
-		changeToArbitraryColor();
+		document.body.style.backgroundColor =
+			'#' + Math.floor(Math.random() * 16777215).toString(16);
 	}, []);
 
 	const toggleShowAppendModal = useSelector(

@@ -9,10 +9,10 @@ const Settings = () => {
 	return (
 		<div
 			id='invisible-backdrop'
-			onClick={(e) => {
+			onMouseDown={(e) =>
 				e.target === document.querySelector('#invisible-backdrop') &&
-					dispatch(hideSettings());
-			}}>
+				dispatch(hideSettings())
+			}>
 			<div id='settings'>
 				<p className='settings-p'>Settings</p>
 				<p className='settings__headers'>About</p>

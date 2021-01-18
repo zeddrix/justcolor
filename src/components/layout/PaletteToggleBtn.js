@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { showPalette, hidePalette } from '../../actions/modalActions';
 
@@ -11,17 +11,15 @@ const PaletteToggleBtn = () => {
 	}, [dispatch]);
 
 	return (
-		<Fragment>
-			<div
-				id='palette-toggle-btn'
-				onClick={
-					togglePalette
-						? () => dispatch(hidePalette())
-						: () => dispatch(showPalette())
-				}>
-				{togglePalette ? '▼' : '▲'}
-			</div>
-		</Fragment>
+		<div
+			id='palette-toggle-btn'
+			onClick={
+				togglePalette
+					? () => dispatch(hidePalette())
+					: () => dispatch(showPalette())
+			}>
+			{togglePalette ? '▼' : '▲'}
+		</div>
 	);
 };
 
