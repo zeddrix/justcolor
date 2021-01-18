@@ -34,6 +34,7 @@ body {
 	height: 100vh;
 	width: 100vw;
 	margin: 0;
+	transition: all 0.25s ease;
 }
 
 .App {
@@ -117,7 +118,7 @@ input:focus {
 	background-color: transparent;
 }
 
-@keyframes visFade {
+@keyframes settingsFadeIn {
 	0% {
 		visibility: hidden;
 		opacity: 0;
@@ -143,7 +144,7 @@ input:focus {
 	overflow: auto;
 	z-index: 150;
 	box-shadow: 5px 5px 15px black;
-	animation: visFade ease-in 0.2s;
+	animation: settingsFadeIn ease-in 0.3s;
 }
 
 .settings__headers,
@@ -216,6 +217,22 @@ h1 {
 	margin: 0;
 }
 
+@keyframes paletteFadeIn {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+		transform: scale(0.9);
+		-webkit-transform: scale(0.9);
+		transform-origin: 50% 50%;
+		-webkit-transform-origin: 50% 50%;
+	}
+	50% {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+}
+
 .palette {
 	border-top: 2px solid lightgrey;
 	height: 32vh;
@@ -231,6 +248,7 @@ h1 {
 	position: absolute;
 	overflow-y: auto;
 	overflow-x: hidden;
+	animation: paletteFadeIn ease-in 0.2s;
 	box-shadow: 0px 5px 10px black;
 }
 
@@ -307,12 +325,17 @@ button:not(.arbitrary-btn):focus {
 .append-btn {
 	color: black;
 	font-family: MPLUSRounded1c;
-	transition: all 0.1s;
+	transition: background-color 0.45s ease;
+}
+
+.append-btn:active {
+	transition: box-shadow 0.1s;
 }
 
 .append-btn:hover,
 .append-btn:focus {
 	color: white;
+	transition: color 0.5s ease;
 }
 
 .black {
@@ -326,6 +349,17 @@ button:not(.arbitrary-btn):focus {
 }
 
 /* MODAL */
+@keyframes bdFade {
+	0% {
+		opacity: 0;
+		background: #00000050;
+	}
+	50% {
+		opacity: 1;
+		background: #00000075;
+	}
+}
+
 #backdrop,
 #invisible-backdrop {
 	z-index: 50;
@@ -341,6 +375,7 @@ button:not(.arbitrary-btn):focus {
 	justify-content: center;
 	align-items: center;
 	background: #00000075;
+	animation: bdFade 0.3s;
 }
 
 #invisible-backdrop {
@@ -350,7 +385,7 @@ button:not(.arbitrary-btn):focus {
 	justify-content: flex-end;
 }
 
-@keyframes zoom {
+@keyframes zoomIn {
 	0% {
 		opacity: 0;
 		-webkit-transform: scale3d(0.5, 0.5, 0.5);
@@ -368,7 +403,7 @@ button:not(.arbitrary-btn):focus {
 	background: white;
 	padding: 3rem 1rem;
 	border-radius: 10px;
-	animation: zoom 0.2s;
+	animation: zoomIn 0.25s;
 	box-shadow: 5px 5px 15px black;
 }
 
