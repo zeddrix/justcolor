@@ -1,27 +1,17 @@
 import * as c from '../actions/constants';
 import { initialColors } from '../components/colorBtns/initialColors';
 
-export const renderAllColorsReducer = (
-	state = { allColors: initialColors },
-	action
-) => {
+export const colorsReducer = (state = { colors: initialColors }, action) => {
 	switch (action.type) {
-		case c.RENDER_ALL_COLORS:
+		case c.GET_COLORS:
 			return {
 				...state,
-				allColors: [...initialColors, ...action.payload],
+				colors: [...initialColors, ...action.payload],
 			};
-		default:
-			return state;
-	}
-};
-
-export const appendNewColorReducer = (state = {}, action) => {
-	switch (action.type) {
-		case c.APPEND_NEW_COLOR:
+		case c.APPEND_COLOR:
 			return {
 				...state,
-				newColor: action.payload,
+				colors: [...state.colors, action.payload],
 			};
 		default:
 			return state;

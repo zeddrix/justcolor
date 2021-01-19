@@ -1,33 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { connect, useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { connect, useDispatch } from 'react-redux';
 import { hideAppendModal } from '../../actions/modalActions';
-import { appendNewColor } from '../../actions/colorActions';
+import { appendColor } from '../../actions/colorActions';
 
-const AppendModal = () => {
+const AppendModal = ({ appendColor }) => {
 	const dispatch = useDispatch();
-	const appendNewColorState = useSelector((state) => state.appendNewColorState);
-	const { newColor } = appendNewColorState;
-
 	const [colorName, setColorName] = useState('');
-	const [rgb, setRgb] = useState(null);
-
-	useEffect(() => {
-		if (newColor) {
-			dispatch(hideAppendModal());
-			setColorName('');
-			setRgb(null);
-		}
-	}, [dispatch, newColor]);
 
 	const onSubmit = () => {
 		const newColor = {
 			colorName,
 			rgb: document.body.style.backgroundColor,
 		};
-
-		console.log(newColor);
-
-		dispatch(appendNewColor(newColor));
+		appendColor(newColor);
+		dispatch(hideAppendModal());
+		setColorName('');
 	};
 
 	return (
@@ -63,4 +50,4 @@ const AppendModal = () => {
 	);
 };
 
-export default connect(null, { appendNewColor })(AppendModal);
+export default connect(null, { appendColor })(AppendModal);

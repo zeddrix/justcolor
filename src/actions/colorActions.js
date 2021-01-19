@@ -1,27 +1,21 @@
 import * as c from './constants';
 
-export const changeColor = (color) => {
-	document.body.style.backgroundColor = color;
-};
-
-export const renderAllColors = () => (dispatch) => {
+export const getColors = () => (dispatch) => {
 	let newColors;
-
 	if (localStorage.getItem('newColors') === null) {
 		newColors = [];
 	} else {
 		newColors = JSON.parse(localStorage.getItem('newColors'));
 	}
-
 	dispatch({
-		type: c.RENDER_ALL_COLORS,
+		type: c.GET_COLORS,
 		payload: newColors,
 	});
 };
 
-export const appendNewColor = (newColor) => (dispatch) => {
+export const appendColor = (newColor) => (dispatch) => {
 	dispatch({
-		type: c.APPEND_NEW_COLOR,
+		type: c.APPEND_COLOR,
 		payload: newColor,
 	});
 };

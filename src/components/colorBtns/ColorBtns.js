@@ -1,27 +1,23 @@
-import React, { Fragment, useEffect, useState } from 'react';
-import { connect, useDispatch, useSelector } from 'react-redux';
+import React, { Fragment, useEffect } from 'react';
+import { connect, useDispatch } from 'react-redux';
 import { showEditModal } from '../../actions/modalActions';
-import { changeColor, renderAllColors } from '../../actions/colorActions';
+import { getColors } from '../../actions/colorActions';
 
-const ColorBtns = () => {
-	const dispatch = useDispatch();
-	const renderAllColorsState = useSelector(
-		(state) => state.renderAllColorsState
-	);
-	const { allColors } = renderAllColorsState;
-	const [allColorsRendered, setAllColorsRendered] = useState(false);
+const changeColor = (color) => {
+	document.body.style.backgroundColor = color;
+};
 
+const ColorBtns = ({ color: { colors }, getColors }) => {
 	useEffect(() => {
-		if (!allColorsRendered) {
-			dispatch(renderAllColors());
-			setAllColorsRendered(true);
-		}
-		console.log(allColors);
-	}, [dispatch, allColors, allColorsRendered]);
+		getColors();
+		// eslint-disable-next-line
+	}, []);
+
+	const dispatch = useDispatch(showEditModal());
 
 	return (
 		<Fragment>
-			{allColors.map((color, i) => (
+			{colors.map((color, i) => (
 				<button
 					style={{ background: color.rgb }}
 					onMouseDown={() => changeColor(color.rgb)}
@@ -42,7 +38,7 @@ const ColorBtns = () => {
 };
 
 const mapStateToProps = (state) => ({
-	color: state.color,
+	color: state.colorsState,
 });
 
-export default connect(mapStateToProps, { renderAllColors })(ColorBtns);
+export default connect(mapStateToProps, { getColors })(ColorBtns);
