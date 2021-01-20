@@ -32,6 +32,7 @@ const AppendModal = ({ appendColor }) => {
 					name='colorName'
 					value={colorName}
 					onChange={(e) => setColorName(e.target.value)}
+					onKeyPress={(e) => e.key === 'Enter' && onSubmit()}
 					className='append-modal__input input-field'
 					type='text'
 					maxLength='16'

@@ -27,6 +27,26 @@ export const deleteColor = (id) => (dispatch) => {
 	});
 };
 
+export const setCurrent = (color) => {
+	return {
+		type: c.SET_CURRENT,
+		payload: color,
+	};
+};
+
+export const clearCurrent = () => {
+	return {
+		type: c.CLEAR_CURRENT,
+	};
+};
+
+export const updateColor = (color) => (dispatch) => {
+	dispatch({
+		type: c.UPDATE_COLOR,
+		payload: color,
+	});
+};
+
 export const getColorId = (id) => (dispatch) => {
 	dispatch({
 		type: c.GET_COLOR_ID,

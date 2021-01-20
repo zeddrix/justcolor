@@ -1,15 +1,16 @@
 import React from 'react';
 import { connect, useDispatch } from 'react-redux';
 import { showEditModal } from '../../actions/modalActions';
-import { getColorId } from '../../actions/colorActions';
+import { getColorId, setCurrent } from '../../actions/colorActions';
 
-const ColorBtn = ({ color, getColorId }) => {
+const ColorBtn = ({ color, getColorId, setCurrent }) => {
 	const changeColor = (color) => {
 		document.body.style.backgroundColor = color;
 	};
 	const dispatch = useDispatch(showEditModal());
 
 	const selectBtnToEdit = () => {
+		setCurrent(color);
 		dispatch(showEditModal());
 		getColorId(color.id);
 	};
@@ -32,4 +33,4 @@ const ColorBtn = ({ color, getColorId }) => {
 	);
 };
 
-export default connect(null, { getColorId })(ColorBtn);
+export default connect(null, { getColorId, setCurrent })(ColorBtn);

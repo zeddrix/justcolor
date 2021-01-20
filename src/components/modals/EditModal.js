@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { hideEditModal } from '../../actions/modalActions';
-import { deleteColor } from '../../actions/colorActions';
+import { deleteColor, updateColor } from '../../actions/colorActions';
 
-const EditModal = ({ deleteColor }) => {
+const EditModal = ({ current, deleteColor, updateColor }) => {
 	const dispatch = useDispatch();
-
 	const colorIdState = useSelector((state) => state.colorIdState);
 	const { colorId } = colorIdState;
+	const [colorName, setColorName] = useState('');
+
+	useEffect(() => {
+		if (current) {
+			setColorName(current.colorName);
+		}
+	}, [current]);
+
+	const onSubmit = () => {
+		const updColor = {
+			colorName,
+			rgb: document.body.style.backgroundColor,
+			id: colorId,
+		};
+		updateColor(updColor);
+		setColorName('');
+		dispatch(hideEditModal());
+	};
 
 	const onDelete = () => {
 		deleteColor(colorId);
@@ -27,6 +44,10 @@ const EditModal = ({ deleteColor }) => {
 					id='edit-color-input'
 					className='input-field'
 					type='text'
+					name='colorName'
+					value={colorName}
+					onChange={(e) => setColorName(e.target.value)}
+					onKeyPress={(e) => e.key === 'Enter' && onSubmit()}
 					maxLength='16'
 					placeholder='Enter name...'
 					autoFocus
@@ -35,10 +56,7 @@ const EditModal = ({ deleteColor }) => {
 				<div id='delete-btn' className='modal-btn' onClick={onDelete}>
 					Delete
 				</div>
-				<div
-					id='done-btn'
-					className='modal-btn'
-					onClick={() => dispatch(hideEditModal())}>
+				<div id='done-btn' className='modal-btn' onClick={onSubmit}>
 					Done
 				</div>
 			</div>
@@ -46,4 +64,10 @@ const EditModal = ({ deleteColor }) => {
 	);
 };
 
-export default connect(null, { deleteColor })(EditModal);
+const mapStateToProps = (state) => ({
+	current: state.colorsState.current,
+});
+
+export default connect(mapStateToProps, { deleteColor, updateColor })(
+	EditModal
+);

@@ -18,6 +18,23 @@ export const colorsReducer = (state = { colors: initialColors }, action) => {
 				...state,
 				colors: state.colors.filter((color) => color.id !== action.payload),
 			};
+		case c.SET_CURRENT:
+			return {
+				...state,
+				current: action.payload,
+			};
+		case c.CLEAR_CURRENT:
+			return {
+				...state,
+				current: null,
+			};
+		case c.UPDATE_COLOR:
+			return {
+				...state,
+				colors: state.colors.map((color) =>
+					color.id === action.payload.id ? action.payload : color
+				),
+			};
 		default:
 			return state;
 	}
