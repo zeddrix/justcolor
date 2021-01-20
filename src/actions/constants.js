@@ -9,3 +9,5 @@ export const HIDE_PALETTE = 'HIDE_PALETTE';
 
 export const GET_COLORS = 'GET_COLORS';
 export const APPEND_COLOR = 'APPEND_COLOR';
+export const DELETE_COLOR = 'DELETE_COLOR';
+export const GET_COLOR_ID = 'GET_COLOR_ID';

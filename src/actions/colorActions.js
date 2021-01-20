@@ -19,3 +19,17 @@ export const appendColor = (newColor) => (dispatch) => {
 		payload: newColor,
 	});
 };
+
+export const deleteColor = (id) => (dispatch) => {
+	dispatch({
+		type: c.DELETE_COLOR,
+		payload: id,
+	});
+};
+
+export const getColorId = (id) => (dispatch) => {
+	dispatch({
+		type: c.GET_COLOR_ID,
+		payload: id,
+	});
+};

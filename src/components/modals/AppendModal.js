@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { connect, useDispatch } from 'react-redux';
+import { v4 as uuid } from 'uuid';
 import { hideAppendModal } from '../../actions/modalActions';
 import { appendColor } from '../../actions/colorActions';
 
@@ -11,6 +12,7 @@ const AppendModal = ({ appendColor }) => {
 		const newColor = {
 			colorName,
 			rgb: document.body.style.backgroundColor,
+			id: uuid(),
 		};
 		appendColor(newColor);
 		dispatch(hideAppendModal());

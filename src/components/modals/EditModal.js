@@ -1,9 +1,18 @@
 import React from 'react';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import { hideEditModal } from '../../actions/modalActions';
-import { useDispatch } from 'react-redux';
+import { deleteColor } from '../../actions/colorActions';
 
-const EditModal = () => {
+const EditModal = ({ deleteColor }) => {
 	const dispatch = useDispatch();
+
+	const colorIdState = useSelector((state) => state.colorIdState);
+	const { colorId } = colorIdState;
+
+	const onDelete = () => {
+		deleteColor(colorId);
+		dispatch(hideEditModal());
+	};
 
 	return (
 		<div
@@ -23,7 +32,7 @@ const EditModal = () => {
 					autoFocus
 				/>
 				<br />
-				<div id='delete-btn' className='modal-btn'>
+				<div id='delete-btn' className='modal-btn' onClick={onDelete}>
 					Delete
 				</div>
 				<div
@@ -37,4 +46,4 @@ const EditModal = () => {
 	);
 };
 
-export default EditModal;
+export default connect(null, { deleteColor })(EditModal);

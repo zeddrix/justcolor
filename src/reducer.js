@@ -6,7 +6,7 @@ import {
 	toggleShowEditModalReducer,
 	togglePaletteReducer,
 } from './reducers/modalReducers';
-import { colorsReducer } from './reducers/colorReducer';
+import { colorsReducer, getColorIdReducer } from './reducers/colorReducer';
 
 const reducer = combineReducers({
 	// Modals
@@ -17,6 +17,7 @@ const reducer = combineReducers({
 
 	// Colors
 	colorsState: colorsReducer,
+	colorIdState: getColorIdReducer,
 });
 
 export default reducer;
