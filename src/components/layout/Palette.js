@@ -14,6 +14,11 @@ const Palette = ({ color: { colors }, getColors }) => {
 		setIsClicked(!isClicked);
 	};
 
+	const changeColor = (color) => {
+		document.body.style.backgroundColor = color;
+		setIsClicked(!isClicked);
+	};
+
 	useEffect(() => {
 		getColors();
 		// eslint-disable-next-line
@@ -24,7 +29,7 @@ const Palette = ({ color: { colors }, getColors }) => {
 			<ArbitraryBtn changeToArbitraryColor={changeToArbitraryColor} />
 			<AppendBtn isClicked={isClicked} />
 			{colors.map((color, key) => (
-				<ColorBtn color={color} key={key} />
+				<ColorBtn changeColor={changeColor} color={color} key={key} />
 			))}
 		</div>
 	);

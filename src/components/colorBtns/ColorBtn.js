@@ -3,10 +3,7 @@ import { connect, useDispatch } from 'react-redux';
 import { showEditModal } from '../../actions/modalActions';
 import { getColorId, setCurrent } from '../../actions/colorActions';
 
-const ColorBtn = ({ color, getColorId, setCurrent }) => {
-	const changeColor = (color) => {
-		document.body.style.backgroundColor = color;
-	};
+const ColorBtn = ({ color, getColorId, setCurrent, changeColor }) => {
 	const dispatch = useDispatch(showEditModal());
 
 	const selectBtnToEdit = () => {
