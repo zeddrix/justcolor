@@ -6,7 +6,7 @@ import { getColorId, setCurrent } from '../../actions/colorActions';
 const ColorBtn = ({ color, getColorId, setCurrent, changeColor }) => {
 	const dispatch = useDispatch(showEditModal());
 
-	const selectBtnToEdit = () => {
+	const editMode = () => {
 		setCurrent(color);
 		dispatch(showEditModal());
 		getColorId(color.id);
@@ -16,7 +16,7 @@ const ColorBtn = ({ color, getColorId, setCurrent, changeColor }) => {
 		<button
 			style={{ background: color.rgb }}
 			onMouseDown={() => changeColor(color.rgb)}
-			onDoubleClick={selectBtnToEdit}
+			onDoubleClick={editMode}
 			id={color.id}
 			className={
 				color.colorName.split(' ')[0].length > 9

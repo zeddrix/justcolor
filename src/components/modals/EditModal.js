@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { hideEditModal } from '../../actions/modalActions';
 import { deleteColor, updateColor } from '../../actions/colorActions';
+import { showDeleteToast, showUpdateToast } from './toasts';
 
 const EditModal = ({ current, deleteColor, updateColor }) => {
 	const dispatch = useDispatch();
@@ -24,11 +25,13 @@ const EditModal = ({ current, deleteColor, updateColor }) => {
 		updateColor(updColor);
 		setColorName('');
 		dispatch(hideEditModal());
+		showUpdateToast();
 	};
 
 	const onDelete = () => {
 		deleteColor(colorId);
 		dispatch(hideEditModal());
+		showDeleteToast();
 	};
 
 	return (

@@ -457,71 +457,82 @@ button:not(.arbitrary-btn):focus {
 }
 
 /* TOASTS */
-#toast {
+.toast {
 	visibility: hidden;
 	min-width: 4rem;
-	margin-left: -125px;
-	background-color: #333;
-	color: #fff;
+	margin-left: 2rem;
+	top: 2rem;
+	border: 1px solid lightgrey;
+	color: lightgrey;
 	text-align: center;
-	border-radius: 10px;
+	border-radius: 5px;
 	padding: 16px;
 	position: fixed;
 	z-index: 1;
-	left: 15%;
-	bottom: 11rem;
 	font-size: 17px;
 	font-family: 'Comic Neue', sans-serif;
 }
 
-#toast.show {
+.toast.show {
 	visibility: visible;
-	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	-webkit-animation: fadein 0.15s, fadeout 0.25s 1.25s;
+	animation: fadein 0.15s, fadeout 0.25s 1.25s;
 }
 
 @-webkit-keyframes fadein {
 	from {
-		bottom: 9rem;
+		top: 0;
 		opacity: 0;
 	}
 	to {
-		bottom: 11rem;
+		top: 2rem;
 		opacity: 1;
 	}
 }
 
 @keyframes fadein {
 	from {
-		bottom: 9rem;
+		top: 0;
 		opacity: 0;
 	}
 	to {
-		bottom: 11rem;
+		top: 2rem;
 		opacity: 1;
 	}
 }
 
 @-webkit-keyframes fadeout {
 	from {
-		bottom: 11rem;
+		top: 2rem;
 		opacity: 1;
 	}
 	to {
-		bottom: 9rem;
+		top: 0;
 		opacity: 0;
 	}
 }
 
 @keyframes fadeout {
 	from {
-		bottom: 11rem;
+		top: 2rem;
 		opacity: 1;
 	}
 	to {
-		bottom: 9rem;
+		top: 0;
 		opacity: 0;
 	}
+}
+
+#add-toast {
+	background: green;
+}
+
+#delete-toast {
+	background: #f84e6a;
+}
+
+#update-toast {
+	background: darkblue;
 }
 
 /* SCROLLBAR */
