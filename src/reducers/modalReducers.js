@@ -1,6 +1,6 @@
 import * as c from '../actions/constants';
 
-export const toggleShowSettingsReducer = (state = false, action) => {
+export const toggleSettingsReducer = (state = false, action) => {
 	switch (action.type) {
 		case c.SHOW_SETTINGS:
 			return { show: true };
@@ -11,7 +11,7 @@ export const toggleShowSettingsReducer = (state = false, action) => {
 	}
 };
 
-export const toggleShowAppendModalReducer = (state = false, action) => {
+export const toggleAppendModalReducer = (state = false, action) => {
 	switch (action.type) {
 		case c.SHOW_APPEND_MODAL:
 			return { show: true };
@@ -22,7 +22,7 @@ export const toggleShowAppendModalReducer = (state = false, action) => {
 	}
 };
 
-export const toggleShowEditModalReducer = (state = false, action) => {
+export const toggleEditModalReducer = (state = false, action) => {
 	switch (action.type) {
 		case c.SHOW_EDIT_MODAL:
 			return { show: true };

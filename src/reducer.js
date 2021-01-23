@@ -1,18 +1,18 @@
 import { combineReducers } from 'redux';
 
 import {
-	toggleShowSettingsReducer,
-	toggleShowAppendModalReducer,
-	toggleShowEditModalReducer,
+	toggleSettingsReducer,
+	toggleAppendModalReducer,
+	toggleEditModalReducer,
 	togglePaletteReducer,
 } from './reducers/modalReducers';
 import { colorsReducer, getColorIdReducer } from './reducers/colorReducer';
 
 const reducer = combineReducers({
 	// Modals
-	toggleShowSettingsState: toggleShowSettingsReducer,
-	toggleShowAppendModalState: toggleShowAppendModalReducer,
-	toggleShowEditModalState: toggleShowEditModalReducer,
+	toggleSettingsState: toggleSettingsReducer,
+	toggleAppendModalState: toggleAppendModalReducer,
+	toggleEditModalState: toggleEditModalReducer,
 	togglePaletteState: togglePaletteReducer,
 
 	// Colors

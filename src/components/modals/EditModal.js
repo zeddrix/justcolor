@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { connect, useDispatch, useSelector } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { hideEditModal } from '../../actions/modalActions';
 import { deleteColor, updateColor } from '../../actions/colorActions';
 import { showDeleteToast, showUpdateToast } from './toasts';
 
-const EditModal = ({ current, deleteColor, updateColor }) => {
+const EditModal = ({ current, deleteColor, updateColor, colorId }) => {
 	const dispatch = useDispatch();
-	const colorIdState = useSelector((state) => state.colorIdState);
-	const { colorId } = colorIdState;
 	const [colorName, setColorName] = useState('');
 
 	useEffect(() => {
@@ -68,6 +66,7 @@ const EditModal = ({ current, deleteColor, updateColor }) => {
 };
 
 const mapStateToProps = (state) => ({
+	colorId: state.colorIdState.colorId,
 	current: state.colorsState.current,
 });
 

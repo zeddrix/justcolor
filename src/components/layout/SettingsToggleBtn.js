@@ -6,27 +6,25 @@ import Settings from '../modals/Settings';
 const SettingsToggleBtn = () => {
 	const dispatch = useDispatch();
 
-	const toggleShowSettings = useSelector(
-		(state) => state.toggleShowSettingsState.show
-	);
+	const toggleSettings = useSelector((state) => state.toggleSettingsState.show);
 
 	return (
 		<div className='settings__toggle-btn__div'>
 			<div id='settings__toggle-btn' onClick={() => dispatch(showSettings())}>
 				<span
 					className={
-						'circle ' + (toggleShowSettings ? 'transparent' : 'colored')
+						'circle ' + (toggleSettings ? 'transparent' : 'colored')
 					}></span>
 				<span
 					className={
-						'circle ' + (toggleShowSettings ? 'transparent' : 'colored')
+						'circle ' + (toggleSettings ? 'transparent' : 'colored')
 					}></span>
 				<span
 					className={
-						'circle ' + (toggleShowSettings ? 'transparent' : 'colored')
+						'circle ' + (toggleSettings ? 'transparent' : 'colored')
 					}></span>
 			</div>
-			{toggleShowSettings && <Settings />}
+			{toggleSettings && <Settings />}
 		</div>
 	);
 };

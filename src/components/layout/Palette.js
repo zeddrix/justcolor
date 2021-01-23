@@ -28,8 +28,8 @@ const Palette = ({ color: { colors }, getColors }) => {
 		<div className='palette'>
 			<ArbitraryBtn changeToArbitraryColor={changeToArbitraryColor} />
 			<AppendBtn isClicked={isClicked} />
-			{colors.map((color, key) => (
-				<ColorBtn changeColor={changeColor} color={color} key={key} />
+			{colors.map((color) => (
+				<ColorBtn changeColor={changeColor} color={color} key={color.id} />
 			))}
 		</div>
 	);

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { connect } from 'react-redux';
 import SettingsToggleBtn from '../src/components/layout/SettingsToggleBtn';
 import AppendModal from '../src/components/modals/AppendModal';
 import EditModal from '../src/components/modals/EditModal';
@@ -8,31 +8,27 @@ import PaletteToggleBtn from './components/layout/PaletteToggleBtn';
 
 import './App.css';
 
-const App = () => {
+const App = ({ toggleAppendModal, toggleEditModal, togglePalette }) => {
 	useEffect(() => {
 		document.body.style.backgroundColor =
 			'#' + Math.floor(Math.random() * 16777215).toString(16);
 	}, []);
 
-	const toggleShowAppendModal = useSelector(
-		(state) => state.toggleShowAppendModalState.show
-	);
-
-	const toggleShowEditModal = useSelector(
-		(state) => state.toggleShowEditModalState.show
-	);
-
-	const togglePalette = useSelector((state) => state.togglePaletteState.show);
-
 	return (
 		<div className='App'>
 			<SettingsToggleBtn />
 			<PaletteToggleBtn />
-			{toggleShowAppendModal && <AppendModal />}
-			{toggleShowEditModal && <EditModal />}
+			{toggleAppendModal && <AppendModal />}
+			{toggleEditModal && <EditModal />}
 			{togglePalette && <Palette />}
 		</div>
 	);
 };
 
-export default App;
+const mapStateToProps = (state) => ({
+	toggleAppendModal: state.toggleAppendModalState.show,
+	toggleEditModal: state.toggleEditModalState.show,
+	togglePalette: state.togglePaletteState.show,
+});
+
+export default connect(mapStateToProps)(App);
