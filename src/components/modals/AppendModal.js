@@ -3,9 +3,9 @@ import { connect, useDispatch } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 import { hideAppendModal } from '../../actions/modalActions';
 import { appendColor } from '../../actions/colorActions';
-import { showAddToast } from './toasts';
+import { showToast } from '../../actions/toastActions';
 
-const AppendModal = ({ appendColor }) => {
+const AppendModal = ({ appendColor, showToast }) => {
 	const dispatch = useDispatch();
 	const [colorName, setColorName] = useState('');
 
@@ -18,7 +18,7 @@ const AppendModal = ({ appendColor }) => {
 		appendColor(newColor);
 		dispatch(hideAppendModal());
 		setColorName('');
-		showAddToast();
+		showToast();
 	};
 
 	return (
@@ -55,4 +55,4 @@ const AppendModal = ({ appendColor }) => {
 	);
 };
 
-export default connect(null, { appendColor })(AppendModal);
+export default connect(null, { appendColor, showToast })(AppendModal);

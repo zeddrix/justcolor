@@ -7,6 +7,9 @@ export const HIDE_EDIT_MODAL = 'HIDE_EDIT_MODAL';
 export const SHOW_PALETTE = 'SHOW_PALETTE';
 export const HIDE_PALETTE = 'HIDE_PALETTE';
 
+export const SHOW_TOAST = 'SHOW_TOAST';
+export const HIDE_TOAST = 'HIDE_TOAST';
+
 export const GET_COLORS = 'GET_COLORS';
 export const APPEND_COLOR = 'APPEND_COLOR';
 export const DELETE_COLOR = 'DELETE_COLOR';
