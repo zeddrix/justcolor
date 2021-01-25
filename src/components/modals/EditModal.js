@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { connect, useDispatch } from 'react-redux';
 import { hideEditModal } from '../../actions/modalActions';
-import { deleteColor, updateColor } from '../../actions/colorActions';
+import {
+	clearCurrent,
+	deleteColor,
+	updateColor,
+} from '../../actions/colorActions';
 import { showDeleteToast, showUpdateToast } from './toasts';
 
-const EditModal = ({ current, deleteColor, updateColor, colorId }) => {
+const EditModal = ({
+	current,
+	deleteColor,
+	updateColor,
+	clearCurrent,
+	colorId,
+}) => {
 	const dispatch = useDispatch();
 	const [colorName, setColorName] = useState('');
 
@@ -14,6 +24,11 @@ const EditModal = ({ current, deleteColor, updateColor, colorId }) => {
 		}
 	}, [current]);
 
+	const closeModal = () => {
+		dispatch(hideEditModal());
+		clearCurrent();
+	};
+
 	const onSubmit = () => {
 		const updColor = {
 			colorName,
@@ -22,22 +37,21 @@ const EditModal = ({ current, deleteColor, updateColor, colorId }) => {
 		};
 		updateColor(updColor);
 		setColorName('');
-		dispatch(hideEditModal());
 		showUpdateToast();
+		closeModal();
 	};
 
 	const onDelete = () => {
 		deleteColor(colorId);
-		dispatch(hideEditModal());
 		showDeleteToast();
+		closeModal();
 	};
 
 	return (
 		<div
 			id='backdrop'
 			onMouseDown={(e) => {
-				e.target === document.querySelector('#backdrop') &&
-					dispatch(hideEditModal());
+				e.target === document.querySelector('#backdrop') && closeModal();
 			}}>
 			<div className='edit-color-modal modal'>
 				<p className='modal__description'>Edit color button:</p>
@@ -70,6 +84,8 @@ const mapStateToProps = (state) => ({
 	current: state.colorsState.current,
 });
 
-export default connect(mapStateToProps, { deleteColor, updateColor })(
-	EditModal
-);
+export default connect(mapStateToProps, {
+	deleteColor,
+	updateColor,
+	clearCurrent,
+})(EditModal);
