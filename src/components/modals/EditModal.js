@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { connect, useDispatch } from 'react-redux';
-import { hideEditModal } from '../../actions/modalActions';
+import {
+	hideEditModal,
+	showToast,
+	hideToast,
+} from '../../actions/modalActions';
 import {
 	clearCurrent,
 	deleteColor,
 	updateColor,
 } from '../../actions/colorActions';
-import { showDeleteToast, showUpdateToast } from './toasts';
 
 const EditModal = ({
 	current,
@@ -14,6 +17,8 @@ const EditModal = ({
 	updateColor,
 	clearCurrent,
 	colorId,
+	showToast,
+	hideToast,
 }) => {
 	const dispatch = useDispatch();
 	const [colorName, setColorName] = useState('');
@@ -37,13 +42,19 @@ const EditModal = ({
 		};
 		updateColor(updColor);
 		setColorName('');
-		showUpdateToast();
+		dispatch(showToast('Color button updated'));
+		setTimeout(() => {
+			dispatch(hideToast());
+		}, 1500);
 		closeModal();
 	};
 
 	const onDelete = () => {
 		deleteColor(colorId);
-		showDeleteToast();
+		dispatch(showToast('Color button deleted'));
+		setTimeout(() => {
+			dispatch(hideToast());
+		}, 1500);
 		closeModal();
 	};
 
@@ -88,4 +99,6 @@ export default connect(mapStateToProps, {
 	deleteColor,
 	updateColor,
 	clearCurrent,
+	showToast,
+	hideToast,
 })(EditModal);

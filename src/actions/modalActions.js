@@ -48,9 +48,10 @@ export const hidePalette = () => {
 	};
 };
 
-export const showToast = () => {
+export const showToast = (msg) => {
 	return {
 		type: c.SHOW_TOAST,
+		payload: msg,
 	};
 };
 

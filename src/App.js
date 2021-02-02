@@ -24,7 +24,12 @@ const App = ({ toggleAppendModal, toggleEditModal, togglePalette, toast }) => {
 			{toggleAppendModal && <AppendModal />}
 			{toggleEditModal && <EditModal />}
 			{togglePalette && <Palette />}
-			{<Toast className={toast ? 'toast show' : 'toast'} />}
+			{
+				<Toast
+					className={toast.show ? 'toast show' : 'toast'}
+					msg={toast.msg}
+				/>
+			}
 		</div>
 	);
 };
@@ -33,7 +38,7 @@ const mapStateToProps = (state) => ({
 	toggleAppendModal: state.toggleAppendModalState.show,
 	toggleEditModal: state.toggleEditModalState.show,
 	togglePalette: state.togglePaletteState.show,
-	toast: state.toastState.show,
+	toast: state.toastState,
 });
 
 export default connect(mapStateToProps)(App);

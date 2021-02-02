@@ -20,7 +20,14 @@ const AppendModal = ({ appendColor, showToast, hideToast }) => {
 		};
 		appendColor(newColor);
 		dispatch(hideAppendModal());
-		dispatch(showToast());
+
+		dispatch(
+			showToast(
+				colorName === ''
+					? 'Unnamed color button added'
+					: 'New color button added'
+			)
+		);
 		setTimeout(() => {
 			dispatch(hideToast());
 		}, 1500);

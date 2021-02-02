@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Toast = ({ className }) => {
+const Toast = ({ className, msg }) => {
 	return (
 		<div id='add-toast' className={className}>
-			Color button added
+			{msg}
 		</div>
 	);
 };

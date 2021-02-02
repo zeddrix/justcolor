@@ -44,12 +44,12 @@ export const togglePaletteReducer = (state = true, action) => {
 	}
 };
 
-export const toastReducer = (state = false, action) => {
+export const toastReducer = (state = { show: false, msg: null }, action) => {
 	switch (action.type) {
 		case c.SHOW_TOAST:
-			return { show: true };
+			return { show: true, msg: action.payload };
 		case c.HIDE_TOAST:
-			return { show: false };
+			return { show: false, msg: null };
 		default:
 			return state;
 	}
