@@ -5,7 +5,7 @@ const Toast = () => {
 	const toast = useSelector((state) => state.toastState);
 
 	return (
-		<div id={toast.id} className={toast.show ? 'toast show' : 'toast'}>
+		<div id={toast.id} className={toast.show ? 'toast show_toast' : 'toast'}>
 			{toast.msg}
 		</div>
 	);

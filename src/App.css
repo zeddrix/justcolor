@@ -462,6 +462,7 @@ button:not(.arbitrary-btn):focus {
 	visibility: hidden;
 	min-width: 4rem;
 	margin-left: 2rem;
+	left: 0;
 	top: 2rem;
 	border: 1px solid lightgrey;
 	color: lightgrey;
@@ -474,13 +475,12 @@ button:not(.arbitrary-btn):focus {
 	font-family: 'Comic Neue', sans-serif;
 }
 
-.show {
+.show_toast {
 	visibility: visible;
-	-webkit-animation: fadein 0.15s, fadeout 0.25s 1.25s;
-	animation: fadein 0.15s, fadeout 0.25s 1.25s;
+	animation: toastFadeIn 0.15s, toastFadeOut 0.25s 1.25s;
 }
 
-@-webkit-keyframes fadein {
+@keyframes toastFadeIn {
 	from {
 		top: 0;
 		opacity: 0;
@@ -491,29 +491,7 @@ button:not(.arbitrary-btn):focus {
 	}
 }
 
-@keyframes fadein {
-	from {
-		top: 0;
-		opacity: 0;
-	}
-	to {
-		top: 2rem;
-		opacity: 1;
-	}
-}
-
-@-webkit-keyframes fadeout {
-	from {
-		top: 2rem;
-		opacity: 1;
-	}
-	to {
-		top: 0;
-		opacity: 0;
-	}
-}
-
-@keyframes fadeout {
+@keyframes toastFadeOut {
 	from {
 		top: 2rem;
 		opacity: 1;
