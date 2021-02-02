@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import ArbitraryBtn from '../colorBtns/ArbitraryBtn';
 import ColorBtn from '../colorBtns/ColorBtn';
 import AppendBtn from '../colorBtns/AppendBtn';
 import { getColors } from '../../actions/colorActions';
 
-const Palette = ({ color: { colors }, getColors }) => {
+const Palette = ({ getColors }) => {
 	const [isClicked, setIsClicked] = useState(true);
+	const colors = useSelector((state) => state.colorsState.colors);
 
 	const changeToArbitraryColor = () => {
 		document.body.style.backgroundColor =
@@ -35,8 +36,4 @@ const Palette = ({ color: { colors }, getColors }) => {
 	);
 };
 
-const mapStateToProps = (state) => ({
-	color: state.colorsState,
-});
-
-export default connect(mapStateToProps, { getColors })(Palette);
+export default connect(null, { getColors })(Palette);

@@ -4,7 +4,7 @@ import { showPalette, hidePalette } from '../../actions/modalActions';
 
 const PaletteToggleBtn = () => {
 	const dispatch = useDispatch();
-	const togglePalette = useSelector((state) => state.togglePaletteState.show);
+	const togglePalette = useSelector((state) => state.togglePaletteState);
 
 	useEffect(() => {
 		dispatch(showPalette());

@@ -9,13 +9,11 @@ import Toast from './components/Toast';
 
 import './App.css';
 
-const App = ({ toggleAppendModal, toggleEditModal, togglePalette, toast }) => {
+const App = ({ toggleAppendModal, toggleEditModal, togglePalette }) => {
 	useEffect(() => {
 		document.body.style.backgroundColor =
 			'#' + Math.floor(Math.random() * 16777215).toString(16);
 	}, []);
-
-	console.log(toast);
 
 	return (
 		<div className='App'>
@@ -30,9 +28,9 @@ const App = ({ toggleAppendModal, toggleEditModal, togglePalette, toast }) => {
 };
 
 const mapStateToProps = (state) => ({
-	toggleAppendModal: state.toggleAppendModalState.show,
-	toggleEditModal: state.toggleEditModalState.show,
-	togglePalette: state.togglePaletteState.show,
+	toggleAppendModal: state.toggleAppendModalState,
+	toggleEditModal: state.toggleEditModalState,
+	togglePalette: state.togglePaletteState,
 });
 
 export default connect(mapStateToProps)(App);

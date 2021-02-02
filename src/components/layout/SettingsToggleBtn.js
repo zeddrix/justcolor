@@ -6,7 +6,7 @@ import Settings from '../modals/Settings';
 const SettingsToggleBtn = () => {
 	const dispatch = useDispatch();
 
-	const toggleSettings = useSelector((state) => state.toggleSettingsState.show);
+	const toggleSettings = useSelector((state) => state.toggleSettingsState);
 
 	return (
 		<div className='settings__toggle-btn__div'>
