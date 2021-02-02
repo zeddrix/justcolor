@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { connect, useDispatch } from 'react-redux';
 import { v4 as uuid } from 'uuid';
-import { hideAppendModal } from '../../actions/modalActions';
+import {
+	hideAppendModal,
+	showToast,
+	hideToast,
+} from '../../actions/modalActions';
 import { appendColor } from '../../actions/colorActions';
-import { showToast } from '../../actions/toastActions';
 
-const AppendModal = ({ appendColor, showToast }) => {
+const AppendModal = ({ appendColor, showToast, hideToast }) => {
 	const dispatch = useDispatch();
 	const [colorName, setColorName] = useState('');
 
@@ -17,8 +20,11 @@ const AppendModal = ({ appendColor, showToast }) => {
 		};
 		appendColor(newColor);
 		dispatch(hideAppendModal());
+		dispatch(showToast());
+		setTimeout(() => {
+			dispatch(hideToast());
+		}, 1500);
 		setColorName('');
-		showToast();
 	};
 
 	return (
@@ -55,4 +61,6 @@ const AppendModal = ({ appendColor, showToast }) => {
 	);
 };
 
-export default connect(null, { appendColor, showToast })(AppendModal);
+export default connect(null, { appendColor, showToast, hideToast })(
+	AppendModal
+);

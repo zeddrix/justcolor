@@ -47,3 +47,15 @@ export const hidePalette = () => {
 		type: c.HIDE_PALETTE,
 	};
 };
+
+export const showToast = () => {
+	return {
+		type: c.SHOW_TOAST,
+	};
+};
+
+export const hideToast = () => {
+	return {
+		type: c.HIDE_TOAST,
+	};
+};

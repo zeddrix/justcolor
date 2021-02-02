@@ -474,7 +474,7 @@ button:not(.arbitrary-btn):focus {
 	font-family: 'Comic Neue', sans-serif;
 }
 
-.toast.show {
+.show {
 	visibility: visible;
 	-webkit-animation: fadein 0.15s, fadeout 0.25s 1.25s;
 	animation: fadein 0.15s, fadeout 0.25s 1.25s;
