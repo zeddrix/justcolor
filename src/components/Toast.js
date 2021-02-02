@@ -1,9 +1,12 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-const Toast = ({ className, msg, id }) => {
+const Toast = () => {
+	const toast = useSelector((state) => state.toastState);
+
 	return (
-		<div id={id} className={className}>
-			{msg}
+		<div id={toast.id} className={toast.show ? 'toast show' : 'toast'}>
+			{toast.msg}
 		</div>
 	);
 };
