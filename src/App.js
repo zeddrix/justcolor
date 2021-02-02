@@ -28,6 +28,7 @@ const App = ({ toggleAppendModal, toggleEditModal, togglePalette, toast }) => {
 				<Toast
 					className={toast.show ? 'toast show' : 'toast'}
 					msg={toast.msg}
+					id={toast.id}
 				/>
 			}
 		</div>

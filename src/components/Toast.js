@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Toast = ({ className, msg }) => {
+const Toast = ({ className, msg, id }) => {
 	return (
-		<div id='add-toast' className={className}>
+		<div id={id} className={className}>
 			{msg}
 		</div>
 	);

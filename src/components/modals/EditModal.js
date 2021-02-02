@@ -42,7 +42,7 @@ const EditModal = ({
 		};
 		updateColor(updColor);
 		setColorName('');
-		dispatch(showToast('Color button updated'));
+		dispatch(showToast('Color button updated', 'update-toast'));
 		setTimeout(() => {
 			dispatch(hideToast());
 		}, 1500);
@@ -51,7 +51,7 @@ const EditModal = ({
 
 	const onDelete = () => {
 		deleteColor(colorId);
-		dispatch(showToast('Color button deleted'));
+		dispatch(showToast('Color button deleted', 'delete-toast'));
 		setTimeout(() => {
 			dispatch(hideToast());
 		}, 1500);

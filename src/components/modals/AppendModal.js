@@ -24,8 +24,9 @@ const AppendModal = ({ appendColor, showToast, hideToast }) => {
 		dispatch(
 			showToast(
 				colorName === ''
-					? 'Unnamed color button added'
-					: 'New color button added'
+					? 'Color button added (NO NAME)'
+					: 'New color button added',
+				'add-toast'
 			)
 		);
 		setTimeout(() => {
