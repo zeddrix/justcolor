@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import ArbitraryBtn from '../colorBtns/ArbitraryBtn';
 import ColorBtn from '../colorBtns/ColorBtn';
@@ -7,6 +7,15 @@ import AppendBtn from '../colorBtns/AppendBtn';
 const Palette = () => {
 	const [isClicked, setIsClicked] = useState(true);
 	const colors = useSelector((state) => state.colorsState.colors);
+
+	const setCurrentBG = () => {
+		setIsClicked(!isClicked);
+	};
+
+	useEffect(() => {
+		setCurrentBG();
+		// eslint-disable-next-line
+	}, []);
 
 	const changeToArbitraryColor = () => {
 		document.body.style.backgroundColor =

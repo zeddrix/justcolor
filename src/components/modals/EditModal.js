@@ -34,7 +34,7 @@ const EditModal = ({
 		clearCurrent();
 	};
 
-	const onSubmit = () => {
+	const onUpdate = () => {
 		const updColor = {
 			colorName,
 			rgb: document.body.style.backgroundColor,
@@ -73,7 +73,7 @@ const EditModal = ({
 					name='colorName'
 					value={colorName}
 					onChange={(e) => setColorName(e.target.value)}
-					onKeyPress={(e) => e.key === 'Enter' && onSubmit()}
+					onKeyPress={(e) => e.key === 'Enter' && onUpdate()}
 					maxLength='16'
 					placeholder='Enter name...'
 					autoFocus
@@ -82,7 +82,7 @@ const EditModal = ({
 				<div id='delete-btn' className='modal-btn' onClick={onDelete}>
 					Delete
 				</div>
-				<div id='done-btn' className='modal-btn' onClick={onSubmit}>
+				<div id='done-btn' className='modal-btn' onClick={onUpdate}>
 					Done
 				</div>
 			</div>
