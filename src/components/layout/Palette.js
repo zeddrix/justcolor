@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { connect, useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import ArbitraryBtn from '../colorBtns/ArbitraryBtn';
 import ColorBtn from '../colorBtns/ColorBtn';
 import AppendBtn from '../colorBtns/AppendBtn';
-import { getColors } from '../../actions/colorActions';
 
-const Palette = ({ getColors }) => {
+const Palette = () => {
 	const [isClicked, setIsClicked] = useState(true);
 	const colors = useSelector((state) => state.colorsState.colors);
 
@@ -20,11 +19,6 @@ const Palette = ({ getColors }) => {
 		setIsClicked(!isClicked);
 	};
 
-	useEffect(() => {
-		getColors();
-		// eslint-disable-next-line
-	}, []);
-
 	return (
 		<div className='palette'>
 			<ArbitraryBtn changeToArbitraryColor={changeToArbitraryColor} />
@@ -36,4 +30,4 @@ const Palette = ({ getColors }) => {
 	);
 };
 
-export default connect(null, { getColors })(Palette);
+export default Palette;
