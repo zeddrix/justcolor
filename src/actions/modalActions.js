@@ -1,63 +1,43 @@
 import * as c from './constants';
 
-export const showSettings = () => {
-	return {
-		type: c.SHOW_SETTINGS,
-	};
-};
+export const showSettings = () => ({
+	type: c.SHOW_SETTINGS,
+});
 
-export const hideSettings = () => {
-	return {
-		type: c.HIDE_SETTINGS,
-	};
-};
+export const hideSettings = () => ({
+	type: c.HIDE_SETTINGS,
+});
 
-export const showAppendModal = () => {
-	return {
-		type: c.SHOW_APPEND_MODAL,
-	};
-};
+export const showAppendModal = () => ({
+	type: c.SHOW_APPEND_MODAL,
+});
 
-export const hideAppendModal = () => {
-	return {
-		type: c.HIDE_APPEND_MODAL,
-	};
-};
+export const hideAppendModal = () => ({
+	type: c.HIDE_APPEND_MODAL,
+});
 
-export const showEditModal = () => {
-	return {
-		type: c.SHOW_EDIT_MODAL,
-	};
-};
+export const showEditModal = () => ({
+	type: c.SHOW_EDIT_MODAL,
+});
 
-export const hideEditModal = () => {
-	return {
-		type: c.HIDE_EDIT_MODAL,
-	};
-};
+export const hideEditModal = () => ({
+	type: c.HIDE_EDIT_MODAL,
+});
 
-export const showPalette = () => {
-	return {
-		type: c.SHOW_PALETTE,
-	};
-};
+export const showPalette = () => ({
+	type: c.SHOW_PALETTE,
+});
 
-export const hidePalette = () => {
-	return {
-		type: c.HIDE_PALETTE,
-	};
-};
+export const hidePalette = () => ({
+	type: c.HIDE_PALETTE,
+});
 
-export const showToast = (msg, id) => {
-	return {
-		type: c.SHOW_TOAST,
-		msg,
-		id,
-	};
-};
+export const showToast = (msg, id) => ({
+	type: c.SHOW_TOAST,
+	msg,
+	id,
+});
 
-export const hideToast = () => {
-	return {
-		type: c.HIDE_TOAST,
-	};
-};
+export const hideToast = () => ({
+	type: c.HIDE_TOAST,
+});

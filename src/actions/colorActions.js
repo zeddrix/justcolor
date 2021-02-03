@@ -14,18 +14,14 @@ export const deleteColor = (id) => (dispatch) => {
 	});
 };
 
-export const setCurrent = (color) => {
-	return {
-		type: c.SET_CURRENT,
-		payload: color,
-	};
-};
+export const setCurrent = (color) => ({
+	type: c.SET_CURRENT,
+	payload: color,
+});
 
-export const clearCurrent = () => {
-	return {
-		type: c.CLEAR_CURRENT,
-	};
-};
+export const clearCurrent = () => ({
+	type: c.CLEAR_CURRENT,
+});
 
 export const updateColor = (color) => (dispatch) => {
 	dispatch({
