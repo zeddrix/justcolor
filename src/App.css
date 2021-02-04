@@ -311,7 +311,7 @@ button:not(.arbitrary-btn):focus {
 
 /* for long color names */
 .word-break {
-	word-break: break-all;
+	word-break: break-word;
 }
 
 /* COLOR BUTTONS */

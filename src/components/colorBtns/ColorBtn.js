@@ -19,11 +19,7 @@ const ColorBtn = ({ color, getColorId, setCurrent, changeColor }) => {
 			onDoubleClick={editMode}
 			id={color.id}
 			className={
-				color.colorName.split(' ')[0].length > 9
-					? 'word-break'
-					: color.rgb === 'rgb(0, 0, 0)'
-					? 'black'
-					: undefined
+				color.rgb === 'rgb(0, 0, 0)' ? 'black word-break' : 'word-break'
 			}>
 			{color.colorName}
 		</button>
