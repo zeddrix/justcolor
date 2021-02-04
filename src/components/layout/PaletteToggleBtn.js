@@ -1,14 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { showPalette, hidePalette } from '../../actions/modalActions';
 
 const PaletteToggleBtn = () => {
 	const dispatch = useDispatch();
 	const togglePalette = useSelector((state) => state.togglePaletteState);
-
-	useEffect(() => {
-		dispatch(showPalette());
-	}, [dispatch]);
 
 	return (
 		<div
