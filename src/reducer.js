@@ -5,7 +5,6 @@ import {
 	toggleAppendModalReducer,
 	toggleEditModalReducer,
 	togglePaletteReducer,
-	toastReducer,
 } from './reducers/modalReducers';
 import { colorsReducer, getColorIdReducer } from './reducers/colorReducer';
 
@@ -15,7 +14,6 @@ const reducer = combineReducers({
 	toggleAppendModalState: toggleAppendModalReducer,
 	toggleEditModalState: toggleEditModalReducer,
 	togglePaletteState: togglePaletteReducer,
-	toastState: toastReducer,
 
 	// Colors
 	colorsState: colorsReducer,

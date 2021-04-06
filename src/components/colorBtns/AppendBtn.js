@@ -12,7 +12,7 @@ const AppendBtn = () => {
 	});
 	return (
 		<button
-			className='append-btn'
+			className='append-btn color-btn'
 			onClick={() => dispatch(showAppendModal())}
 			ref={currentBG}>
 			+

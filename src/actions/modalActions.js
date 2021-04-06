@@ -31,13 +31,3 @@ export const showPalette = () => ({
 export const hidePalette = () => ({
 	type: c.HIDE_PALETTE,
 });
-
-export const showToast = (msg, id) => ({
-	type: c.SHOW_TOAST,
-	msg,
-	id,
-});
-
-export const hideToast = () => ({
-	type: c.HIDE_TOAST,
-});

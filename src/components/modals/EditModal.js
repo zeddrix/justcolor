@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { connect, useDispatch } from 'react-redux';
-import {
-	hideEditModal,
-	showToast,
-	hideToast,
-} from '../../actions/modalActions';
+import { toast } from 'react-toastify';
+import { hideEditModal } from '../../actions/modalActions';
 import {
 	clearCurrent,
 	deleteColor,
@@ -17,8 +14,6 @@ const EditModal = ({
 	updateColor,
 	clearCurrent,
 	colorId,
-	showToast,
-	hideToast,
 }) => {
 	const dispatch = useDispatch();
 	const [colorName, setColorName] = useState('');
@@ -42,19 +37,33 @@ const EditModal = ({
 		};
 		updateColor(updColor);
 		setColorName('');
-		dispatch(showToast('Color button updated', 'update-toast'));
-		setTimeout(() => {
-			dispatch(hideToast());
-		}, 1500);
+
+		toast.info('Color button updated', {
+			position: 'top-right',
+			autoClose: 3000,
+			hideProgressBar: true,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+		});
+
 		closeModal();
 	};
 
 	const onDelete = () => {
 		deleteColor(colorId);
-		dispatch(showToast('Color button deleted', 'delete-toast'));
-		setTimeout(() => {
-			dispatch(hideToast());
-		}, 1500);
+
+		toast.error('Color button deleted', {
+			position: 'top-right',
+			autoClose: 3000,
+			hideProgressBar: true,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+		});
+
 		closeModal();
 	};
 
@@ -99,6 +108,4 @@ export default connect(mapStateToProps, {
 	deleteColor,
 	updateColor,
 	clearCurrent,
-	showToast,
-	hideToast,
 })(EditModal);

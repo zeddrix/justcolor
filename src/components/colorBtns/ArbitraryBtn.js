@@ -2,7 +2,7 @@ import React from 'react';
 
 const ArbitraryBtn = ({ changeToArbitraryColor }) => (
 	<button
-		className='arbitrary-btn'
+		className='arbitrary-btn color-btn'
 		onMouseDown={changeToArbitraryColor}></button>
 );
 

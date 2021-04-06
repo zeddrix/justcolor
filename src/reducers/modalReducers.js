@@ -43,24 +43,3 @@ export const togglePaletteReducer = (state = true, action) => {
 			return state;
 	}
 };
-
-const initialState = {
-	show: false,
-	msg: null,
-	id: null,
-};
-
-export const toastReducer = (state = initialState, action) => {
-	switch (action.type) {
-		case c.SHOW_TOAST:
-			return {
-				show: true,
-				msg: action.msg,
-				id: action.id,
-			};
-		case c.HIDE_TOAST:
-			return initialState;
-		default:
-			return state;
-	}
-};

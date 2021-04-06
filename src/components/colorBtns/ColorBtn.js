@@ -22,7 +22,9 @@ const ColorBtn = ({ color, getColorId, setCurrent, changeColor }) => {
 			ref={refCallback}
 			id={color.id}
 			className={
-				color.rgb === 'rgb(0, 0, 0)' ? 'black word-break' : 'word-break'
+				color.rgb === 'rgb(0, 0, 0)'
+					? 'color-btn black word-break'
+					: 'color-btn word-break'
 			}>
 			{color.colorName}
 		</button>

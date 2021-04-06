@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { connect, useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { v4 as uuid } from 'uuid';
-import {
-	hideAppendModal,
-	showToast,
-	hideToast,
-} from '../../actions/modalActions';
+import { hideAppendModal } from '../../actions/modalActions';
 import { appendColor } from '../../actions/colorActions';
 
-const AppendModal = ({ appendColor, showToast, hideToast }) => {
+const AppendModal = ({ appendColor }) => {
 	const dispatch = useDispatch();
 	const [colorName, setColorName] = useState('');
 
@@ -19,19 +17,24 @@ const AppendModal = ({ appendColor, showToast, hideToast }) => {
 			id: uuid(),
 		};
 		appendColor(newColor);
+
 		dispatch(hideAppendModal());
 
-		dispatch(
-			showToast(
-				colorName === ''
-					? 'Color button added (NO NAME)'
-					: 'New color button added',
-				'add-toast'
-			)
+		toast.dark(
+			colorName === ''
+				? 'Unnamed color button added'
+				: 'New color button added',
+			{
+				position: 'top-right',
+				autoClose: 3000,
+				hideProgressBar: true,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+			}
 		);
-		setTimeout(() => {
-			dispatch(hideToast());
-		}, 1500);
+
 		setColorName('');
 	};
 
@@ -69,6 +72,4 @@ const AppendModal = ({ appendColor, showToast, hideToast }) => {
 	);
 };
 
-export default connect(null, { appendColor, showToast, hideToast })(
-	AppendModal
-);
+export default connect(null, { appendColor })(AppendModal);
