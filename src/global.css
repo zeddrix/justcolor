@@ -1,0 +1,73 @@
+* {
+	box-sizing: border-box;
+	user-select: none; /* Standard syntax */
+	-webkit-user-select: none; /* Chrome, Opera, Safari */
+	-moz-user-select: none; /* Firefox 2+ */
+	-ms-user-select: none; /* IE 10+ */
+
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+	font-family: 'Architects Daughter';
+	src: url('./fonts/ArchitectsDaughter-Regular.ttf') format('truetype');
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'Comic Neue';
+	src: url('./fonts/ComicNeue-Regular.ttf') format('truetype');
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'MPLUSRounded1c';
+	src: url('./fonts/MPLUSRounded1c-Black.ttf') format('truetype');
+	font-display: fallback;
+}
+
+body div#svelte {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	transition: all 0.25s ease;
+	font-family: 'Architects Daughter', cursive;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	overflow-x: hidden;
+}
+
+.color-btn {
+	font-family: inherit;
+	font-size: 1rem;
+	line-height: 0.9;
+	width: 4.1rem;
+	height: 4.1rem;
+	margin: 0.45rem 0.3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	transition: all 0.4s;
+	border: none;
+	outline: none;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0px 1px 0px grey, 0px 5.3px 0px 0px lightgrey, 0px 9px 6px #999;
+}
+
+.color-btn:hover {
+	color: #ccc;
+}
+
+.color-btn:not(.arbitrary-btn):focus {
+	color: #dfe7ea;
+	box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey, 0px 2px 5px #999;
+}
