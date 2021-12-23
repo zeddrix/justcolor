@@ -1,12 +1,12 @@
 <script>
-	import AppendBtn from '$components/colorBtns/AppendBtn.svelte';
-	import ArbitraryBtn from '$components/colorBtns/ArbitraryBtn.svelte';
-	import ColorButtons from '$components/colorBtns/ColorButtons.svelte';
+	import AppendButton from '$components/ColorButtons/AppendButton.svelte';
+	import ArbitraryButton from '$components/ColorButtons/ArbitraryButton.svelte';
+	import ColorButtons from '$components/ColorButtons/ColorButtons.svelte';
 </script>
 
 <div class="palette">
-	<ArbitraryBtn />
-	<AppendBtn />
+	<ArbitraryButton />
+	<AppendButton />
 	<ColorButtons />
 </div>
 
