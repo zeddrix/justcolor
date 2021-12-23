@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import ArbitraryBtn from '../colorBtns/ArbitraryBtn';
-import ColorBtn from '../colorBtns/ColorBtn';
-import AppendBtn from '../colorBtns/AppendBtn';
+import ArbitraryBtn from '../ColorButtons/ArbitraryBtn';
+import ColorBtn from '../ColorButtons/ColorBtn';
+import AppendBtn from '../ColorButtons/AppendBtn';
+
+import './Palette.css';
+import './../Scrollbar.css';
 
 const Palette = () => {
 	const [isClicked, setIsClicked] = useState(true);

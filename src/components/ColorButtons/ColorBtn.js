@@ -1,8 +1,9 @@
-import React from 'react';
 import { connect, useDispatch } from 'react-redux';
 import { showEditModal } from '../../actions/modalActions';
 import { getColorId, setCurrent } from '../../actions/colorActions';
 import { useDoubleClick } from '../../actions/useDoubleClick';
+
+import './ColorButtons.css';
 
 const ColorBtn = ({ color, getColorId, setCurrent, changeColor }) => {
 	const dispatch = useDispatch(showEditModal());

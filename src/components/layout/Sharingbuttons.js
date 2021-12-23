@@ -1,6 +1,6 @@
-import React from 'react';
+import './SharingButtons.css';
 
-const Sharingbuttons = () => {
+const SharingButtons = () => {
 	return (
 		<div className='settings__sharing-buttons'>
 			<a
@@ -87,4 +87,4 @@ const Sharingbuttons = () => {
 	);
 };
 
-export default Sharingbuttons;
+export default SharingButtons;

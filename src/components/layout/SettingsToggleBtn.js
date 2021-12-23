@@ -1,4 +1,4 @@
-import React from 'react';
+import './SettingsToggleBtn.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { showSettings } from '../../actions/modalActions';
 import Settings from '../modals/Settings';

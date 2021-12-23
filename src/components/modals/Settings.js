@@ -1,8 +1,9 @@
-import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { hideSettings } from '../../actions/modalActions';
-import Sharingbuttons from '../layout/Sharingbuttons';
+import SharingButtons from '../layout/SharingButtons';
+import './Settings.css';
+import './../Scrollbar.css';
 
 const Settings = () => {
 	const dispatch = useDispatch();
@@ -35,7 +36,7 @@ const Settings = () => {
 				<p className='settings__info'>
 					Share this app with your family and friends!
 				</p>
-				<Sharingbuttons />
+				<SharingButtons />
 			</div>
 		</div>
 	);

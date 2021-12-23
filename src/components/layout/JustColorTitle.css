@@ -1,0 +1,44 @@
+.justcolor-title_div {
+	width: 80%;
+	/* border: 5px solid white; */
+}
+
+.justcolor-title {
+	font-size: 5rem;
+	height: 70vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+@media only screen and (min-width: 319px) {
+	/* MOBILE */
+	.justcolor-title {
+		font-size: 4rem;
+		height: 70vh;
+	}
+}
+@media only screen and (min-width: 550px) {
+	/* AMAZON TABLETS */
+	.justcolor-title {
+		font-size: 10rem;
+	}
+}
+@media only screen and (min-width: 768px) {
+	/* IPAD */
+	.justcolor-title {
+		font-size: 10rem;
+	}
+}
+@media only screen and (min-width: 1024px) and (min-height: 1360px) {
+	/* IPAD PRO */
+	.justcolor-title {
+		font-size: 12rem;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	/* DESKTOP */
+	.justcolor-title {
+		font-size: 13rem;
+		height: 85vh;
+	}
+}

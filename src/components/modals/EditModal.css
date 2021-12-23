@@ -1,0 +1,10 @@
+.edit-modal__input:focus {
+	box-shadow: 0 0 5px blue;
+}
+
+/* All other devices from AMAZON TABLETS */
+@media only screen and (min-width: 550px) {
+	.edit-modal__input:focus {
+		box-shadow: 0 0 10px blue;
+	}
+}

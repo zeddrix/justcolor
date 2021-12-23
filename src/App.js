@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
@@ -10,6 +10,7 @@ import PaletteToggleBtn from './components/layout/PaletteToggleBtn';
 import About from './components/pages/About';
 
 import './App.css';
+import JustColorTitle from './components/layout/JustColorTitle';
 
 const App = ({ toggleAppendModal, toggleEditModal, togglePalette }) => {
 	useEffect(() => {
@@ -23,6 +24,7 @@ const App = ({ toggleAppendModal, toggleEditModal, togglePalette }) => {
 				<Switch>
 					<Route exact path='/'>
 						<SettingsToggleBtn />
+						<JustColorTitle />
 						<PaletteToggleBtn />
 						{toggleAppendModal && <AppendModal />}
 						{toggleEditModal && <EditModal />}

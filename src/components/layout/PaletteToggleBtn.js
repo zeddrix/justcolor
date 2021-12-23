@@ -1,6 +1,6 @@
-import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { showPalette, hidePalette } from '../../actions/modalActions';
+import './PaletteToggleBtn.css';
 
 const PaletteToggleBtn = () => {
 	const dispatch = useDispatch();

@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { connect, useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { v4 as uuid } from 'uuid';
 import { hideAppendModal } from '../../actions/modalActions';
 import { appendColor } from '../../actions/colorActions';
+
+import './AppendModal.css';
+import './Modal.css';
 
 const AppendModal = ({ appendColor }) => {
 	const dispatch = useDispatch();
@@ -48,11 +51,11 @@ const AppendModal = ({ appendColor }) => {
 			<div className='append-modal modal'>
 				<p className='modal__description'>Name your new color button:</p>
 				<input
+					className='append-modal__input input-field'
 					name='colorName'
 					value={colorName}
 					onChange={(e) => setColorName(e.target.value)}
 					onKeyPress={(e) => e.key === 'Enter' && onSubmit()}
-					className='append-modal__input input-field'
 					type='text'
 					maxLength='16'
 					placeholder='Enter name...'

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { connect, useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { hideEditModal } from '../../actions/modalActions';
@@ -7,6 +7,9 @@ import {
 	deleteColor,
 	updateColor,
 } from '../../actions/colorActions';
+
+import './EditModal.css';
+import './Modal.css';
 
 const EditModal = ({
 	current,
@@ -73,11 +76,10 @@ const EditModal = ({
 			onMouseDown={(e) => {
 				e.target === document.querySelector('#backdrop') && closeModal();
 			}}>
-			<div className='edit-color-modal modal'>
+			<div className='edit-modal modal'>
 				<p className='modal__description'>Edit color button:</p>
 				<input
-					id='edit-color-input'
-					className='input-field'
+					className='edit-modal__input input-field'
 					type='text'
 					name='colorName'
 					value={colorName}

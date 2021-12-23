@@ -1,4 +1,4 @@
-import React from 'react';
+import './ColorButtons.css';
 
 const ArbitraryBtn = ({ changeToArbitraryColor }) => (
 	<button

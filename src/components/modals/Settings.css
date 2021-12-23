@@ -1,0 +1,137 @@
+.colored {
+	background-color: whitesmoke;
+}
+
+.transparent {
+	background-color: transparent;
+}
+
+@keyframes settingsFadeIn {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+		transform: scale(0.9);
+		-webkit-transform: scale(0.9);
+		transform-origin: 90% 0;
+		-webkit-transform-origin: 90% 0;
+	}
+	50% {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+}
+
+#settings {
+	margin: 2rem 2rem 0.5rem 0.5rem;
+	background: black;
+	border-radius: 7.5px;
+	width: 20rem;
+	height: 20rem;
+	padding: 0.75rem;
+	overflow: auto;
+	z-index: 150;
+	box-shadow: 5px 5px 15px black;
+	animation: settingsFadeIn ease-in 0.2s;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 319px) {
+	#settings {
+		margin: 2rem 1.5rem 0.5rem 0.5rem;
+		padding: 1rem;
+		height: 15rem;
+	}
+	.settings-p {
+		font-size: 0.8rem;
+	}
+	.settings__headers {
+		font-size: 1rem;
+		margin: 0.5rem 1rem;
+	}
+	.settings__info {
+		font-size: 0.8rem;
+		margin: 0.5rem 1rem;
+		margin-bottom: 1rem;
+	}
+}
+
+/* AMAZON TABLETS */
+@media only screen and (min-width: 550px) {
+	#settings {
+		margin: 3.75rem 3rem;
+	}
+}
+
+/* IPAD */
+@media only screen and (min-width: 768px) {
+	#settings {
+		margin: 3.75rem 3rem;
+	}
+}
+
+/* IPAD PRO */
+@media only screen and (min-width: 1024px) and (min-height: 1360px) {
+	#settings {
+		margin: 4.75rem 4rem;
+	}
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1200px) {
+	.color-btn {
+		width: 4.5rem;
+		height: 4.5rem;
+		font-size: 1rem;
+		margin: 0.5rem;
+		box-shadow: inset 0px 1px 0px grey, 0px 6px 0px 0px lightgrey,
+			0px 10px 10px #999;
+	}
+	#settings {
+		margin: 2.75rem;
+	}
+}
+
+.settings__headers,
+.settings-p {
+	font-family: sans-serif;
+	color: whitesmoke;
+	text-decoration: none;
+	margin: 0.5rem;
+}
+
+.settings-p {
+	font-size: 1rem;
+	color: #aaaaaa;
+	border-bottom: 1px solid grey;
+	padding-bottom: 7.5px;
+}
+
+.settings__headers {
+	font-size: 1.3rem;
+	text-align: left;
+	margin: 0.75rem 1.5rem 0.5rem 1.75rem;
+}
+
+.settings__info {
+	font-family: sans-serif;
+	color: #cccccc;
+	text-decoration: none;
+	text-align: left;
+	margin: 0 1.75rem;
+}
+
+.settings__sharing-buttons {
+	margin: 1rem 0.7rem 0 0.7rem;
+}
+
+.settings__info-link {
+	color: #ff4684;
+	text-decoration: none;
+}
+
+.settings__info-link:hover,
+.settings__info-link:focus {
+	color: #ff0055;
+	text-decoration: underline;
+}

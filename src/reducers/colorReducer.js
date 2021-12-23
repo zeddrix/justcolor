@@ -1,5 +1,5 @@
 import * as c from '../actions/constants';
-import { initialColors } from '../components/colorBtns/initialColors';
+import { initialColors } from '../components/ColorButtons/initialColors';
 
 export const colorsReducer = (state = { colors: initialColors }, action) => {
 	switch (action.type) {

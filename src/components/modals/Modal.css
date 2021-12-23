@@ -1,0 +1,223 @@
+#backdrop,
+#invisible-backdrop {
+	z-index: 50;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+@keyframes backdropFade {
+	0% {
+		opacity: 0;
+		background: #00000050;
+	}
+	50% {
+		opacity: 1;
+		background: #00000075;
+	}
+}
+#backdrop {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #00000075;
+	animation: backdropFade 0.3s;
+}
+
+#invisible-backdrop {
+	background: #00000000;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+@keyframes zoomIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d(0.5, 0.5, 0.5);
+		transform: scale3d(0.5, 0.5, 0.5);
+	}
+	50% {
+		opacity: 1;
+	}
+}
+.modal {
+	z-index: 100;
+	width: 90%;
+	overflow: auto;
+	background: white;
+	padding: 3rem 1rem;
+	border-radius: 10px;
+	animation: zoomIn 0.25s;
+	box-shadow: 5px 5px 15px black;
+}
+@media only screen and (max-width: 319px) {
+	/* MOBILE */
+	.modal {
+		width: 90%;
+		padding: 2.5rem 1rem;
+		border-radius: 6px;
+	}
+}
+@media only screen and (min-width: 420px) {
+	/* SMALLER TABLETS */
+	.modal {
+		width: 70%;
+		padding: 3.5rem 1rem;
+		border-radius: 6px;
+	}
+}
+
+@media only screen and (min-width: 550px) {
+	/* AMAZON TABLETS */
+	.modal {
+		width: 75%;
+		padding: 5rem 1rem;
+	}
+}
+@media only screen and (min-width: 768px) {
+	/* IPAD */
+	.modal {
+		width: 65%;
+		padding: 5rem 1rem;
+	}
+}
+@media only screen and (min-width: 1024px) and (min-height: 1360px) {
+	/* IPAD PRO */
+	.modal {
+		width: 60%;
+		padding: 6rem 1rem;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	/* DESKTOP */
+	.modal {
+		width: 30%;
+		padding: 4rem 1rem;
+	}
+}
+
+.input-field {
+	font-family: 'Comic Neue', sans-serif;
+	text-align: center;
+	font-size: 1rem;
+	width: 10rem;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.modal-btn {
+	padding: 0.7rem 1.5rem;
+	display: inline-block;
+	margin: 1rem 0.3rem 0 0.3rem;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.modal__description {
+	font-size: 1rem;
+	margin: 0.5rem;
+}
+
+@media only screen and (max-width: 319px) {
+	/* MOBILE */
+	.input-field {
+		width: 9rem;
+	}
+	.modal-btn {
+		padding: 0.6rem 1.1rem;
+		margin-top: 0.5rem;
+	}
+	.modal__description,
+	.input-field,
+	.modal-btn {
+		font-size: 0.85rem;
+	}
+}
+@media only screen and (min-width: 550px) {
+	/* AMAZON TABLETS */
+	.input-field {
+		width: 15rem;
+		margin: 0.3rem;
+	}
+	.modal-btn {
+		border-radius: 7px;
+		padding: 1rem 1.8rem;
+	}
+	.modal__description,
+	.input-field,
+	.modal-btn {
+		font-size: 1.5rem;
+	}
+}
+@media only screen and (min-width: 768px) {
+	/* IPAD */
+	.modal-btn {
+		padding: 1rem 1.8rem;
+		border-radius: 8px;
+	}
+	.input-field {
+		width: 15rem;
+		margin: 0.2rem;
+	}
+	.modal__description,
+	.input-field,
+	.modal-btn {
+		font-size: 1.5rem;
+	}
+}
+@media only screen and (min-width: 1024px) and (min-height: 1360px) {
+	/* IPAD PRO */
+	.input-field {
+		width: 20rem;
+	}
+	.modal-btn {
+		padding: 1rem 2.5rem;
+		border-radius: 10px;
+		margin-top: 1.75rem;
+	}
+	.modal__description,
+	.input-field,
+	.modal-btn {
+		font-size: 2rem;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	/* DESKTOP */
+	.input-field {
+		width: 12.5rem;
+	}
+	.modal-btn {
+		padding: 0.8rem 1.5rem;
+		border-radius: 5px;
+	}
+	.modal__description,
+	.input-field,
+	.modal-btn {
+		font-size: 1.3rem;
+	}
+}
+
+.add-btn {
+	background: green;
+}
+.cancel-btn {
+	background: black;
+}
+.name-required {
+	animation-name: shakeX;
+	animation-duration: 0.75s;
+	background: #ff7990;
+	outline-color: #b80707;
+}
+
+#delete-btn {
+	background: #ff3657;
+}
+
+#done-btn {
+	background: darkblue;
+}

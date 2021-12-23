@@ -1,0 +1,23 @@
+.palette::-webkit-scrollbar,
+#settings::-webkit-scrollbar {
+	width: 5px;
+}
+.palette::-webkit-scrollbar-track,
+#settings::-webkit-scrollbar-track {
+	background: none;
+}
+.palette::-webkit-scrollbar-thumb,
+#settings::-webkit-scrollbar-thumb {
+	background: #f5f5f573;
+	border-radius: 50px;
+	/* visibility: hidden; */
+}
+.palette::-webkit-scrollbar-thumb:hover,
+#settings::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+.palette:hover::-webkit-scrollbar-thumb,
+#settings:hover::-webkit-scrollbar-thumb {
+	visibility: visible;
+}

@@ -1,6 +1,7 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { showAppendModal } from '../../actions/modalActions';
+import './ColorButtons.css';
 
 const AppendBtn = () => {
 	const dispatch = useDispatch();
