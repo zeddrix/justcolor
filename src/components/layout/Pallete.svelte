@@ -5,8 +5,8 @@
 </script>
 
 <div class="palette">
-	<AppendBtn />
 	<ArbitraryBtn />
+	<AppendBtn />
 	<ColorButtons />
 </div>
 
@@ -29,7 +29,7 @@
 
 	.palette {
 		border-top: 2px solid lightgrey;
-		height: 32vh;
+		height: 7.5rem;
 		background: rgba(0, 0, 0, 0.6);
 		width: 90vw;
 		bottom: 2.75rem;
