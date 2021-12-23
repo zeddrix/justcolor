@@ -41,33 +41,3 @@ body div#svelte {
 	justify-content: center;
 	overflow-x: hidden;
 }
-
-.color-btn {
-	font-family: inherit;
-	font-size: 1rem;
-	line-height: 0.9;
-	width: 4.1rem;
-	height: 4.1rem;
-	margin: 0.45rem 0.3rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-	transition: all 0.4s;
-	border: none;
-	outline: none;
-	text-decoration: none;
-	text-align: center;
-	cursor: pointer;
-	text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
-	box-shadow: inset 0px 1px 0px grey, 0px 5.3px 0px 0px lightgrey, 0px 9px 6px #999;
-}
-
-.color-btn:hover {
-	color: #ccc;
-}
-
-.color-btn:not(.arbitrary-btn):focus {
-	color: #dfe7ea;
-	box-shadow: inset 0px 1px 0px grey, 0px 2px 0px 0px lightgrey, 0px 2px 5px #999;
-}
