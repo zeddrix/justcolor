@@ -1,7 +1,11 @@
 <script>
-	import Pallete from '$components/layout/Pallete.svelte';
-	import { changeToArbitraryColor } from '$lib/changeToArbitraryColor.svelte';
 	import { onMount } from 'svelte';
+
+	import { changeToArbitraryColor } from '$lib/changeToArbitraryColor.svelte';
+
+	import PaletteButton from '$components/layout/PaletteButton.svelte';
+	import Pallete from '$components/layout/Pallete.svelte';
+
 	import '../global.css';
 
 	onMount(() => changeToArbitraryColor());
@@ -12,3 +16,4 @@
 </svelte:head>
 
 <Pallete />
+<PaletteButton />

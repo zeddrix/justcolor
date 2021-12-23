@@ -1,14 +1,23 @@
 <script>
+	// import { slide } from 'svelte/transition';
+	// import { quintOut } from 'svelte/easing';
+	import { fade } from 'svelte/transition';
+
+	import { paletteOpenStore } from '$lib/store';
+
 	import AppendButton from '$components/ColorButtons/AppendButton.svelte';
 	import ArbitraryButton from '$components/ColorButtons/ArbitraryButton.svelte';
 	import ColorButtons from '$components/ColorButtons/ColorButtons.svelte';
 </script>
 
-<div class="palette">
-	<ArbitraryButton />
-	<AppendButton />
-	<ColorButtons />
-</div>
+{#if $paletteOpenStore}
+	<!-- <div class="palette" transition:slide={{ delay: 250, duration: 300, easing: quintOut }}> -->
+	<div class="palette" transition:fade={{ duration: 200 }}>
+		<ArbitraryButton />
+		<AppendButton />
+		<ColorButtons />
+	</div>
+{/if}
 
 <style>
 	@keyframes paletteFadeIn {
@@ -42,7 +51,7 @@
 		position: absolute;
 		overflow-y: auto;
 		overflow-x: hidden;
-		animation: paletteFadeIn ease-in 0.2s;
+		/* animation: paletteFadeIn ease-in 0.2s; */
 		box-shadow: 0px 5px 10px black;
 	}
 
