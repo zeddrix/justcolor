@@ -2,8 +2,7 @@
 	import Dialog, { Actions } from '@smui/dialog';
 	import './Modal.css';
 
-	let open = true;
-
+	export let open = false;
 	export let modalLabel: string;
 	export let modalType: 'append' | 'edit';
 	export let button1Class: 'cancel' | 'delete';

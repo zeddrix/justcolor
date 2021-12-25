@@ -1,8 +1,16 @@
 <script>
-	import { pageBgColorStore } from '$lib/store';
+	import { appendModalOpenStore, pageBgColorStore } from '$lib/store';
+
+	const openAppendModal = () => appendModalOpenStore.set(true);
 </script>
 
-<button class="append-btn color-btn" style={`background: ${$pageBgColorStore}`}> + </button>
+<button
+	class="append-btn color-btn"
+	on:click={openAppendModal}
+	style={`background: ${$pageBgColorStore}`}
+>
+	+
+</button>
 
 <style>
 	.append-btn {
