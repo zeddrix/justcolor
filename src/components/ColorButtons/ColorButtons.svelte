@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { pageBgColorStore } from '$lib/store';
+	import { editModalOpenStore, pageBgColorStore } from '$lib/store';
 
 	import { initialColors } from './initialColors';
 
@@ -8,12 +8,15 @@
 
 		pageBgColorStore.set(colorRgb);
 	};
+
+	const openEditModal = () => editModalOpenStore.set(true);
 </script>
 
 {#each initialColors as { name, rgb, id }}
 	<button
 		style={`background: ${rgb}`}
 		on:mousedown={() => changeColor(rgb)}
+		on:dblclick={openEditModal}
 		class={rgb === 'rgb(0, 0, 0)' ? 'color-btn black word-break' : 'color-btn word-break'}
 	>
 		{name}

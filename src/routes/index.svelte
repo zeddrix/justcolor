@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 
-	import { appendModalOpenStore } from '$lib/store';
+	import { appendModalOpenStore, editModalOpenStore } from '$lib/store';
 	import { changeToArbitraryColor } from '$lib/changeToArbitraryColor.svelte';
 
 	import PaletteButton from '$components/layout/PaletteButton.svelte';
@@ -31,7 +31,7 @@
 />
 
 <Modal
-	open={false}
+	bind:open={$editModalOpenStore}
 	modalType="edit"
 	modalLabel="Edit your color button's name:"
 	button1Class="delete"
