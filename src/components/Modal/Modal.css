@@ -1,0 +1,186 @@
+#invisible-backdrop {
+	z-index: 50;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #00000000;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.mdc-dialog__container {
+	margin-bottom: 5rem;
+}
+.mdc-dialog__surface {
+	align-items: center;
+	padding: 3rem;
+}
+
+@media only screen and (min-width: 319px) {
+	/* MOBILE */
+	.mdc-dialog__surface {
+		padding: 1rem;
+	}
+}
+@media only screen and (min-width: 420px) {
+	/* SMALLER TABLETS */
+	.mdc-dialog__surface {
+		padding: 2rem;
+	}
+}
+@media only screen and (min-width: 1024px) and (min-height: 1360px) {
+	/* IPAD PRO */
+	.mdc-dialog__surface {
+		padding: 3rem;
+	}
+}
+
+.append-modal__input:focus {
+	box-shadow: 0 0 5px green;
+}
+@media only screen and (min-width: 550px) {
+	/* All other devices from AMAZON TABLETS */
+	.append-modal__input:focus {
+		box-shadow: 0 0 10px green;
+	}
+}
+
+.edit-modal__input:focus {
+	box-shadow: 0 0 5px blue;
+}
+@media only screen and (min-width: 550px) {
+	/* All other devices from AMAZON TABLETS */
+	.edit-modal__input:focus {
+		box-shadow: 0 0 10px blue;
+	}
+}
+
+.input-field {
+	font-family: 'Comic Neue', sans-serif;
+	text-align: center;
+	font-size: 1rem;
+	width: 10rem;
+	border: 1px solid black;
+	border-radius: 3px;
+	outline: none;
+	margin-top: 1rem !important;
+}
+
+.modal-btn {
+	padding: 0.7rem 1.5rem;
+	display: inline-block;
+	margin: 0 0.3rem 0 0.3rem;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.modal__description {
+	font-size: 1rem;
+	margin: 0.5rem;
+}
+
+@media only screen and (max-width: 319px) {
+	/* MOBILE */
+	.input-field {
+		width: 9rem;
+	}
+	.modal-btn {
+		padding: 0.6rem 1.1rem;
+		margin-top: 0.5rem;
+	}
+	.modal__description,
+	.input-field,
+	.modal-btn {
+		font-size: 0.85rem;
+	}
+}
+@media only screen and (min-width: 550px) {
+	/* AMAZON TABLETS */
+	.input-field {
+		width: 15rem;
+		margin: 0.3rem;
+	}
+	.modal-btn {
+		border-radius: 7px;
+		padding: 1rem 1.8rem;
+	}
+	.modal__description,
+	.input-field,
+	.modal-btn {
+		font-size: 1.5rem;
+	}
+}
+@media only screen and (min-width: 768px) {
+	/* IPAD */
+	.modal-btn {
+		padding: 1rem 1.8rem;
+		border-radius: 8px;
+	}
+	.input-field {
+		width: 15rem;
+		margin: 0.2rem;
+	}
+	.modal__description,
+	.input-field,
+	.modal-btn {
+		font-size: 1.5rem;
+	}
+}
+@media only screen and (min-width: 1024px) and (min-height: 1360px) {
+	/* IPAD PRO */
+	.input-field {
+		width: 20rem;
+	}
+	.modal-btn {
+		padding: 1rem 2.5rem;
+		border-radius: 10px;
+		margin-top: 1.75rem;
+	}
+	.modal__description,
+	.input-field,
+	.modal-btn {
+		font-size: 2rem;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	/* DESKTOP */
+	.input-field {
+		width: 12.5rem;
+	}
+	.modal-btn {
+		padding: 0.8rem 1.5rem;
+		border-radius: 5px;
+	}
+	.modal__description,
+	.input-field,
+	.modal-btn {
+		font-size: 1.3rem;
+	}
+}
+
+.add-btn {
+	background: green;
+}
+.cancel-btn {
+	background: black;
+}
+.name-required {
+	-webkit-animation-name: shakeX;
+	animation-name: shakeX;
+	-webkit-animation-duration: 0.75s;
+	animation-duration: 0.75s;
+	background: #ff7990;
+	outline-color: #b80707;
+}
+
+.delete-btn {
+	background: #ff3657;
+}
+
+.done-btn {
+	background: darkblue;
+}

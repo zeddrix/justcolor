@@ -7,6 +7,7 @@
 	import Pallete from '$components/layout/Pallete.svelte';
 
 	import '../global.css';
+	import Modal from '$components/Modal/Modal.svelte';
 
 	onMount(() => changeToArbitraryColor());
 </script>
@@ -17,3 +18,21 @@
 
 <Pallete />
 <PaletteButton />
+
+<Modal
+	modalType="append"
+	modalLabel="Name your new color button:"
+	button1Class="cancel"
+	button2Class="add"
+	button1Name="Cancel"
+	button2Name="Add!"
+/>
+
+<!-- <Modal
+	modalType="edit"
+	modalLabel="Edit your color button's name:"
+	button1Class="delete"
+	button2Class="done"
+	button1Name="Delete"
+	button2Name="Done"
+/> -->

@@ -34,7 +34,7 @@ body div#svelte {
 	height: 100%;
 	width: 100%;
 	margin: 0;
-	transition: all 0.25s ease;
+	transition: all 0.25s ease !important;
 	font-family: 'Architects Daughter', cursive;
 	display: flex;
 	flex-flow: row wrap;
