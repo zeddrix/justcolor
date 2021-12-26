@@ -33,15 +33,3 @@
 		<div class={`${button2Class}-btn modal-btn`} on:click={onButton2Click}>{button2Name}</div>
 	</Actions>
 </Dialog>
-
-<style>
-	.append-modal__input:focus {
-		box-shadow: 0 0 5px green;
-	}
-	@media only screen and (min-width: 550px) {
-		/* All other devices from AMAZON TABLETS */
-		.append-modal__input:focus {
-			box-shadow: 0 0 10px green;
-		}
-	}
-</style>

@@ -1,5 +1,6 @@
 <script>
 	import { appendModalOpenStore, pageBgColorStore } from '$lib/store';
+	import './ColorButtons.css';
 
 	const openAppendModal = () => appendModalOpenStore.set(true);
 </script>

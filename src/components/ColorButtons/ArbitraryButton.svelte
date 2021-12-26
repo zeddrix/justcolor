@@ -1,5 +1,7 @@
 <script>
 	import { changeToArbitraryColor } from '$lib/changeToArbitraryColor.svelte';
+
+	import './ColorButtons.css';
 </script>
 
 <button class="arbitrary-btn color-btn" on:mousedown={changeToArbitraryColor} />
