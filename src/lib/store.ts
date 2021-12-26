@@ -4,3 +4,7 @@ export const pageBgColorStore = writable('');
 export const paletteOpenStore = writable(true);
 export const appendModalOpenStore = writable(false);
 export const editModalOpenStore = writable(false);
+
+export const modalInputValueStore = writable('');
+
+export const newColorButtonsStore = writable([]);

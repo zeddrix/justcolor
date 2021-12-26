@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { modalInputValueStore } from '$lib/store';
+
 	import Dialog, { Actions } from '@smui/dialog';
 	import './Modal.css';
 
@@ -9,6 +11,8 @@
 	export let button2Class: 'add' | 'done';
 	export let button1Name: 'Cancel' | 'Delete';
 	export let button2Name: 'Add!' | 'Done';
+	export let onButton1Click;
+	export let onButton2Click;
 </script>
 
 <Dialog bind:open aria-labelledby="simple-title" aria-describedby="simple-content">
@@ -18,11 +22,15 @@
 		type="text"
 		maxLength="16"
 		placeholder="Enter name..."
+		bind:value={$modalInputValueStore}
+		on:keydown
 	/>
 	<br />
 	<Actions>
-		<div class={`${button1Class}-btn modal-btn`}>{button1Name}</div>
-		<div class={`${button2Class}-btn modal-btn`}>{button2Name}</div>
+		<div class={`${button1Class}-btn modal-btn`} on:click={onButton1Click}>
+			{button1Name}
+		</div>
+		<div class={`${button2Class}-btn modal-btn`} on:click={onButton2Click}>{button2Name}</div>
 	</Actions>
 </Dialog>
 
