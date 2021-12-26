@@ -1,22 +1,21 @@
 <script>
-	import { onMount } from 'svelte';
-
 	import { v4 as uuid } from 'uuid';
+	import { onMount } from 'svelte';
 
 	import {
 		appendModalOpenStore,
 		editModalOpenStore,
 		modalInputValueStore,
-		newColorButtonsStore,
+		colorButtonsStore,
 		pageBgColorStore
 	} from '$lib/store';
 	import { changeToArbitraryColor } from '$lib/changeToArbitraryColor.svelte';
 
 	import PaletteButton from '$components/layout/PaletteButton.svelte';
 	import Pallete from '$components/layout/Pallete.svelte';
+	import Modal from '$components/Modal/Modal.svelte';
 
 	import '../global.css';
-	import Modal from '$components/Modal/Modal.svelte';
 
 	onMount(() => changeToArbitraryColor());
 
@@ -33,7 +32,11 @@
 			id: uuid()
 		};
 
-		newColorButtonsStore.set([...$newColorButtonsStore, newColor]);
+		const newColorButtonsSet = [...$colorButtonsStore, newColor];
+
+		colorButtonsStore.set(newColorButtonsSet);
+
+		localStorage.setItem('colorButtons', JSON.stringify(newColorButtonsSet));
 
 		closeAppendModal();
 	};

@@ -7,4 +7,4 @@ export const editModalOpenStore = writable(false);
 
 export const modalInputValueStore = writable('');
 
-export const newColorButtonsStore = writable([]);
+export const colorButtonsStore = writable([]);

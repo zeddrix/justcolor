@@ -1,7 +1,19 @@
 <script lang="ts">
-	import { editModalOpenStore, newColorButtonsStore, pageBgColorStore } from '$lib/store';
+	import { editModalOpenStore, colorButtonsStore, pageBgColorStore } from '$lib/store';
+	import { onMount } from 'svelte';
 
 	import { initialColors } from './initialColors';
+
+	onMount(() => {
+		let colorButtons = JSON.parse(localStorage.getItem('colorButtons'));
+
+		if (!colorButtons) {
+			colorButtons = [...initialColors];
+			localStorage.setItem('colorButtons', JSON.stringify(colorButtons));
+		}
+
+		colorButtonsStore.set(colorButtons);
+	});
 
 	const changeColor = (colorRgb: string) => {
 		document.body.style.backgroundColor = colorRgb;
@@ -12,18 +24,7 @@
 	const openEditModal = () => editModalOpenStore.set(true);
 </script>
 
-{#each initialColors as { name, rgb, id }}
-	<button
-		style={`background: ${rgb}`}
-		on:mousedown={() => changeColor(rgb)}
-		on:dblclick={openEditModal}
-		class={rgb === 'rgb(0, 0, 0)' ? 'color-btn black word-break' : 'color-btn word-break'}
-	>
-		{name}
-	</button>
-{/each}
-
-{#each $newColorButtonsStore as { name, rgb, id }}
+{#each $colorButtonsStore as { name, rgb, id }}
 	<button
 		style={`background: ${rgb}`}
 		on:mousedown={() => changeColor(rgb)}
