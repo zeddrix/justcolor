@@ -1,8 +1,27 @@
 <script>
+	import { onMount } from 'svelte';
 	import { paletteOpenStore } from '$lib/store';
+
+	const paletteOpen = () => {
+		const colorPaletteOpen = localStorage.getItem('colorPaletteOpen');
+
+		if (colorPaletteOpen) {
+			paletteOpenStore.set(JSON.parse(colorPaletteOpen));
+		}
+	};
+
+	onMount(() => paletteOpen());
+
+	const togglePaletteButton = () => {
+		paletteOpenStore.set(!$paletteOpenStore);
+
+		localStorage.setItem('colorPaletteOpen', JSON.stringify($paletteOpenStore));
+
+		paletteOpen();
+	};
 </script>
 
-<div id="palette-toggle-btn" on:click={() => paletteOpenStore.set(!$paletteOpenStore)}>
+<div id="palette-toggle-btn" on:click={togglePaletteButton}>
 	{$paletteOpenStore ? '▼' : '▲'}
 </div>
 
