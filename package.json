@@ -19,6 +19,7 @@
 		"@smui/snackbar": "^6.0.0-beta.9",
 		"@smui/tooltip": "^6.0.0-beta.9",
 		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-static": "^1.0.0-next.23",
 		"@sveltejs/kit": "next",
 		"@typescript-eslint/eslint-plugin": "^4.31.1",
 		"@typescript-eslint/parser": "^4.31.1",
