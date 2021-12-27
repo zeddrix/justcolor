@@ -30,8 +30,6 @@
 
 <Modal
 	bind:open={$appendModalOpenStore}
-	onButton1Click={closeAppendModal}
-	onButton2Click={appendNewColor}
 	on:keydown={(e) => e.key === 'Enter' && appendNewColor()}
 	modalType="append"
 	modalLabel="Name your new color button:"
@@ -39,4 +37,6 @@
 	button2Class="add"
 	button1Name="Cancel"
 	button2Name="Add!"
+	onButton1Click={closeAppendModal}
+	onButton2Click={appendNewColor}
 />

@@ -6,6 +6,7 @@
 	import PaletteButton from '$components/layout/PaletteButton.svelte';
 	import Pallete from '$components/layout/Pallete.svelte';
 	import AppendModal from '$components/Modal/AppendModal.svelte';
+	import UpdateModal from '$components/Modal/UpdateModal.svelte';
 
 	import '../global.css';
 
@@ -17,6 +18,7 @@
 </svelte:head>
 
 <AppendModal />
+<UpdateModal />
 
 <Pallete />
 <PaletteButton />

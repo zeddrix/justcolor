@@ -1,5 +1,10 @@
 <script lang="ts">
-	import { editModalOpenStore, colorButtonsStore, pageBgColorStore } from '$lib/store';
+	import {
+		updateModalOpenStore,
+		colorButtonsStore,
+		pageBgColorStore,
+		colorButtonIdStore
+	} from '$lib/store';
 	import { onMount } from 'svelte';
 
 	import { initialColors } from './initialColors';
@@ -23,14 +28,17 @@
 		pageBgColorStore.set(colorRgb);
 	};
 
-	const openEditModal = () => editModalOpenStore.set(true);
+	const openUpdateModal = (id: string) => {
+		updateModalOpenStore.set(true);
+		colorButtonIdStore.set(id);
+	};
 </script>
 
 {#each $colorButtonsStore as { name, rgb, id }}
 	<button
 		style={`background: ${rgb}`}
 		on:mousedown={() => changeColor(rgb)}
-		on:dblclick={openEditModal}
+		on:dblclick={() => openUpdateModal(id)}
 		class={rgb === 'rgb(0, 0, 0)' ? 'color-btn black word-break' : 'color-btn word-break'}
 	>
 		{name}

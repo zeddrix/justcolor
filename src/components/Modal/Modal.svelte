@@ -6,7 +6,7 @@
 
 	export let open = false;
 	export let modalLabel: string;
-	export let modalType: 'append' | 'edit';
+	export let modalType: 'append' | 'update';
 	export let button1Class: 'cancel' | 'delete';
 	export let button2Class: 'add' | 'done';
 	export let button1Name: 'Cancel' | 'Delete';
