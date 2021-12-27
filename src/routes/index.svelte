@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-	<title>JustColor!</title>
+	<title>Home | JustColor!</title>
 </svelte:head>
 
 <AppendModal />

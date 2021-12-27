@@ -18,7 +18,7 @@
 				<a class="more__info-link" href="https://zeddrix.com/about-zedd/" target="__blank__">
 					Zeddrix Fabian</a
 				>. Learn more about JustColor{' '}
-				<Link href="/about" target="_blank">
+				<Link href="/about">
 					<span class="more__info-link">here</span></Link
 				>.
 			</p>
