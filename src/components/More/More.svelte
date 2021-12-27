@@ -6,11 +6,12 @@
 
 <div class="more-wrapper">
 	<Wrapper rich>
-		<span role="button" tabindex="0">
+		<div role="button" tabindex="0" class="more-toggle-button_container">
 			<MoreToggleButton />
-		</span>
+		</div>
 		<Tooltip xPos="center" yPos="below" persistent>
-			<p class="more-p">More</p>
+			<p class="more_main-header">More</p>
+
 			<p class="more__header">About</p>
 			<p class="more__info">
 				JustColor is created by{' '}
@@ -21,15 +22,21 @@
 					<span class="more__info-link">here</span></Link
 				>.
 			</p>
+
 			<p class="more__header">Share</p>
 			<p class="more__info">Share this app with your family and friends!</p>
-			<br />
+
 			<ShareButtons />
 		</Tooltip>
 	</Wrapper>
 </div>
 
 <style>
+	.more-toggle-button_container {
+		margin-left: 1rem;
+		margin-top: 0.5rem;
+	}
+
 	.more-wrapper {
 		height: 90vh;
 		width: 100%;
@@ -47,19 +54,20 @@
 		background: black;
 		border-radius: 7.5px;
 		width: 20rem;
+		min-height: 20rem !important;
 		padding: 0.75rem;
 		box-shadow: 5px 5px 15px black;
 	}
 
 	.more__header,
-	.more-p {
+	.more_main-header {
 		font-family: sans-serif;
 		color: whitesmoke;
 		text-decoration: none;
 		margin: 0.5rem;
 	}
 
-	.more-p {
+	.more_main-header {
 		font-size: 1rem;
 		color: #aaaaaa;
 		border-bottom: 1px solid grey;
@@ -68,7 +76,7 @@
 	}
 
 	.more__header {
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		text-align: left;
 		margin: 0.75rem 1.5rem 0.5rem 1.75rem;
 	}
@@ -79,7 +87,7 @@
 		text-decoration: none;
 		text-align: left;
 		margin: 0 1.75rem;
-		font-size: 1rem;
+		font-size: 0.9rem;
 	}
 
 	.more__info-link {
@@ -95,7 +103,7 @@
 
 	/* MOBILE */
 	@media only screen and (max-width: 319px) {
-		.more-p {
+		.more_main-header {
 			font-size: 0.8rem;
 		}
 		.more__header {
