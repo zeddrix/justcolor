@@ -5,7 +5,7 @@ export const paletteOpenStore = writable(true);
 export const appendModalOpenStore = writable(false);
 export const updateModalOpenStore = writable(false);
 
-export const colorButtonIdStore = writable('');
+export const currentColorButtonStore = writable();
 
 export const modalInputValueStore = writable('');
 

@@ -10,10 +10,7 @@
 
 	import Modal from './Modal.svelte';
 
-	const closeAppendModal = () => {
-		appendModalOpenStore.set(false);
-		modalInputValueStore.set('');
-	};
+	const closeAppendModal = () => appendModalOpenStore.set(false);
 
 	const appendNewColor = () => {
 		const newColor = {

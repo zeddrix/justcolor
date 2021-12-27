@@ -1,12 +1,13 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	import {
 		updateModalOpenStore,
 		colorButtonsStore,
 		pageBgColorStore,
-		colorButtonIdStore
+		currentColorButtonStore,
+		modalInputValueStore
 	} from '$lib/store';
-	import { onMount } from 'svelte';
-
 	import { initialColors } from './initialColors';
 
 	import './ColorButtons.css';
@@ -24,13 +25,15 @@
 
 	const changeColor = (colorRgb: string) => {
 		document.body.style.backgroundColor = colorRgb;
-
 		pageBgColorStore.set(colorRgb);
 	};
 
-	const openUpdateModal = (id: string) => {
+	const openUpdateModal = (name: string, rgb: string, id: string) => {
 		updateModalOpenStore.set(true);
-		colorButtonIdStore.set(id);
+
+		const currentColorButton = { name, rgb, id };
+		currentColorButtonStore.set(currentColorButton);
+		modalInputValueStore.set(name);
 	};
 </script>
 
@@ -38,7 +41,7 @@
 	<button
 		style={`background: ${rgb}`}
 		on:mousedown={() => changeColor(rgb)}
-		on:dblclick={() => openUpdateModal(id)}
+		on:dblclick={() => openUpdateModal(name, rgb, id)}
 		class={rgb === 'rgb(0, 0, 0)' ? 'color-btn black word-break' : 'color-btn word-break'}
 	>
 		{name}
@@ -46,8 +49,8 @@
 {/each}
 
 <style>
-	/* for long color names */
 	.word-break {
+		/* for long color names */
 		word-break: break-word;
 	}
 
