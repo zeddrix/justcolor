@@ -58,6 +58,11 @@
 		padding: 0.75rem;
 		box-shadow: 5px 5px 15px black;
 	}
+	@media only screen and (min-width: 319px) and (max-width: 410px) {
+		:global(.mdc-tooltip__surface) {
+			margin: 0;
+		}
+	}
 
 	.more__header,
 	.more_main-header {

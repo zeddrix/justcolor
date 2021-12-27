@@ -25,16 +25,14 @@
 		</ul>
 	</div>
 
+	<br />
+
 	<BackButton />
 </div>
 
 <style>
 	div {
 		width: 75vw;
-	}
-
-	.body {
-		position: absolute;
 	}
 
 	.heading {
