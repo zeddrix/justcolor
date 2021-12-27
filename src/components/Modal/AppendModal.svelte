@@ -7,6 +7,7 @@
 		modalInputValueStore,
 		pageBgColorStore
 	} from '$lib/store';
+	import { openAppendSnackbar } from '$lib/snackbarFunctions.svelte';
 
 	import Modal from './Modal.svelte';
 
@@ -21,6 +22,8 @@
 		const newColorButtonsSet = [...$colorButtonsStore, newColor];
 		colorButtonsStore.set(newColorButtonsSet);
 		localStorage.setItem('colorButtons', JSON.stringify(newColorButtonsSet));
+
+		openAppendSnackbar();
 		closeAppendModal();
 	};
 </script>

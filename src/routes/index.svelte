@@ -8,6 +8,7 @@
 	import Pallete from '$components/layout/Pallete.svelte';
 	import AppendModal from '$components/Modal/AppendModal.svelte';
 	import UpdateModal from '$components/Modal/UpdateModal.svelte';
+	import Snackbar from '$components/layout/Snackbar.svelte';
 
 	import '../global.css';
 
@@ -27,3 +28,5 @@
 
 <Pallete />
 <PaletteButton />
+
+<Snackbar />

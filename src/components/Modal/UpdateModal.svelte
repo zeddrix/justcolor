@@ -1,4 +1,6 @@
 <script>
+	import { openDeleteSnackbar, openUpdateSnackbar } from '$lib/snackbarFunctions.svelte';
+
 	import {
 		currentColorButtonStore,
 		colorButtonsStore,
@@ -18,6 +20,7 @@
 
 		localStorage.setItem('colorButtons', JSON.stringify($colorButtonsStore));
 		closeUpdateModal();
+		openDeleteSnackbar();
 	};
 
 	const updateColor = () => {
@@ -35,6 +38,7 @@
 
 		localStorage.setItem('colorButtons', JSON.stringify($colorButtonsStore));
 		closeUpdateModal();
+		openUpdateSnackbar();
 	};
 </script>
 
