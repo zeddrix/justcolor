@@ -5,7 +5,7 @@
 		updateModalOpenStore,
 		colorButtonsStore,
 		pageBgColorStore,
-		currentColorButtonStore,
+		colorButtonToUpdateStore,
 		modalInputValueStore
 	} from '$lib/store';
 	import { initialColors } from './initialColors';
@@ -31,8 +31,8 @@
 	const openUpdateModal = (name: string, rgb: string, id: string) => {
 		updateModalOpenStore.set(true);
 
-		const currentColorButton = { name, rgb, id };
-		currentColorButtonStore.set(currentColorButton);
+		const colorButtonToUpdate = { name, rgb, id };
+		colorButtonToUpdateStore.set(colorButtonToUpdate);
 		modalInputValueStore.set(name);
 	};
 </script>

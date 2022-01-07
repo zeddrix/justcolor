@@ -10,7 +10,7 @@
 	export let button1Class: 'cancel' | 'delete';
 	export let button2Class: 'add' | 'done';
 	export let button1Name: 'Cancel' | 'Delete';
-	export let button2Name: 'Add!' | 'Done';
+	export let button2Name: 'Add!' | 'Duplicate' | 'Done';
 	export let onButton1Click;
 	export let onButton2Click;
 </script>

@@ -2,7 +2,7 @@
 	import { openDeleteSnackbar, openUpdateSnackbar } from '$lib/snackbarFunctions.svelte';
 
 	import {
-		currentColorButtonStore,
+		colorButtonToUpdateStore,
 		colorButtonsStore,
 		updateModalOpenStore,
 		modalInputValueStore
@@ -15,7 +15,7 @@
 	const deleteColor = () => {
 		colorButtonsStore.set(
 			// @ts-ignore
-			$colorButtonsStore.filter((color) => color.id !== $currentColorButtonStore.id)
+			$colorButtonsStore.filter((color) => color.id !== $colorButtonToUpdateStore.id)
 		);
 
 		localStorage.setItem('colorButtons', JSON.stringify($colorButtonsStore));
@@ -26,13 +26,13 @@
 	const updateColor = () => {
 		const updatedColor = {
 			// @ts-ignore
-			...$currentColorButtonStore,
+			...$colorButtonToUpdateStore,
 			name: $modalInputValueStore
 		};
 		colorButtonsStore.set(
 			$colorButtonsStore.map((color) =>
 				// @ts-ignore
-				color.id === $currentColorButtonStore.id ? updatedColor : color
+				color.id === $colorButtonToUpdateStore.id ? updatedColor : color
 			)
 		);
 

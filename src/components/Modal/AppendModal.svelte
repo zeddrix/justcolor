@@ -4,12 +4,13 @@
 	import {
 		appendModalOpenStore,
 		colorButtonsStore,
+		colorDuplicatedStore,
 		modalInputValueStore,
 		pageBgColorStore
 	} from '$lib/store';
-	import { openAppendSnackbar } from '$lib/snackbarFunctions.svelte';
 
 	import Modal from './Modal.svelte';
+	import { openAppendSnackbar, openDuplicateSnackbar } from '$lib/snackbarFunctions.svelte';
 
 	const closeAppendModal = () => appendModalOpenStore.set(false);
 
@@ -23,7 +24,7 @@
 		colorButtonsStore.set(newColorButtonsSet);
 		localStorage.setItem('colorButtons', JSON.stringify(newColorButtonsSet));
 
-		openAppendSnackbar();
+		$colorDuplicatedStore ? openDuplicateSnackbar() : openAppendSnackbar();
 		closeAppendModal();
 	};
 </script>
@@ -36,7 +37,7 @@
 	button1Class="cancel"
 	button2Class="add"
 	button1Name="Cancel"
-	button2Name="Add!"
+	button2Name={$colorDuplicatedStore ? 'Duplicate' : 'Add!'}
 	onButton1Click={closeAppendModal}
 	onButton2Click={appendNewColor}
 />

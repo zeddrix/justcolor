@@ -1,9 +1,16 @@
-<script context="module">
+<script context="module" lang="ts">
 	import { snackbarStore } from './store';
 
 	export const openAppendSnackbar = () => {
 		snackbarStore.set({
 			text: 'New color button added',
+			open: true
+		});
+	};
+
+	export const openDuplicateSnackbar = () => {
+		snackbarStore.set({
+			text: 'Color button duplicated',
 			open: true
 		});
 	};

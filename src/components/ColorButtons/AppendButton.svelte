@@ -1,8 +1,19 @@
 <script>
-	import { appendModalOpenStore, pageBgColorStore } from '$lib/store';
+	import {
+		appendModalOpenStore,
+		colorButtonsStore,
+		colorDuplicatedStore,
+		pageBgColorStore
+	} from '$lib/store';
 	import './ColorButtons.css';
 
-	const openAppendModal = () => appendModalOpenStore.set(true);
+	const openAppendModal = () => {
+		appendModalOpenStore.set(true);
+
+		const duplicateColor = $colorButtonsStore.find((color) => color.rgb === $pageBgColorStore);
+
+		colorDuplicatedStore.set(duplicateColor);
+	};
 </script>
 
 <button
