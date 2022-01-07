@@ -5,7 +5,8 @@
 		"dev": "svelte-kit dev",
 		"prepare": "npm run smui-theme",
 		"smui-theme": "smui-theme compile static/smui.css -i src/theme",
-		"build": "svelte-kit build",
+		"build": "rm -rf build && svelte-kit build && touch build/.nojekyll",
+		"deploy": "npm run build && npx gh-pages -d build -t true",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
@@ -19,13 +20,14 @@
 		"@smui/snackbar": "^6.0.0-beta.9",
 		"@smui/tooltip": "^6.0.0-beta.9",
 		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-static": "^1.0.0-next.23",
+		"@sveltejs/adapter-static": "^1.0.0-next.24",
 		"@sveltejs/kit": "next",
 		"@typescript-eslint/eslint-plugin": "^4.31.1",
 		"@typescript-eslint/parser": "^4.31.1",
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^3.2.1",
+		"gh-pages": "^3.2.3",
 		"prettier": "^2.4.1",
 		"prettier-plugin-svelte": "^2.4.0",
 		"smui-theme": "^6.0.0-beta.9",
@@ -33,10 +35,12 @@
 		"svelte-check": "^2.2.6",
 		"svelte-preprocess": "^4.9.4",
 		"tslib": "^2.3.1",
-		"typescript": "^4.4.3"
+		"typescript": "^4.4.3",
+		"uuid": "^8.3.2"
 	},
 	"type": "module",
 	"dependencies": {
-		"uuid": "^8.3.2"
+		"i": "^0.3.7",
+		"update": "^0.7.4"
 	}
 }
