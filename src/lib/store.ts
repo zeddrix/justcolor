@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-export const paletteOpenStore = writable(true);
+export const paletteOpenStore = writable(false);
 
 export const appendModalOpenStore = writable(false);
 export const updateModalOpenStore = writable(false);

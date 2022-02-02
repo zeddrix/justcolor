@@ -7,6 +7,8 @@
 
 		if (colorPaletteOpen) {
 			paletteOpenStore.set(JSON.parse(colorPaletteOpen));
+		} else {
+			paletteOpenStore.set(true);
 		}
 	};
 
