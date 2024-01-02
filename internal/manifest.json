@@ -1,6 +1,6 @@
 {
   ".svelte-kit/build/runtime/internal/start.js": {
-    "file": "start-3e84fce7.js",
+    "file": "start-f3c651cc.js",
     "src": ".svelte-kit/build/runtime/internal/start.js",
     "isEntry": true,
     "imports": [
@@ -51,7 +51,7 @@
     ]
   },
   "src/routes/about.svelte": {
-    "file": "pages/about.svelte-21f2c1b5.js",
+    "file": "pages/about.svelte-06ea2c0a.js",
     "src": "src/routes/about.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
