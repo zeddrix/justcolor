@@ -4,6 +4,6 @@
 
 <div class="margins">
 	<Fab color="primary" extended href="/">
-		<Label>{'<='} Back</Label>
+		<Label>Back</Label>
 	</Fab>
 </div>

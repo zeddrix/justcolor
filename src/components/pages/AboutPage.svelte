@@ -12,6 +12,15 @@
 			<h2>Version: 1.5.0</h2>
 		</div>
 
+		<h2>Purpose</h2>
+		<p>
+			Back in 2019, we were surprised to know that we will have a younger baby sister, 17 years
+			younger than I am! Of course, we as older siblings (besides our parents), also have the
+			responsibility of teaching the youngest member of our family. And there came the idea thought
+			by my dad of creating a website/web app that can teach my baby sister the names of the
+			different colors and play around with it. Just color!
+		</p>
+
 		<br />
 
 		<h2>What's New</h2>
