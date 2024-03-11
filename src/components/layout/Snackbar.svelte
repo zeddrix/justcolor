@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Snackbar, { Actions, Label, SnackbarComponentDev } from '@smui/snackbar';
+	import Snackbar, { Actions, Label } from '@smui/snackbar';
 
 	import IconButton from '@smui/icon-button';
 	import { snackbarStore } from '$lib/store';
 
-	let snackbar: SnackbarComponentDev;
+	let snackbar: Snackbar;
 
 	$: if (snackbar && $snackbarStore.open) {
 		snackbar.open();

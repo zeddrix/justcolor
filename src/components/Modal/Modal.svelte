@@ -27,9 +27,9 @@
 	/>
 	<br />
 	<Actions>
-		<div class={`${button1Class}-btn modal-btn`} on:click={onButton1Click}>
+		<button class={`${button1Class}-btn modal-btn`} on:click={onButton1Click}>
 			{button1Name}
-		</div>
-		<div class={`${button2Class}-btn modal-btn`} on:click={onButton2Click}>{button2Name}</div>
+		</button>
+		<button class={`${button2Class}-btn modal-btn`} on:click={onButton2Click}>{button2Name}</button>
 	</Actions>
 </Dialog>
