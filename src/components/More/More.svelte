@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import Tooltip, { Wrapper, Link } from '@smui/tooltip';
 	import MoreToggleButton from './MoreToggleButton.svelte';
 	import ShareButtons from './Share/ShareButtons.svelte';
@@ -18,7 +19,7 @@
 				<a class="more__info-link" href="https://zeddrix.com/about-zedd/" target="__blank__">
 					Zeddrix Fabian</a
 				>. Learn more about JustColor{' '}
-				<Link href="/about">
+				<Link href="{`${base}/about`}">
 					<span class="more__info-link">here</span></Link
 				>.
 			</p>
